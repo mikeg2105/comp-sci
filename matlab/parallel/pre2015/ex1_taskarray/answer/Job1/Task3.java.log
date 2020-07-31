@@ -1,0 +1,15 @@
+Tue Feb 28 07:09:13 GMT 2012 | 2 | MATLAB: About to find job proxy using location "Job1"
+Tue Feb 28 07:09:13 GMT 2012 | 2 | MATLAB: About to find task proxy using location "Job1/Task3"
+Tue Feb 28 07:09:13 GMT 2012 | 2 | MATLAB: Completed pre-execution phase
+Tue Feb 28 07:09:13 GMT 2012 | 4 | MATLAB: About to pPreJobEvaluate
+Tue Feb 28 07:09:14 GMT 2012 | 4 | MATLAB: About to pPreTaskEvaluate
+Tue Feb 28 07:09:14 GMT 2012 | 4 | MATLAB: About to add job dependencies
+Tue Feb 28 07:09:14 GMT 2012 | 4 | MATLAB: About to call jobStartup
+Tue Feb 28 07:09:14 GMT 2012 | 4 | MATLAB: About to call taskStartup
+Tue Feb 28 07:09:14 GMT 2012 | 4 | MATLAB: About to get evaluation data
+Tue Feb 28 07:09:14 GMT 2012 | 1 | MATLAB: Begin task function
+Tue Feb 28 07:09:14 GMT 2012 | 1 | MATLAB: End task function
+Tue Feb 28 07:09:14 GMT 2012 | 4 | MATLAB: About to call taskFinish
+Tue Feb 28 07:09:14 GMT 2012 | 4 | MATLAB: About to call pPostTaskEvaluate
+Tue Feb 28 07:09:14 GMT 2012 | 4 | MATLAB: About to call pPostJobEvaluate
+Tue Feb 28 07:09:15 GMT 2012 | 0 | MATLAB: About to exit MATLAB normally

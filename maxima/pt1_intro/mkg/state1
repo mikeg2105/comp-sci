@@ -1,0 +1,1541 @@
+;;; -*- Mode: LISP; package:maxima; syntax:common-lisp; -*- 
+(in-package :maxima)
+(DSKSETQ $%I1
+         '(($BATCH)
+           "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac")) 
+(ADDLABEL '$%I1) 
+(DSKSETQ $%I2
+         '((MDEFINE (47
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+           (($QPLOT (47
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+            $EXPRLIST $PRANGE
+            ((MLIST (47
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             $HVRANGE))
+           ((MPROG (48
+                    "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                    SRC $QPLOT 47))
+            ((MLIST (48
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             $OPTLIST $PLIST)
+            ((MSETQ (49
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             $OPTLIST
+             ((MLIST (49
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $QPLOT 47))
+              ((MLIST (49
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $QPLOT 47))
+               $NTICKS 100)
+              ((MLIST (49
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $QPLOT 47))
+               $LEGEND NIL)
+              ((MLIST (50
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $QPLOT 47))
+               $YLABEL " ")
+              ((MLIST (50
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $QPLOT 47))
+               $GNUPLOT_PREAMBLE "set grid; set zeroaxis lw 2;")))
+            ((MSETQ (51
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             $OPTLIST
+             (($CONS (51
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $QPLOT 47))
+              ((MLIST (51
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $QPLOT 47))
+               $STYLE
+               ((MLIST (51
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $QPLOT 47))
+                $LINES 5))
+              $OPTLIST))
+            ((MCOND (52
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             ((MEQUAL (52
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $QPLOT 47))
+              (($LENGTH (52
+                         "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                         SRC $QPLOT 47))
+               $HVRANGE)
+              0)
+             ((MSETQ (52
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $QPLOT 47))
+              $PLIST
+              ((MLIST (52
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $QPLOT 47))))
+             T
+             ((MSETQ (53
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $QPLOT 47))
+              $PLIST $HVRANGE))
+            ((MSETQ (54
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             $PLIST
+             (($CONS (54
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $QPLOT 47))
+              $PRANGE $PLIST))
+            ((MSETQ (55
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             $PLIST
+             (($CONS (55
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $QPLOT 47))
+              $EXPRLIST $PLIST))
+            ((MSETQ (56
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             $PLIST
+             (($APPEND (56
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $QPLOT 47))
+              $PLIST $OPTLIST))
+            (($APPLY (57
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $QPLOT 47))
+             $PLOT2D $PLIST)))) 
+(ADDLABEL '$%I2) 
+(DSKSETQ $%O2
+         '((MDEFINE SIMP)
+           (($QPLOT (47
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+            $EXPRLIST $PRANGE
+            ((MLIST (47
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             $HVRANGE))
+           ((MPROG (48
+                    "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                    SRC $QPLOT 47))
+            ((MLIST (48
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             $OPTLIST $PLIST)
+            ((MSETQ (49
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             $OPTLIST
+             ((MLIST (49
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $QPLOT 47))
+              ((MLIST (49
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $QPLOT 47))
+               $NTICKS 100)
+              ((MLIST (49
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $QPLOT 47))
+               $LEGEND NIL)
+              ((MLIST (50
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $QPLOT 47))
+               $YLABEL " ")
+              ((MLIST (50
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $QPLOT 47))
+               $GNUPLOT_PREAMBLE "set grid; set zeroaxis lw 2;")))
+            ((MSETQ (51
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             $OPTLIST
+             (($CONS (51
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $QPLOT 47))
+              ((MLIST (51
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $QPLOT 47))
+               $STYLE
+               ((MLIST (51
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $QPLOT 47))
+                $LINES 5))
+              $OPTLIST))
+            ((MCOND (52
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             ((MEQUAL (52
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $QPLOT 47))
+              (($LENGTH (52
+                         "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                         SRC $QPLOT 47))
+               $HVRANGE)
+              0)
+             ((MSETQ (52
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $QPLOT 47))
+              $PLIST
+              ((MLIST (52
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $QPLOT 47))))
+             T
+             ((MSETQ (53
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $QPLOT 47))
+              $PLIST $HVRANGE))
+            ((MSETQ (54
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             $PLIST
+             (($CONS (54
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $QPLOT 47))
+              $PRANGE $PLIST))
+            ((MSETQ (55
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             $PLIST
+             (($CONS (55
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $QPLOT 47))
+              $EXPRLIST $PLIST))
+            ((MSETQ (56
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $QPLOT 47))
+             $PLIST
+             (($APPEND (56
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $QPLOT 47))
+              $PLIST $OPTLIST))
+            (($APPLY (57
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $QPLOT 47))
+             $PLOT2D $PLIST)))) 
+(ADDLABEL '$%O2) 
+(DSKSETQ $%I3
+         '((MDEFINE (59
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $RTT 59))
+           (($RTT (59
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $RTT 59))
+            $E)
+           (($RADCAN (59
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $RTT 59))
+            (($TRIGRAT
+                 (59
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $RTT 59))
+             (($TRIGSIMP
+                  (59
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $RTT 59))
+              $E))))) 
+(ADDLABEL '$%I3) 
+(DSKSETQ $%O3
+         '((MDEFINE SIMP)
+           (($RTT (59
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $RTT 59))
+            $E)
+           (($RADCAN (59
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $RTT 59))
+            (($TRIGRAT
+                 (59
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $RTT 59))
+             (($TRIGSIMP
+                  (59
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $RTT 59))
+              $E))))) 
+(ADDLABEL '$%O3) 
+(DSKSETQ $%I4
+         '((MDEFINE (61
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TS 61))
+           (($TS (61
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $TS 61))
+            $E $V)
+           (($RATSUBST
+                (61
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $TS 61))
+            1
+            ((MPLUS (61
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TS 61))
+             ((MEXPT (61
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $TS 61))
+              ((%COS (61
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $TS 61))
+               $V)
+              2)
+             ((MEXPT (61
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $TS 61))
+              ((%SIN (61
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $TS 61))
+               $V)
+              2))
+            $E))) 
+(ADDLABEL '$%I4) 
+(DSKSETQ $%O4
+         '((MDEFINE SIMP)
+           (($TS (61
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $TS 61))
+            $E $V)
+           (($RATSUBST
+                (61
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $TS 61))
+            1
+            ((MPLUS (61
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TS 61))
+             ((MEXPT (61
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $TS 61))
+              ((%COS (61
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $TS 61))
+               $V)
+              2)
+             ((MEXPT (61
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $TS 61))
+              ((%SIN (61
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $TS 61))
+               $V)
+              2))
+            $E))) 
+(ADDLABEL '$%O4) 
+(DSKSETQ $%I5
+         '((MDEFINE (63
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TO_ATAN 63))
+           (($TO_ATAN
+                (63
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $TO_ATAN 63))
+            $E $Y $X)
+           (($RATSUBST (63
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $TO_ATAN 63))
+            ((%ATAN (63
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TO_ATAN 63))
+             ((MQUOTIENT
+                  (63
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TO_ATAN 63))
+              $Y $X))
+            (($ATAN2 (63
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $TO_ATAN 63))
+             $Y $X)
+            $E))) 
+(ADDLABEL '$%I5) 
+(DSKSETQ $%O5
+         '((MDEFINE SIMP)
+           (($TO_ATAN
+                (63
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $TO_ATAN 63))
+            $E $Y $X)
+           (($RATSUBST
+                (63
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $TO_ATAN 63))
+            ((%ATAN (63
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TO_ATAN 63))
+             ((MQUOTIENT
+                  (63
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TO_ATAN 63))
+              $Y $X))
+            (($ATAN2 (63
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $TO_ATAN 63))
+             $Y $X)
+            $E))) 
+(ADDLABEL '$%O5) 
+(DSKSETQ $%I6
+         '((MDEFINE (65
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TO_ATAN2 65))
+           (($TO_ATAN2
+                (65
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $TO_ATAN2 65))
+            $E $Y $X)
+           (($RATSUBST
+                (65
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $TO_ATAN2 65))
+            (($ATAN2 (65
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $TO_ATAN2 65))
+             $Y $X)
+            ((%ATAN (65
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TO_ATAN2 65))
+             ((MQUOTIENT
+                  (65
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TO_ATAN2 65))
+              $Y $X))
+            $E))) 
+(ADDLABEL '$%I6) 
+(DSKSETQ $%O6
+         '((MDEFINE SIMP)
+           (($TO_ATAN2
+                (65
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $TO_ATAN2 65))
+            $E $Y $X)
+           (($RATSUBST
+                (65
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $TO_ATAN2 65))
+            (($ATAN2 (65
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $TO_ATAN2 65))
+             $Y $X)
+            ((%ATAN (65
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TO_ATAN2 65))
+             ((MQUOTIENT
+                  (65
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TO_ATAN2 65))
+              $Y $X))
+            $E))) 
+(ADDLABEL '$%O6) 
+(DSKSETQ $%I7
+         '((MDEFINE (74
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN 74))
+           (($TOTAN (74
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN 74))
+            $E $V)
+           ((MPROGN (74
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN 74))
+            (($RATSUBST
+                 (74
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $TOTAN 74))
+             ((MQUOTIENT
+                  (74
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TOTAN 74))
+              1
+              ((%SQRT (74
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $TOTAN 74))
+               ((MPLUS (74
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $TOTAN 74))
+                1
+                ((MEXPT (74
+                         "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                         SRC $TOTAN 74))
+                 $T 2))))
+             ((%COS (74
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN 74))
+              $V)
+             $E)
+            (($RATSUBST
+                 (75
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $TOTAN 74))
+             ((MQUOTIENT
+                  (75
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TOTAN 74))
+              $T
+              ((%SQRT (75
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $TOTAN 74))
+               ((MPLUS (75
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $TOTAN 74))
+                1
+                ((MEXPT (75
+                         "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                         SRC $TOTAN 74))
+                 $T 2))))
+             ((%SIN (75
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN 74))
+              $V)
+             $%%)))) 
+(ADDLABEL '$%I7) 
+(DSKSETQ $%O7
+         '((MDEFINE SIMP)
+           (($TOTAN (74
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN 74))
+            $E $V)
+           ((MPROGN (74
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN 74))
+            (($RATSUBST
+                 (74
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $TOTAN 74))
+             ((MQUOTIENT
+                  (74
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TOTAN 74))
+              1
+              ((%SQRT (74
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $TOTAN 74))
+               ((MPLUS (74
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $TOTAN 74))
+                1
+                ((MEXPT (74
+                         "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                         SRC $TOTAN 74))
+                 $T 2))))
+             ((%COS (74
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN 74))
+              $V)
+             $E)
+            (($RATSUBST
+                 (75
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $TOTAN 74))
+             ((MQUOTIENT
+                  (75
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TOTAN 74))
+              $T
+              ((%SQRT (75
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $TOTAN 74))
+               ((MPLUS (75
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $TOTAN 74))
+                1
+                ((MEXPT (75
+                         "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                         SRC $TOTAN 74))
+                 $T 2))))
+             ((%SIN (75
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN 74))
+              $V)
+             $%%)))) 
+(ADDLABEL '$%O7) 
+(DSKSETQ $%I8
+         '((MDEFINE (84
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN2 84))
+           (($TOTAN2 (84
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $TOTAN2 84))
+            $E $V)
+           ((MPROGN (84
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN2 84))
+            (($RATSUBST
+                 (84
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $TOTAN2 84))
+             ((MQUOTIENT
+                  (84
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TOTAN2 84))
+              ((MPLUS (84
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $TOTAN2 84))
+               1
+               ((MMINUS (84
+                         "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                         SRC $TOTAN2 84))
+                ((MEXPT (84
+                         "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                         SRC $TOTAN2 84))
+                 $T 2)))
+              ((MPLUS (84
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $TOTAN2 84))
+               1
+               ((MEXPT (84
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $TOTAN2 84))
+                $T 2)))
+             ((%COS (84
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN2 84))
+              $V)
+             $E)
+            (($RATSUBST
+                 (85
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $TOTAN2 84))
+             ((MQUOTIENT
+                  (85
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TOTAN2 84))
+              ((MTIMES (85
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $TOTAN2 84))
+               2 $T)
+              ((MPLUS (85
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $TOTAN2 84))
+               1
+               ((MEXPT (85
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $TOTAN2 84))
+                $T 2)))
+             ((%SIN (85
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN2 84))
+              $V)
+             $%%)))) 
+(ADDLABEL '$%I8) 
+(DSKSETQ $%O8
+         '((MDEFINE SIMP)
+           (($TOTAN2 (84
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $TOTAN2 84))
+            $E $V)
+           ((MPROGN (84
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN2 84))
+            (($RATSUBST
+                 (84
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $TOTAN2 84))
+             ((MQUOTIENT
+                  (84
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TOTAN2 84))
+              ((MPLUS (84
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $TOTAN2 84))
+               1
+               ((MMINUS (84
+                         "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                         SRC $TOTAN2 84))
+                ((MEXPT (84
+                         "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                         SRC $TOTAN2 84))
+                 $T 2)))
+              ((MPLUS (84
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $TOTAN2 84))
+               1
+               ((MEXPT (84
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $TOTAN2 84))
+                $T 2)))
+             ((%COS (84
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN2 84))
+              $V)
+             $E)
+            (($RATSUBST
+                 (85
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $TOTAN2 84))
+             ((MQUOTIENT
+                  (85
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TOTAN2 84))
+              ((MTIMES (85
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $TOTAN2 84))
+               2 $T)
+              ((MPLUS (85
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $TOTAN2 84))
+               1
+               ((MEXPT (85
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $TOTAN2 84))
+                $T 2)))
+             ((%SIN (85
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $TOTAN2 84))
+              $V)
+             $%%)))) 
+(ADDLABEL '$%O8) 
+(DSKSETQ $%I9
+         '((MDEFINE (85
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MSTATE 85))
+           (($MSTATE (85
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85)))
+           ((MPROGN (85
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MSTATE 85))
+            (($PRINT (86
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+             "  [fpprec,fpprintprec,display2d] = "
+             ((MLIST (86
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+              $FPPREC $FPPRINTPREC $DISPLAY2D))
+            (($PRINT (87
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+             "  [radexpand, domain] = "
+             ((MLIST (87
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+              $RADEXPAND $DOMAIN))
+            (($PRINT (88
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+             "  [algebraic,listarith,simp,simpsum] = "
+             ((MLIST (88
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+              $ALGEBRAIC $LISTARITH $SIMP $SIMPSUM))
+            ((MDOIN (89
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MSTATE 85))
+             $I
+             ((MLIST (89
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+              1 2 3 5 6 7 8 9 10 11)
+             NIL NIL NIL NIL
+             (($PRINT (90
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $MSTATE 85))
+              "  "
+              (($INFOLISTS ARRAY
+                   (90
+                    "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                    SRC $MSTATE 85))
+               $I)
+              " =  "
+              (($EV (90
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MSTATE 85))
+               (($INFOLISTS ARRAY
+                    (90
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MSTATE 85))
+                $I))))
+            (($PRINT (91
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+             "   facts() = "
+             (($FACTS (91
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $MSTATE 85))))
+            (($PRINT (92
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+             "   tellrat() = "
+             (($TELLRAT
+                  (92
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $MSTATE 85))))
+            (($PRINT (93
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+             "  ")))) 
+(ADDLABEL '$%I9) 
+(DSKSETQ $%O9
+         '((MDEFINE SIMP)
+           (($MSTATE (85
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85)))
+           ((MPROGN (85
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MSTATE 85))
+            (($PRINT (86
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+             "  [fpprec,fpprintprec,display2d] = "
+             ((MLIST (86
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+              $FPPREC $FPPRINTPREC $DISPLAY2D))
+            (($PRINT (87
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+             "  [radexpand, domain] = "
+             ((MLIST (87
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+              $RADEXPAND $DOMAIN))
+            (($PRINT (88
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+             "  [algebraic,listarith,simp,simpsum] = "
+             ((MLIST (88
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+              $ALGEBRAIC $LISTARITH $SIMP $SIMPSUM))
+            ((MDOIN (89
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MSTATE 85))
+             $I
+             ((MLIST (89
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+              1 2 3 5 6 7 8 9 10 11)
+             NIL NIL NIL NIL
+             (($PRINT (90
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $MSTATE 85))
+              "  "
+              (($INFOLISTS ARRAY
+                   (90
+                    "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                    SRC $MSTATE 85))
+               $I)
+              " =  "
+              (($EV (90
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MSTATE 85))
+               (($INFOLISTS ARRAY
+                    (90
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MSTATE 85))
+                $I))))
+            (($PRINT (91
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+             "   facts() = "
+             (($FACTS (91
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $MSTATE 85))))
+            (($PRINT (92
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+             "   tellrat() = "
+             (($TELLRAT
+                  (92
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $MSTATE 85))))
+            (($PRINT (93
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MSTATE 85))
+             "  ")))) 
+(ADDLABEL '$%O9) 
+(DSKSETQ $%I10
+         '((MDEFINE (93
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MATTRIB 93))
+           (($MATTRIB
+                (93
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $MATTRIB 93)))
+           ((MPROGN (93
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MATTRIB 93))
+            (($PRINT (94
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MATTRIB 93))
+             "   facts() = "
+             (($FACTS (94
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $MATTRIB 93))))
+            (($PRINT (95
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MATTRIB 93))
+             "   dependencies = " $DEPENDENCIES)
+            (($PRINT (96
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MATTRIB 93))
+             "   props = " $PROPS)
+            (($PRINT (97
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MATTRIB 93))
+             "  ")))) 
+(ADDLABEL '$%I10) 
+(DSKSETQ $%O10
+         '((MDEFINE SIMP)
+           (($MATTRIB
+                (93
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $MATTRIB 93)))
+           ((MPROGN (93
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MATTRIB 93))
+            (($PRINT (94
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MATTRIB 93))
+             "   facts() = "
+             (($FACTS (94
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $MATTRIB 93))))
+            (($PRINT (95
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MATTRIB 93))
+             "   dependencies = " $DEPENDENCIES)
+            (($PRINT (96
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MATTRIB 93))
+             "   props = " $PROPS)
+            (($PRINT (97
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MATTRIB 93))
+             "  ")))) 
+(ADDLABEL '$%O10) 
+(DSKSETQ $%I11
+         '((MDEFINE (97
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MCLEAN 97))
+           (($MCLEAN (97
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MCLEAN 97)))
+           ((MPROGN (97
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MCLEAN 97))
+            (($KILL (97
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MCLEAN 97))
+             (($ALLBUT (97
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $MCLEAN 97))
+              $MSTATE $MCLEAN $MATTRIB $RTT $TS $TO_ATAN $TO_ATAN2
+              $TOTAN $TOTAN2 $QPLOT $FLL))
+            (($RESET (98
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MCLEAN 97))
+             $FPPRINTPREC $FPPREC $DISPLAY2D $RADEXPAND $DOMAIN)
+            (($PRINT (99
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MCLEAN 97))
+             "----- clean start")
+            (($PRINT (100
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MCLEAN 97))
+             "  ")))) 
+(ADDLABEL '$%I11) 
+(DSKSETQ $%O11
+         '((MDEFINE SIMP)
+           (($MCLEAN (97
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MCLEAN 97)))
+           ((MPROGN (97
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MCLEAN 97))
+            (($KILL (97
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $MCLEAN 97))
+             (($ALLBUT (97
+                        "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                        SRC $MCLEAN 97))
+              $MSTATE $MCLEAN $MATTRIB $RTT $TS $TO_ATAN $TO_ATAN2
+              $TOTAN $TOTAN2 $QPLOT $FLL))
+            (($RESET (98
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MCLEAN 97))
+             $FPPRINTPREC $FPPREC $DISPLAY2D $RADEXPAND $DOMAIN)
+            (($PRINT (99
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MCLEAN 97))
+             "----- clean start")
+            (($PRINT (100
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $MCLEAN 97))
+             "  ")))) 
+(ADDLABEL '$%O11) 
+(DSKSETQ $%I12
+         '((MDEFINE (100
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $FLL 100))
+           (($FLL (100
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $FLL 100))
+            $X)
+           ((MLIST (100
+                    "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                    SRC $FLL 100))
+            (($FIRST (100
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $FLL 100))
+             $X)
+            (($LAST (100
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $FLL 100))
+             $X)
+            (($LENGTH (100
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $FLL 100))
+             $X)))) 
+(ADDLABEL '$%I12) 
+(DSKSETQ $%O12
+         '((MDEFINE SIMP)
+           (($FLL (100
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $FLL 100))
+            $X)
+           ((MLIST (100
+                    "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                    SRC $FLL 100))
+            (($FIRST (100
+                      "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                      SRC $FLL 100))
+             $X)
+            (($LAST (100
+                     "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                     SRC $FLL 100))
+             $X)
+            (($LENGTH (100
+                       "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                       SRC $FLL 100))
+             $X)))) 
+(ADDLABEL '$%O12) 
+(DSKSETQ $%I13
+         '(($DECLARE
+               (100
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC))
+           $FLL $EVFUN)) 
+(ADDLABEL '$%I13) 
+(DSKSETQ $%O13
+         '"C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac") 
+(ADDLABEL '$%O13) 
+(MDEFPROP $QPLOT
+    ((LAMBDA)
+     ((MLIST) $EXPRLIST $PRANGE
+      ((MLIST (47
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $QPLOT 47))
+       $HVRANGE))
+     ((MPROG (48
+              "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+              SRC $QPLOT 47))
+      ((MLIST (48
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $QPLOT 47))
+       $OPTLIST $PLIST)
+      ((MSETQ (49
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $QPLOT 47))
+       $OPTLIST
+       ((MLIST (49
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $QPLOT 47))
+        ((MLIST (49
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $QPLOT 47))
+         $NTICKS 100)
+        ((MLIST (49
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $QPLOT 47))
+         $LEGEND NIL)
+        ((MLIST (50
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $QPLOT 47))
+         $YLABEL " ")
+        ((MLIST (50
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $QPLOT 47))
+         $GNUPLOT_PREAMBLE "set grid; set zeroaxis lw 2;")))
+      ((MSETQ (51
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $QPLOT 47))
+       $OPTLIST
+       (($CONS (51
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $QPLOT 47))
+        ((MLIST (51
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $QPLOT 47))
+         $STYLE
+         ((MLIST (51
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $QPLOT 47))
+          $LINES 5))
+        $OPTLIST))
+      ((MCOND (52
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $QPLOT 47))
+       ((MEQUAL (52
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $QPLOT 47))
+        (($LENGTH (52
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $QPLOT 47))
+         $HVRANGE)
+        0)
+       ((MSETQ (52
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $QPLOT 47))
+        $PLIST
+        ((MLIST (52
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $QPLOT 47))))
+       T
+       ((MSETQ (53
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $QPLOT 47))
+        $PLIST $HVRANGE))
+      ((MSETQ (54
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $QPLOT 47))
+       $PLIST
+       (($CONS (54
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $QPLOT 47))
+        $PRANGE $PLIST))
+      ((MSETQ (55
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $QPLOT 47))
+       $PLIST
+       (($CONS (55
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $QPLOT 47))
+        $EXPRLIST $PLIST))
+      ((MSETQ (56
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $QPLOT 47))
+       $PLIST
+       (($APPEND (56
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $QPLOT 47))
+        $PLIST $OPTLIST))
+      (($APPLY (57
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $QPLOT 47))
+       $PLOT2D $PLIST)))
+    MEXPR) 
+(ADD2LNC '(($QPLOT) $EXPRLIST $PRANGE
+           ((MLIST (47
+                    "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                    SRC $QPLOT 47))
+            $HVRANGE))
+         $FUNCTIONS) 
+(MDEFPROP $QPLOT T MLEXPRP) 
+(MDEFPROP $RTT
+    ((LAMBDA) ((MLIST) $E)
+     (($RADCAN (59
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $RTT 59))
+      (($TRIGRAT
+           (59
+            "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+            SRC $RTT 59))
+       (($TRIGSIMP
+            (59
+             "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+             SRC $RTT 59))
+        $E))))
+    MEXPR) 
+(ADD2LNC '(($RTT) $E) $FUNCTIONS) 
+(MDEFPROP $TS
+    ((LAMBDA) ((MLIST) $E $V)
+     (($RATSUBST
+          (61
+           "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+           SRC $TS 61))
+      1
+      ((MPLUS (61
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $TS 61))
+       ((MEXPT (61
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $TS 61))
+        ((%COS (61
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $TS 61))
+         $V)
+        2)
+       ((MEXPT (61
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $TS 61))
+        ((%SIN (61
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $TS 61))
+         $V)
+        2))
+      $E))
+    MEXPR) 
+(ADD2LNC '(($TS) $E $V) $FUNCTIONS) 
+(MDEFPROP $TO_ATAN
+    ((LAMBDA) ((MLIST) $E $Y $X)
+     (($RATSUBST
+          (63
+           "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+           SRC $TO_ATAN 63))
+      ((%ATAN (63
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $TO_ATAN 63))
+       ((MQUOTIENT
+            (63
+             "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+             SRC $TO_ATAN 63))
+        $Y $X))
+      (($ATAN2 (63
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $TO_ATAN 63))
+       $Y $X)
+      $E))
+    MEXPR) 
+(ADD2LNC '(($TO_ATAN) $E $Y $X) $FUNCTIONS) 
+(MDEFPROP $TO_ATAN2
+    ((LAMBDA) ((MLIST) $E $Y $X)
+     (($RATSUBST
+          (65
+           "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+           SRC $TO_ATAN2 65))
+      (($ATAN2 (65
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $TO_ATAN2 65))
+       $Y $X)
+      ((%ATAN (65
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $TO_ATAN2 65))
+       ((MQUOTIENT
+            (65
+             "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+             SRC $TO_ATAN2 65))
+        $Y $X))
+      $E))
+    MEXPR) 
+(ADD2LNC '(($TO_ATAN2) $E $Y $X) $FUNCTIONS) 
+(MDEFPROP $TOTAN
+    ((LAMBDA) ((MLIST) $E $V)
+     ((MPROGN (74
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $TOTAN 74))
+      (($RATSUBST
+           (74
+            "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+            SRC $TOTAN 74))
+       ((MQUOTIENT
+            (74
+             "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+             SRC $TOTAN 74))
+        1
+        ((%SQRT (74
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $TOTAN 74))
+         ((MPLUS (74
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $TOTAN 74))
+          1
+          ((MEXPT (74
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TOTAN 74))
+           $T 2))))
+       ((%COS (74
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $TOTAN 74))
+        $V)
+       $E)
+      (($RATSUBST
+           (75
+            "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+            SRC $TOTAN 74))
+       ((MQUOTIENT
+            (75
+             "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+             SRC $TOTAN 74))
+        $T
+        ((%SQRT (75
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $TOTAN 74))
+         ((MPLUS (75
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $TOTAN 74))
+          1
+          ((MEXPT (75
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TOTAN 74))
+           $T 2))))
+       ((%SIN (75
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $TOTAN 74))
+        $V)
+       $%%)))
+    MEXPR) 
+(ADD2LNC '(($TOTAN) $E $V) $FUNCTIONS) 
+(MDEFPROP $TOTAN2
+    ((LAMBDA) ((MLIST) $E $V)
+     ((MPROGN (84
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $TOTAN2 84))
+      (($RATSUBST
+           (84
+            "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+            SRC $TOTAN2 84))
+       ((MQUOTIENT
+            (84
+             "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+             SRC $TOTAN2 84))
+        ((MPLUS (84
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $TOTAN2 84))
+         1
+         ((MMINUS (84
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TOTAN2 84))
+          ((MEXPT (84
+                   "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                   SRC $TOTAN2 84))
+           $T 2)))
+        ((MPLUS (84
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $TOTAN2 84))
+         1
+         ((MEXPT (84
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $TOTAN2 84))
+          $T 2)))
+       ((%COS (84
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $TOTAN2 84))
+        $V)
+       $E)
+      (($RATSUBST
+           (85
+            "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+            SRC $TOTAN2 84))
+       ((MQUOTIENT
+            (85
+             "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+             SRC $TOTAN2 84))
+        ((MTIMES (85
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $TOTAN2 84))
+         2 $T)
+        ((MPLUS (85
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $TOTAN2 84))
+         1
+         ((MEXPT (85
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $TOTAN2 84))
+          $T 2)))
+       ((%SIN (85
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $TOTAN2 84))
+        $V)
+       $%%)))
+    MEXPR) 
+(ADD2LNC '(($TOTAN2) $E $V) $FUNCTIONS) 
+(MDEFPROP $MSTATE
+    ((LAMBDA) ((MLIST))
+     ((MPROGN (85
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $MSTATE 85))
+      (($PRINT (86
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MSTATE 85))
+       "  [fpprec,fpprintprec,display2d] = "
+       ((MLIST (86
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MSTATE 85))
+        $FPPREC $FPPRINTPREC $DISPLAY2D))
+      (($PRINT (87
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MSTATE 85))
+       "  [radexpand, domain] = "
+       ((MLIST (87
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MSTATE 85))
+        $RADEXPAND $DOMAIN))
+      (($PRINT (88
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MSTATE 85))
+       "  [algebraic,listarith,simp,simpsum] = "
+       ((MLIST (88
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MSTATE 85))
+        $ALGEBRAIC $LISTARITH $SIMP $SIMPSUM))
+      ((MDOIN (89
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $MSTATE 85))
+       $I
+       ((MLIST (89
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MSTATE 85))
+        1 2 3 5 6 7 8 9 10 11)
+       NIL NIL NIL NIL
+       (($PRINT (90
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $MSTATE 85))
+        "  "
+        (($INFOLISTS ARRAY
+             (90
+              "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+              SRC $MSTATE 85))
+         $I)
+        " =  "
+        (($EV (90
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $MSTATE 85))
+         (($INFOLISTS ARRAY
+              (90
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $MSTATE 85))
+          $I))))
+      (($PRINT (91
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MSTATE 85))
+       "   facts() = "
+       (($FACTS (91
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $MSTATE 85))))
+      (($PRINT (92
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MSTATE 85))
+       "   tellrat() = "
+       (($TELLRAT
+            (92
+             "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+             SRC $MSTATE 85))))
+      (($PRINT (93
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MSTATE 85))
+       "  ")))
+    MEXPR) 
+(ADD2LNC '(($MSTATE)) $FUNCTIONS) 
+(MDEFPROP $MATTRIB
+    ((LAMBDA) ((MLIST))
+     ((MPROGN (93
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $MATTRIB 93))
+      (($PRINT (94
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MATTRIB 93))
+       "   facts() = "
+       (($FACTS (94
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $MATTRIB 93))))
+      (($PRINT (95
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MATTRIB 93))
+       "   dependencies = " $DEPENDENCIES)
+      (($PRINT (96
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MATTRIB 93))
+       "   props = " $PROPS)
+      (($PRINT (97
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MATTRIB 93))
+       "  ")))
+    MEXPR) 
+(ADD2LNC '(($MATTRIB)) $FUNCTIONS) 
+(MDEFPROP $MCLEAN
+    ((LAMBDA) ((MLIST))
+     ((MPROGN (97
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $MCLEAN 97))
+      (($KILL (97
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $MCLEAN 97))
+       (($ALLBUT (97
+                  "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                  SRC $MCLEAN 97))
+        $MSTATE $MCLEAN $MATTRIB $RTT $TS $TO_ATAN $TO_ATAN2 $TOTAN
+        $TOTAN2 $QPLOT $FLL))
+      (($RESET (98
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MCLEAN 97))
+       $FPPRINTPREC $FPPREC $DISPLAY2D $RADEXPAND $DOMAIN)
+      (($PRINT (99
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MCLEAN 97))
+       "----- clean start")
+      (($PRINT (100
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $MCLEAN 97))
+       "  ")))
+    MEXPR) 
+(ADD2LNC '(($MCLEAN)) $FUNCTIONS) 
+(DEFPROP $FLL T EVFUN) 
+(ADD2LNC '$FLL $PROPS) 
+(MDEFPROP $FLL
+    ((LAMBDA) ((MLIST) $X)
+     ((MLIST (100
+              "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+              SRC $FLL 100))
+      (($FIRST (100
+                "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                SRC $FLL 100))
+       $X)
+      (($LAST (100
+               "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+               SRC $FLL 100))
+       $X)
+      (($LENGTH (100
+                 "C:/Documents and Settings/mike/My Documents/Google Drive/computationalmethods/maxima/pt1/mbe1util.mac"
+                 SRC $FLL 100))
+       $X)))
+    MEXPR) 
+(ADD2LNC '(($FLL) $X) $FUNCTIONS) 
+(MDEFPROP $NSET (NIL $VERSION 1.21) $PROPS) 
+(ADD2LNC '$NSET $PROPS) 
+(DEFPROP ${ %{ VERB) 
+(DEFPROP ${ "{" OP) 
+(SETF (GETHASH "{" *OPR-TABLE*) '${) 
+(ADD2LNC '"{" $PROPS) 
+(DEFPROP %{ ${ NOUN) 
+(DEFPROP $} "}" OP) 
+(SETF (GETHASH "}" *OPR-TABLE*) '$}) 
+(ADD2LNC '"}" $PROPS) 
+(DEFPROP $KRON_DELTA SIMP-KRON-DELTA OPERATORS) 
+(ADD2LNC '$KRON_DELTA $PROPS) 
+(DEFPROP $KRON_DELTA T OPERS) 
+(ADD2LNC '$KRON_DELTA $PROPS) 
+(DEFPROP $KRON_DELTA T $SYMMETRIC) 
+(ADD2LNC '$KRON_DELTA $PROPS) 
+(MDEFPROP $TRYLEVEL (NIL $MAXMIN 1) $PROPS) 
+(ADD2LNC '$TRYLEVEL $PROPS) 
+(MDEFPROP $MAXMIN (NIL $VERSION 1) $PROPS) 
+(ADD2LNC '$MAXMIN $PROPS) 
+(MDEFPROP $NUMMOD (NIL $VERSION 3) $PROPS) 
+(ADD2LNC '$NUMMOD $PROPS) 
+(DEFPROP $CONJUGATE SIMP-CONJUGATE OPERATORS) 
+(ADD2LNC '$CONJUGATE $PROPS) 
+(MDEFPROP $CONJUGATE (NIL $VERSION 1) $PROPS) 
+(ADD2LNC '$CONJUGATE $PROPS) 
+(DEFPROP %ERF_GENERALIZED $ERF_GENERALIZED NOUN) 
+(DEFPROP %ERF_GENERALIZED SIMP-ERF-GENERALIZED OPERATORS) 
+(ADD2LNC '%ERF_GENERALIZED $PROPS) 
+(DEFPROP %ERF_GENERALIZED T OPERS) 
+(ADD2LNC '%ERF_GENERALIZED $PROPS) 
+(DEFPROP %ERF_GENERALIZED T $ANTISYMMETRIC) 
+(ADD2LNC '%ERF_GENERALIZED $PROPS) 
+(DEFPROP $ERF_GENERALIZED %ERF_GENERALIZED VERB) 
+(DEFPROP $BETA SIMPBETA OPERATORS) 
+(ADD2LNC '$BETA $PROPS) 
+(DEFPROP $BETA T OPERS) 
+(ADD2LNC '$BETA $PROPS) 
+(DEFPROP $BETA T $SYMMETRIC) 
+(ADD2LNC '$BETA $PROPS) 
+(SETQ $LINENUM 14) 
+(SETQ *ALPHABET* (NCONC '(#\_ #\%) *ALPHABET*)) 
+(ADD2LNC '$INTEGERVALUED $FEATURES) 

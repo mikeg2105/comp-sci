@@ -1,0 +1,21 @@
+plottemplate=ascii_template()
+plot_ascii=read_ascii(filepath('plot.txt',subdir=['examples','data']),template=plottemplate)
+print,plot_ascii
+
+
+maroon_bells=read_binary('/usr/local/packages/rsi/idl_6.2/examples/data/surface.dat',$
+data_dims=[350,450],data_type=2,endian='little')
+tvscl,maroon_bells
+
+
+x=2*!PI/100*findgen(100)
+plot,sin(x)
+plot,sin(x)
+plot,sin(2*x)
+oplot,sin(3*x)
+
+plot, plot_ascii.time, plot_ascii.temp1
+plot, plot_ascii.time, plot_ascii.temp1,title='temperature versus time',$
+xtitle='time in seconds',ytitle='temperature (celsius)'
+
+live_plot,plot_ascii.Temp1,plot_ascii.Temp2

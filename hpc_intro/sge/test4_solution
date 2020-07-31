@@ -1,0 +1,55 @@
+#!/bin/bash 
+#
+#$ -j y
+#$ -l h_rt=00:25:00
+#$ -m bea  -M savasbox@gmail.com
+#
+#   Running your jobs in batch:
+# 
+#  It is likely that you have a program that reads
+#  some data from the keyboard and/or files
+#  and writes some results out to the screen and/or files.
+#
+#  You now want to run this program in batch. 
+#  
+#   
+#  An example program named <optpath> resides in this directory.
+#  This program calculates the shortest-distance-path between any 
+#  two nodes in a graph. 
+#  An example data file named <graph.dat> contains the complete 
+#  definition of a topology as a set of links connecting the nodes.
+#  An example sequence of commands for this program is listed
+#  in a file named <optpath.dat> .
+# Your tasks are as follows:
+#  (1) Run <optpath>  on its own to see what it expects as input. 
+#  (2) Study the contents of <optpath.dat> and <graph.dat> 
+#    
+#  (3) Prepare a job submission script which will
+#       run <optpath> and use <optpath.dat> as its input.  
+#  (4) Submit this script to SGE.
+#  (5) using -m and -M options email yourself about the 
+#       progress of your job and submit the job again.
+#  
+#  Before submitting long-running batch jobs it is important to estimate
+#  a generous time period during which your job will 
+#  run to completion. This is vitally important as you do not want 
+#  your job to abort because you ran out of time. 
+# There are various commands for checking the compute times used.
+# Also if you use the -m e and -M options, time needed to run your job 
+# will be emailed to you. 
+#  Linux commands to help you time your jobs are; 
+#             time  , times and timeused .
+#       type 
+#       -  man -s1 time : to find out about the time command
+#       -  man times  : to find out about the times command.
+#       -  timeused   :to find out more 
+#      
+# 
+#  (6) Select a suitable timer command to time your run.
+#       Using the reported values you can now predict your h_rt needs.      
+
+  export TIMECOUNTER=0
+ source timeused
+ ./optpath < optpath.dat
+ source timeused 
+

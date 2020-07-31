@@ -1,0 +1,29 @@
+#!/bin/bash 
+#
+#$ -l h_rt=00:05:00
+#
+#   Running your jobs:
+#  
+#   This directory contains an artificial program that 
+#  calculates the effect of quotas on the fish stocks.
+#   A technically simple problem, the politicians prefer  
+#   not to know about!
+#   
+#  The program is named <fish> and resides in this directory.
+#  Your task is to run this program under SGE using qsub. 
+#  The following steps are advisable: 
+#  (1) Run the program interactively to see what it does 
+#      and what input it expects from the user.
+#  (2) Create an input file which will contain the 
+#      expected input data ' that you would normally 
+#      enter at the keyboard'.
+#  (3) Prepare a job submission script which will 
+#        -read the data from your input file
+#        -write the results into a job output file 
+#         or another file of your choice.
+#  (4) Submit the script to SGE.
+#  (5) Add commands to join the error and normal output into one single file
+#      and also to email you about the progress of your job. 
+#  
+
+

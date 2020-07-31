@@ -1,0 +1,44 @@
+#Make include file
+
+# to use gccnag use 
+
+
+CC = gcc
+
+
+NAGDIR = /usr/local/packages5/nag/cll6a09dgl
+
+
+#comment these to remove default settings
+FLAGS = -Wall -I/usr/local/include
+LIBS = -L/usr/local/lib  -lm
+LINKFLAGS = -g  -Wall -I/usr/local/include
+
+#uncomment these to use GSL library
+#FLAGS = -DUSE_GSL -Wall -I/usr/local/include
+#LIBS = -L/usr/local/lib -lgsl -lgslcblas -lm
+#LINKFLAGS = -g -Wall -DUSE_GSL -Wall -I/usr/local/include
+
+#uncomment these to use NAG with gccnag compiler
+#don't forget 
+# module add compilers/gcc
+#CC = gccnag
+#FLAGS = -DUSE_NAG -Wall -I/usr/local/include
+#LIBS = -L/usr/local/lib ${NAGDIR}/lib/libnagc_nag.a -lm
+#LINKFLAGS = -g  -Wall -DUSE_NAG  -I/usr/local/include
+
+
+#uncomment these to use NAG with gcc compiler don't forget 
+# module add compilers/gcc
+#FLAGS = -DUSE_NAG -Wall -I/usr/local/include -I${NAGDIR}/include ${NAGDIR}/lib/libnagc_nag.a
+#LIBS = -L/usr/local/lib ${NAGDIR}/lib/libnagc_nag.a -lm
+#LINKFLAGS = -g  -Wall -DUSE_NAG  -I/usr/local/include  -I${NAGDIR}/include ${NAGDIR}/lib/libnagc_nag.a
+
+CLINKER = ${CC}
+
+
+
+
+
+VPATH = src:../src
+INCLUDE = 

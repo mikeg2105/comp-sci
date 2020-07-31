@@ -1,0 +1,7 @@
+#Makefile for mc model
+CC = g++
+CLINKER = ${CC}
+FLAGS = -ggdb -Wall -g3
+LIBS = -lm
+LINKFLAGS = 
+VPATH = src:../include

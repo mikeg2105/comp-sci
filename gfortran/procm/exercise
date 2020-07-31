@@ -1,0 +1,40 @@
+		  Exercises for Procedures and Modules
+		  ====================================
+
+1. Write a program that calls a funtion to sum all of the integers
+   between min and max.  Set min and max to be optional keyword
+   arguments which default to 1 and 10 respectively.  (opt_par.f90)
+
+2. Look at program err_main.f90 and err_sub.f90. Compile and run.
+   What is wrong?  Rewrite in a better way in Fortran 90.
+
+3. Write a recursive function to calculate the nth value of the
+   Fibonacci sequence.  Notice that fib(1) = 1, fib(2) = 1, fib(i) =
+   fib(i-1) + fib(i-2) i.e.  1, 1, 2, 3, 5, 8, 13, ...  (fibon.f90)
+
+4. Write a program which defines a generic function to return the
+   maximum absolute value of two variables, for real, integer and
+   complex variable types.  (maxabs.f90)
+
+5. Write a module which defines kind values for single and double
+   precision real variables, and a main program which uses this module
+   and can be changed from single to double precision by changing a
+   single value.  (prec.f90, prec_mod.f90)
+
+6. Look at the program generic.f90.  Modify this program to include a
+   function for swapping two variables of type (point) by using module, 
+   where 'point' is defined with two real variables.  
+   (gen_mod.f90, swap_mod.f90)
+
+7. Look at the program money.f90.  From these code fragments, construct
+   a module that allows you to run the program mon_main.f90.
+   (mon_main.f90, mon_mod.f90)
+
+8. Write a module which defines a vector type with x and y components
+   and the associated operators '+' and '-' overloading, and a main program
+   which uses this module to apply all associated operators overloading 
+   to the variables of derived type vector. 
+   (vec_main.f90, vec_mod.f90)
+
+
+

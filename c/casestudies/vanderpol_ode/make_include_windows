@@ -1,0 +1,20 @@
+#Make include file
+
+
+
+CC = g++
+CLINKER = ${CC}
+
+#uncomment these flags to enable the GLUT
+#LINKFLAGS = -L"C:\MinGW\lib"  -DUSE_GLUT -lfreeglut_static -lglu32 -lopengl32 -lwinmm -lgdi32 -Wl,--subsystem,windows
+#FLAGS = -D FREEGLUT_STATIC -DUSE_GLUT -I"C:\MinGW\freeglut\include"
+
+
+#comment these to enable Glut
+LINKFLAGS = 
+FLAGS = 
+
+
+
+VPATH = src:../src
+INCLUDE = 

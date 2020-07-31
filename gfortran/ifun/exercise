@@ -1,0 +1,6 @@
+		     Exercises for Intrinsic Functions
+                     ---------------------------------
+
+Look at the programs char_int.f90, model.f90, mod_int.f90
+and convert.f90 and run them. Notice how these programs use instrinsic 
+functions for certain purposes. 

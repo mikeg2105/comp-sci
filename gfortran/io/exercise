@@ -1,0 +1,6 @@
+		     Exercises for Input/Output
+                     ---------------------------------
+
+Look at the programs non_adv.f90, inquire.f90, namelist.f90,
+edit1.f90, edit2.f90, and io_spec.f90, and run them.
+Notice how these programs use new I/O facilities. 

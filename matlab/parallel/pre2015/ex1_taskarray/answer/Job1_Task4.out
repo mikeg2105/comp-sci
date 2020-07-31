@@ -1,0 +1,28 @@
+Executing: 
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2010 The MathWorks, Inc.
+                Version 7.12.0.635 (R2011a) 64-bit (glnxa64)
+                               March 18, 2011
+
+ 
+  To get started, type one of these: helpwin, helpdesk, or demo.
+  For product information, visit www.mathworks.com.
+ 
+2012-02-28 07:09:13 | About to construct the storage object using constructor "makeFileStorageObject" and location "PC{}:UNIX{/home/cs1mkg/courses/matlab_examples/dct/ex1_taskarray/answer}:"
+2012-02-28 07:09:13 | Logging to /home/cs1mkg/courses/matlab_examples/dct/ex1_taskarray/answer/Job1/Task4.java.log
+2012-02-28 07:09:13 | About to find job proxy using location "Job1"
+2012-02-28 07:09:13 | About to find task proxy using location "Job1/Task4"
+2012-02-28 07:09:13 | Completed pre-execution phase
+2012-02-28 07:09:13 | About to pPreJobEvaluate
+2012-02-28 07:09:14 | About to pPreTaskEvaluate
+2012-02-28 07:09:14 | About to add job dependencies
+2012-02-28 07:09:14 | About to call jobStartup
+2012-02-28 07:09:14 | About to call taskStartup
+2012-02-28 07:09:14 | About to get evaluation data
+2012-02-28 07:09:14 | Begin task function
+2012-02-28 07:09:14 | End task function
+2012-02-28 07:09:14 | About to call taskFinish
+2012-02-28 07:09:14 | About to call pPostTaskEvaluate
+2012-02-28 07:09:14 | About to call pPostJobEvaluate
+2012-02-28 07:09:15 | About to exit MATLAB normally

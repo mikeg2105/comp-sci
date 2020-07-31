@@ -1,0 +1,29 @@
+#!/bin/bash
+#
+#  A simple job submission script. 
+#  Tasks:
+#  (1) Submit this job to the batch queue on iceberg by using qsub.
+#  (2) Using Qstat monitor your job.
+#  (3) Study the output files from this job 
+#  (4) From the output file(s) find out the name of the worker
+#        that ran your job.
+
+echo "This job was started on/time:  `date` "
+echo 'This job was run on : ' $HOSTNAME
+ 
+# The following use of command 'sleep' makes the process go to sleep.
+# It is there, simply to allow you to be able to
+# glimps at your jobs via the qstat command by lingering the job! 
+
+
+echo 'We are working in directory:' `pwd`
+echo ' This directory contains:' 
+ls -mf
+
+sleep 30
+
+echo ' The sun Grid Engine Related Environment Variables are:' 
+set | grep 'SGE_'
+
+echo 'Have a good day' $me 'Your job is finished.'  
+ 

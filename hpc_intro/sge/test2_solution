@@ -1,0 +1,29 @@
+#!/bin/bash
+#$ -cwd
+#$ -l h_rt=00:02:00
+#
+#  In this example we will attempt to merge the
+#  normal output  *.o*  and error output *.e* files
+#  for a job.
+#    
+#   
+#  Your tasks are: 
+#  
+#  (1) Submit this script to the batch queue.
+#  (2) Study the output. There is something wrong.
+#      Locate the error and the error messages. 
+#  (3) Use the appropriate qsub parameters to merge 
+#      both the normal and error outputs into a single file
+#      so that the location of the error is more easy to find.
+#   
+#
+module load compilers/intel
+today=`date`
+me=`whoami`
+echo " The currently used shell is : $SHELL "
+echo "This job was started on/time: $today  by $me "
+echo 'This job was run on : ' $HOSTNAME
+rm a.out
+ifort  fish.f90 
+ ./a.out  < myfishin.in
+ 

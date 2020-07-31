@@ -1,0 +1,25 @@
+#!/bin/bash 
+#
+#$ -j y
+#$ -l h_rt=00:05:00
+#$ -t 1-4 
+#
+#
+# Modify test3 script so that four seperate jobs are submitted
+# simultaneously as an SGE JOB ARRAY.
+#  
+#
+# Each one of the four jobs will pick just one of the job input files 
+#  (fish1.in, fish2.in and fish3.in fish4.in) and will write the output into 
+#  a correspondingly numbered output file. 
+# For example; the output for fish1.in will be written into a file named fish1.out 
+#
+# HINT : An environment variable named $SGE_TASK_ID contains the job_array ID. 
+#        For example for job number 2 , $SGE_TASK_ID will be set to 2 . 
+#       
+#        When an $environment_variable is used in a command line its value gets 
+#        substituted.   So,   myfile${SGE_TASK_ID}.dat  will read as myfile2.dat 
+#        for job number 2. 
+./fish < fish${SGE_TASK_ID}.in  > fish${SGE_TASK_ID}.out 
+
+

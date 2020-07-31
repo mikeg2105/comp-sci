@@ -1,0 +1,1 @@
+ Examples to test performance differences using vectorization 

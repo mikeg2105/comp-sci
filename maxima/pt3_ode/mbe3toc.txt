@@ -1,0 +1,55 @@
+Maxima by Example, Chapter 3,
+  Ordinary Differential Equation Tools
+  
+3.1 Solving Ordinary Differential Equations
+
+3.2 Solution of One First Order Ordinary Differential Equation (ODE)
+
+3.2.1 Summary Table
+
+3.2.2 Exact Solution with ode2 and ic1
+
+3.2.3 Exact Solution with desolve
+
+3.2.4 Numerical Solution and Plot with plotdf
+
+3.2.5 Numerical Solution with Fourth Order Runge-Kutta: rk
+
+3.3  Solution of One Second Order or Two First Order ODE's
+
+3.3.1  Summary Table
+
+3.3.2  Exact Solution with ode2, ic2, and eliminate
+
+3.3.3  Exact Solution with desolve, atvalue, and eliminate
+
+3.3.4  Numerical Solution and Plot with plotdf
+
+3.3.5  Numerical Solution with Fourth Order Runge-Kutta: rk
+
+3.4 Examples of ODE Solutions
+
+3.4.1  Ex.1: Fall in Gravity with Air Friction: Terminal Velocity
+
+3.4.2  Ex.2: One Nonlinear First Order ODE
+
+3.4.3  Ex.3: One First Order ODE Which is Not Linear in Y'
+
+3.4.4  Ex.4: Linear Oscillator with Damping
+
+3.4.5  Ex.5: Underdamped Linear Oscillator with Sinusoidal Driving Force
+
+3.4.6  Ex.6: Regular and Chaotic Motion of a Driven Damped Planar Pendulum
+
+3.4.7     Free Oscillation Case
+
+3.4.8     Damped Oscillation Case
+
+3.4.9     Including a Sinudoidal Driving Torque
+
+3.4.10    Regular Motion Parameters Case
+
+3.4.11    Chaotic Motion Parameters Case
+
+3.5  Using contrib_ode for ODE's
+

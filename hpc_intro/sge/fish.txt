@@ -1,0 +1,44 @@
+ 
+  Simulation of fishing.
+
+
+F = total fish stock in weight units (tons)
+B = total number of boats fishing.
+P = price of fish (per ton)
+c = fish catch per time unit ( month)
+r = restocking of fish per time unit ( months )
+
+
+1)	F = f( r , c )   
+2)	B = f( F , P , c)
+3)	P = f( c )
+4)	c = f( F ,B , P ) 
+5)	r = f( F ) 
+
+
+Explanations : 
+
+(1) fish stock (F) varies +vely with reproduction(r),  -vely with catching(c)
+   
+(2) Number of boats out fishing is determined by the price of fish and 
+    amount of fish which is there.
+
+(3) Price depends on fish caught
+
+(4) fish catch depends on number of boats fishing , fish stock and price 
+
+(5) reproduction rate vary with the total stock. This is a simplification
+    as it varies with the mature stock which will introduce a time delay 
+     which we will ignore to simplify.
+
+   Run this simulation with different parameters for the model.
+
+
+ One example : 
+       F = F*r - c
+       B = F/1000 - P*10 + c/100
+       P = 1/c
+       c = B*100 if F>F0 otherwise B*(100 - 100(F0-F)/F0 )
+       r = 0.01 for F>F0 otherwise r = 0.01 - 0.01(F0- F)^2/F0  
+
+ 

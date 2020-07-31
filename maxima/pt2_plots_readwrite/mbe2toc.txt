@@ -1,0 +1,86 @@
+  file mbe2toc.txt  contains the table of contents
+   for Maxima by Example, Chapter 2:
+   Plots, Files, Read, Write, and Fit
+
+    Edwin L Woollett, October, 2011
+    woollett@charter.net
+    http://www.csulb.edu/~woollett
+
+
+
+2.1 Introduction to plot2d
+
+2.1.1 First Steps with plot2d
+
+2.1.2 Parametric Plots
+
+2.1.3 Can We Draw a Circle?
+
+2.1.4 Line Width and Color Controls
+
+2.1.5 Discrete Data Plots: Point Size, Color, and Type Control
+
+2.1.6 More gnuplot_preamble Options
+
+2.1.7 Creating Various Kinds of Graphics Files using plot2d
+
+2.1.8 Using qplot for Quick Plots of One or More Functions
+
+2.1.9 Plot of a Discontinuous Function
+
+2.1.10 Multiple Plots Using the Embedded Option
+
+
+2.2 Working with Files Using the Package mfiles.mac
+
+2.2.1  Check File Existence with file_search or probe_file
+
+2.2.2  Check for File Existence using ls or dir
+
+2.2.3  Type of File, Number of Lines, Number of Characters
+
+2.2.4  Print All or Some Lines of a File to the Console
+
+2.2.5  Rename a File using rename_file
+
+2.2.6  Delete a File with delete_file
+
+2.2.7  Copy a File using copy_file
+
+2.2.8  Change the File Type using file_convert
+
+2.2.9  Breaking File Lines with pbreak_lines or pbreak()
+
+2.2.10 Search Text Lines for Strings with search_file
+
+2.2.11 Search for a Text String in Multiple Files with search_mfiles
+
+2.2.12 Replace Text in File with ftext_replace
+
+2.2.13 Email Reply Format using reply_to
+
+2.2.14 Reading a Data File with read_data
+
+2.2.15 File Lines to List of Strings using read_text
+
+2.2.16 Writing Data to a Data File One Line at a Time using with_stdout
+
+2.2.17 Creating a Data File from a Nested List using write_data
+
+
+
+
+2.3 Least Squares Fit to Experimental Data
+
+2.3.1 Maxima and Least Squares Fits: lsquares_estimates
+
+2.3.2 Syntax of lsquares_estimates
+
+2.3.3 Coffee Cooling Model
+
+2.3.4 Experiment Data for Coffee Cooling
+
+2.3.5 Least Squares Fit of Coffee Cooling Data
+
+
+
