@@ -12,7 +12,7 @@ Simulation
   Simulation Type = Transient
   Steady State Max Iterations = 1
   Output Intervals(1) = 1
-  Timestep intervals(1) = 3
+  Timestep intervals(1) = 60
   Timestep Sizes(1) = 1
   Timestepping Method = BDF
   BDF Order = 1
@@ -97,6 +97,8 @@ Material 1
   Heat Capacity = 4183.0
   Sound Damping = Real 0.0
   Sound Reaction Damping = Real 0.0
+  Sound Source = Variable Time
+     Real MATC "10*sin(30*tx)"
 End
 
 
@@ -105,8 +107,8 @@ Boundary Condition 1
   Target Boundaries(1) = 1 
   Name = "BoundaryCondition 1"
   Pressure Velocity = Real 10
-  Excess Pressure = Variable  "Time"
-      Real MATC "10*sin(tx)"
+  Excess Pressure = Variable  "Time, Coordinate "
+      Real MATC "1000*sin(0.20944*tx(0))*exp(-(tx(1)-19)*(tx(1)-19)/400)*exp(-(tx(2)-5.55)*(tx(2)-5.55)/36)"
 End
 
 Boundary Condition 2
