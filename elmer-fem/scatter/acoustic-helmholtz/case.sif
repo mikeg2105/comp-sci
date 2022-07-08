@@ -12,43 +12,30 @@ Simulation
   Simulation Type = Transient
   Steady State Max Iterations = 1
   Output Intervals(1) = 10
-  Timestep intervals(1) = 500
+  Timestep intervals(1) = 100
   Timestep Sizes(1) = 0.1
   Timestepping Method = BDF
   BDF Order = 1
-  Angular Frequency = 18812.0
   Solver Input File = case.sif
   Post File = case.vtu
 End
 
 Constants
   Gravity(4) = 0 -1 0 9.82
-  Stefan Boltzmann = 5.670374419e-08
-  Permittivity of Vacuum = 8.85418781e-12
+  Stefan Boltzmann = 5.67e-08
+  Permittivity of Vacuum = 8.8542e-12
   Permeability of Vacuum = 1.25663706e-6
-  Boltzmann Constant = 1.380649e-23
-  Unit Charge = 1.6021766e-19
+  Boltzmann Constant = 1.3807e-23
+  Unit Charge = 1.602e-19
 End
 
 Body 1
   Target Bodies(1) = 1
-  Name = "Body 1"
+  Name = "Body Property 1"
   Equation = 1
   Material = 1
-  Initial Condition = 1
   Body Force = 1
 End
-
-Body 2
-  Target Bodies(1) = 2
-  Name = "Body 2"
-  Equation = 2
-  Material = 1
-End
-
-
-
-
 
 Solver 1
   Equation = WaveSolver Equation
@@ -75,18 +62,7 @@ Solver 1
   Linear System Precondition Recompute = 1
 End
 
-Initial Condition 1
-  Pressure Velocity = Real 0.1
-  Excess Pressure = Real 0.1
-End
-
-
 Equation 1
-   Name = "WaveSolver Equation"
-  Active Solvers(1) = 1
-End
-
-Equation 2
   Name = "WaveSolver Equation"
   Active Solvers(1) = 1
 End
@@ -94,36 +70,38 @@ End
 Body Force 1
   Name = "BodyForce 1"
   Sound Source = Variable  "Time, Coordinate "
-      Real MATC "0.1*sin(2351*tx(0))*exp(-(tx(1)-18)*(tx(1)-18)/0.01)*exp(-(tx(2)-1.7)*(tx(2)-1.7)/0.01)"
-
+      Real MATC "100*sin(546*tx)*exp(-(tx(1)-0.2)*(tx(1)-0.2)/0.01)*exp(-(tx(2)-0.15)*(tx(2)-0.15)/0.01)"
 End
 
 Material 1
-  Name = "Water (room temperature)"
-  Sound speed = 1497.0
-  Heat Conductivity = 0.58
-  Viscosity = 1.002e-3
-  Heat expansion Coefficient = 0.207e-3
-  Relative Permittivity = 80.1
-  Density = 998.3
-  Heat Capacity = 4183.0
-  Sound Damping = Real 0.5
+  Name = "Material 1"
+  Sound damping = 0.0
+  Sound speed = 343
+  Density = 1.224
+  Sound Damping = Real 0.1
   Sound Reaction Damping = Real 0.0
+  Sound Source = Variable  "Time, Coordinate "
+      Real MATC "sin(tx*546)*exp(-(tx(1)-0.2)*(tx(1)-0.2)/0.01)*exp(-(tx(2)-0.15)*(tx(2)-0.15)/0.01)"
 End
-
-
 
 Boundary Condition 1
   Target Boundaries(1) = 1 
-  Name = "BoundaryCondition 1"
-  Pressure Velocity = Real 0
+  Name = "Constraint1"
+  Pressure Velocity = Real 1
+  Excess Pressure = Real 1
+
 End
 
 Boundary Condition 2
   Target Boundaries(1) = 2 
-  Name = "BoundaryCondition 2"
+  Name = "Constraint2"
   Pressure Velocity = Real 0
+  Excess Pressure = Real 0.1
 End
 
-
-
+Boundary Condition 3
+  Target Boundaries(1) = 3 
+  Name = "Constraint3"
+  Pressure Velocity = Real -1
+  Excess Pressure = Real 0.01
+End

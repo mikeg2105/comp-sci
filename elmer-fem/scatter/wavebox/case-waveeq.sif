@@ -108,7 +108,7 @@ Boundary Condition 1
   Name = "BoundaryCondition 1"
   Pressure Velocity = Real 10
   Excess Pressure = Variable  "Time, Coordinate "
-      Real MATC "1000*sin(0.20944*tx(0))*exp(-(tx(1)-19)*(tx(1)-19)/400)*exp(-(tx(2)-5.55)*(tx(2)-5.55)/36)"
+      Real MATC "1*sin(2*tx(0))*exp(-(tx(1)+2)*(tx(1)+2)/2)*exp(-(tx(2)-1.7)*(tx(2)-1.7)/2)"
 End
 
 Boundary Condition 2
