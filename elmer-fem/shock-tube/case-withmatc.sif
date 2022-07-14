@@ -1,0 +1,163 @@
+Header
+  CHECK KEYWORDS Warn
+  Mesh DB "." "."
+  Include Path ""
+  Results Directory ""
+End
+
+Simulation
+  Max Output Level = 5
+  Coordinate System = Cartesian
+  Coordinate Mapping(3) = 1 2 3
+  Simulation Type = Transient
+  Steady State Max Iterations = 1
+  Output Intervals(1) = 1
+  Timestep intervals(1) = 100
+  Timestep Sizes(1) = 0.001
+  Timestepping Method = BDF
+  BDF Order = 1
+  Solver Input File = case.sif
+  Post File = case.vtu
+End
+
+Constants
+  Gravity(4) = 0 -1 0 9.82
+  Stefan Boltzmann = 5.670374419e-08
+  Permittivity of Vacuum = 8.85418781e-12
+  Permeability of Vacuum = 1.25663706e-6
+  Boltzmann Constant = 1.380649e-23
+  Unit Charge = 1.6021766e-19
+End
+
+
+Body 1
+  Equation = 1
+  Material = 1
+  Initial Condition = 1
+End
+
+
+Material 1
+  Compressibility Model = String "Perfect Gas"
+  Reference Pressure = 1e5
+  Specific Heat Ratio = 1.4
+  Viscosity = 16.7e-6
+  Heat Conductivity = 0.026
+  Heat Capacity = 1.01e3
+End
+
+
+
+
+
+
+Solver 1
+  Equation = "Navier-Stokes"
+  Linear System Solver = "Iterative"
+  Linear System Iterative Method = "BiCGStab"
+  Linear System Max Iterations = 500
+  Linear System Convergence Tolerance = 1.0e-08
+  Linear System Abort Not Converged = True
+  Linear System Preconditioning = "ILU2"
+  Linear System Residual Output = 1
+  Steady State Convergence Tolerance = 1.0e-05
+  Bubbles = Logical True
+  Nonlinear System Convergence Tolerance = 1.0e-05
+  Nonlinear System Max Iterations = 1
+  Nonlinear System Newton After Iterations = 3
+  Nonlinear System Newton After Tolerance = 1.0e-02
+  Nonlinear System Relaxation Factor = 1
+End
+
+
+Solver 2
+  Equation = "Heat Equation"
+  Variable = "Temperature"
+  Linear System Solver = "Iterative"
+  Linear System Iterative Method = "BiCGStab"
+  Linear System Max Iterations = 350
+  Linear System Convergence Tolerance = 1.0e-08
+  Linear System Preconditioning = "ILU0"
+  Linear System Residual Output = 1
+  Steady State Convergence Tolerance = 1.0e-05
+  Bubbles = Logical True
+  Nonlinear System Convergence Tolerance = 1.0e-05
+  Nonlinear System Max Iterations = 1
+  Nonlinear System Newton After Iterations = 3
+  Nonlinear System Newton After Tolerance = 1.0e-02
+  Nonlinear System Relaxation Factor = 1
+End
+
+
+
+
+
+
+
+Equation 1
+  Navier-Stokes = True
+  Heat Equation = True
+  Convection = "Computed"
+End
+
+Material 1
+  Name = "Air (room temperature)"
+  Heat expansion Coefficient = 3.43e-3
+  Heat Conductivity = 0.0257
+  Density = 1.205
+  Heat Capacity = 1005.0
+  Sound speed = 343.0
+  Relative Permittivity = 1.00059
+  Viscosity = 1.983e-5
+End
+
+Initial Condition 1
+  Name = "InitialCondition 1"
+  Velocity 3 = 0
+  Velocity 1 = 0
+  Velocity 2 = 0
+  Temperature = 300
+Pressure = Variable "Coordinate 1"
+  Real MATC "1+99*(1/(1+exp(-100*(tx-0.5))))"
+Density = Variable "Coordinate 1"
+  Real MATC "1+(1/(1+exp(-100*(tx-0.5))))"
+Temparature = Variable "Coordinate 1"
+  Real MATC "1+(1/(1+exp(-100*(tx-0.5))))"
+
+End
+
+
+Boundary Condition 1
+  Target Boundaries = 1
+  Velocity 1 = Variable Coordinate 2
+  Real 
+    0.1    0
+    0.15   0.02
+    0.2    0
+  End
+
+  Velocity 2 = 0
+  Temperature = Variable Coordinate 2
+  Real 
+    0.1    300
+    0.15   350
+    0.2    300
+  End
+End
+
+Boundary Condition 2
+  Target Boundaries = 2
+  Velocity 2 = 0
+End
+
+Boundary Condition 3
+  Target Boundaries = 3
+  Velocity 1 = 0
+  Velocity 2 = 0
+  Temperature = 300
+End
+
+
+
+
+
