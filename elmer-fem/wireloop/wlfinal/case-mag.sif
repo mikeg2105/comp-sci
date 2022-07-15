@@ -11,7 +11,7 @@ Simulation
   Coordinate Mapping(3) = 1 2 3
   Simulation Type = Steady state
   Steady State Max Iterations = 1
-  Angular Frequency = 1.0e3
+  Angular Frequency = 1.0e5
   Output Intervals(1) = 1
   Solver Input File = case.sif
   Post File = case.vtu
@@ -36,7 +36,7 @@ End
 Body 2
   Target Bodies(1) = 4
   Name = "Body Property 2"
-  Equation = 1
+  Equation = 2
   Material = 2
 End
 
@@ -102,11 +102,13 @@ End
 
 Equation 1
   Name = "Equation 1"
-  Angular Frequency = 1000
-  Active Solvers(2) = 1 2
+  Active Solvers(1) = 2
 End
 
-
+Equation 2
+  Name = "Equation 2"
+  Active Solvers(1) = 1
+End
 
 Material 1
   Name = "Iron (generic)"
@@ -130,8 +132,6 @@ Material 2
   Relative Permeability = 1.00000037
   Relative Permittivity = 1.00059
   Density = 1.205
-  Magnetization 1 = 250
-  Magnetization 2 = 1000
   Heat expansion Coefficient = 3.43e-3
   Heat Capacity = 1005.0
   Relative Permeability = 1
@@ -140,24 +140,22 @@ End
 
 Body Force 1
   Name = "BodyForce 1"
- Calculate Potential = True
+  Calculate Potential = True
   Current Density = 1000
 End
 
 Boundary Condition 1
   Target Boundaries(3) = 1 2 3 
   Name = "BoundaryCondition 1"
-
+  Potential Im = 0
+  Potential = 0
+  Potential Re = 0
 End
 
 Boundary Condition 2
   Target Boundaries(1) = 6 
   Name = "BoundaryCondition 2"
-
-End
-
-Boundary Condition 3
-  Target Boundaries(3) = 2 4 5 
-  Name = "BoundaryCondition 3"
-  Infinity BC = True
+  Potential = 1000
+  Potential Re = 10
+  Potential Im = 10
 End
