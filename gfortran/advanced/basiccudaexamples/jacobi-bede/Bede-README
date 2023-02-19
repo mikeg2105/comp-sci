@@ -1,0 +1,75 @@
+This is the NVIDIA Jacobi MPI demonstration code (see the accompanying README file) with
+some slight modifications to make its running on Bede simpler.
+
+There are two stages to running this benchmark code:
+1) Compile the codes using the included Makefile
+2) Run the codes using the included Slurm script as a template.
+
+1) Making the codes
+
+Prerequisites:
+--------------
+
+This demonstrator assumes you have loaded the module file
+OpenMPI/3.1.4-gcccuda-2019b
+
+This in term loads several secondary module files, the most important of
+which is CUDA/10.1.243-GCC-8.3.0.
+
+Makefile:
+---------
+
+The included Makefile has defined explicitly the environment variables
+MPI_HOME and CUDA_INSTALL_PATH consistent with the above module file.
+
+The compilation options have been simplified to target the V100 GPU only.
+
+The CFLAGS and NVCCFLAGS have been modified to work with gcc 8.3.0 
+(so -mcpu=native is used instead of -march=native).
+
+The target directory has been changed to be the current working directory
+rather than a separate bin directory.
+
+Type
+
+make all
+
+to make all of the required object files and the two executables - one
+which uses CUDA aware MPI and the other that uses normal MPI.
+
+2) Run the codes
+
+sbatch job script
+-----------------
+
+The sample script submits to two nodes, 8 GPUS in total. 
+
+The bede-mpirun wrapper is used to get an effective set of MPI processes, so
+there is one MPI process per GPU.
+
+The executables assume that the Jacobi iteration takes place on a 2D mesh of 
+MPI processes. At present the value of ROW and COL for the dimensions of this
+2D mesh are defined manually before the first bede-mpirun command.
+
+The second set of arguments passed to the excutables is the local grid dimensions
+for each GPU. The values currently assume a square 10,000 by 10,000 mesh on each GPU.
+There is sufficient memory on each of Bede's GPUs to support mesh sizes up to
+20,000 by 20,000.
+
+Interesting issues
+------------------
+
+Wisdom would suggest that the CUDA aware MPI executable would be faster than the
+normal MPI executable. This appears to be not the case and this discrepency has
+been observed on V100 GPUs with x86_64 processors as well with the Power9
+processors on Bede.
+
+The multi-node results on Bede do not appear to scale as they should.
+
+Both of the above are open issues and enlightenment from others would be
+greatly appreciated.
+
+Initial version:
+Cliff Addison
+July 2021.
+Module

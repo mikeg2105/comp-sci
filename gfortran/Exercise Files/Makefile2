@@ -1,0 +1,19 @@
+VAR='hello'
+VAR2='merry'
+VAR3='fun'
+VAR4=${VAR2:merry=planet}
+
+default:
+	echo ${VAR}
+	
+merry:
+	@echo ${VAR2} is $@
+
+fun: merry
+	@echo ${VAR3} is $@ and $<
+
+#use the @ symbol so that make does not echo the command	
+hay:
+	@echo ${VAR4}
+	
+

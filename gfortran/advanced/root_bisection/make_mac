@@ -1,0 +1,10 @@
+#Makefile for findrt2
+#FF = if90
+FF = gfortran
+FLINKER = ${FF}
+FLAGS = -g
+#FLAGS = -fast -O4 -tp k8-64
+#LIBS = -lm
+LINKFLAGS = 
+VPATH = .:../include
+

@@ -1,0 +1,37 @@
+/* [wxMaxima: input   start ] */
+M(v,c_s):=v/c_s;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+M(v_1,c_s1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+p_2(p_1,ρ_1,v_1,ρ_2):=p_1+ρ_1*v_1^2*(1-(ρ_1/ρ_2));
+v_2(p_1,ρ_1,v_1,ρ_2):=sqrt((v_1^2/2)+(γ*p_1/((γ-1)*ρ_1)-(γ*p_2/((γ-1)*ρ_2))));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+v_2(p_1,ρ_1,v_1,ρ_2):=sqrt((v_1^2/2)+(γ*p_1/((γ-1)*ρ_1)-(γ*p_2(p_1,ρ_1,v_1,ρ_2)/((γ-1)*ρ_2))));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+

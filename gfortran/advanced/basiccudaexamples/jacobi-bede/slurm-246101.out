@@ -1,0 +1,26 @@
+1  SLURM_JOB_NUM_NODES
+ SLURM_NTASKS
+32  SLURM_CPUS_ON_NODE
+gpu032.bede.dur.ac.uk
+Lmod has detected the following error: The following module(s) are unknown:
+"OpenMPI/3.1.4-gcccuda-2019b"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore-cache load "OpenMPI/3.1.4-gcccuda-2019b"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+which: no mpirun in (/opt/software/slurm/default/bin:/opt/software/slurm/default/sbin:/nobackup/projects/bdshe01/cs1mkg/miniconda3/bin:/nobackup/projects/bdshe01/cs1mkg/miniconda3/condabin:/opt/software/slurm/tools/1.2/bin:/opt/software/slurm/default/bin:/opt/software/slurm/default/sbin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/users/cs1mkg/.local/bin:/users/cs1mkg/bin:/users/cs1mkg/.local/bin:/users/cs1mkg/bin)
+/opt/software/slurm/tools/1.2/bin/bede-mpirun
+build CUDA Aware MPI
+mpicc -I/opt/software/eb/software/OpenMPI/3.1.4-gcccuda-2019b/include -I/opt/software/eb/software/CUDA/10.1.243-GCC-8.3.0/include -std=c99 -O3 -mcpu=native -Wall -c Jacobi.c -o jacobi.o
+make: mpicc: Command not found
+make: *** [jacobi.o] Error 127
+=========================================================
+SLURM job: finished date = Mon 2 Aug 19:31:23 BST 2021
+Total run time : 0 Hours 0 Minutes 1 Seconds
+=========================================================

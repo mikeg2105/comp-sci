@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="gfortcourse" />
+		<Option pch_mode="2" />
+		<Option compiler="gfortran" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/gfortcourse" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gfortran" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../Exercise Files/Chap 01/01_02/Exercise_1.2.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_02/Lesson_1.2_end_typo.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_02/Lesson_1.2_print_typo.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_02/Lesson_1.2_program_typo.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_03/Exercise_1.3.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_03/Lesson_1.3_function_typo.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_03/Lesson_1.3_program_name_typo.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_03/Lesson_1.3_variable_typo.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_04/Exercise_1.4.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_04/Lesson_1.4_argument_mismatch.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_04/Lesson_1.4_assignment_mismatch.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_04/Lesson_1.4_missing_declaration.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_05/Exercise_1.5.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_05/Lesson_1.5_function_call_parens_missing.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_05/Lesson_1.5_function_decl_parens_missing.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_05/Lesson_1.5_missing_declaration_comma.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 01/01_05/Lesson_1.5_print_comma_missing.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 02/02_02/Lesson_2.2_variable_demo.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 02/02_04/Lesson_2.4_named_constant.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 02/02_06/Lesson_2.6_expression_demonstration.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 02/02_07/Lesson_2.7_if_constructs.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 02/02_07/Lesson_2.7_select_case.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 02/02_08/Lesson_2.8_indexed_loops.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 02/02_08/Lesson_2.8_while_loop.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 02/02_09/Lesson_2.9_squares.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 03/03_02/Lesson_3.2_hello_user_pt1.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 03/03_02/Lesson_3.2_hello_user_pt2.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 03/03_03/Lesson_3.3_read_from_file.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 03/03_03/Lesson_3.3_write_to_file.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 03/03_05/Lesson_3.5_solution.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 04/04_03/Lesson_4.3_functions_and_subroutines.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/Chap 04/04_06/Lesson_4.6_solution.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../Exercise Files/arrays.f90">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../Exercise Files/athena/hydrostatsolatmos.f90">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../Exercise Files/athena/statbalancemod.f90">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../Exercise Files/badfort.f90">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../Exercise Files/geometry.f90">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../Exercise Files/hello">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../Exercise Files/ifanimal.f90">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../Exercise Files/io.f90">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../Exercise Files/maths.f90">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../Exercise Files/precision.f90">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../advanced/basiccudaexamples/basiccuda/device.cu" />
+		<Unit filename="../advanced/basiccudaexamples/basiccuda/matmul.cu" />
+		<Unit filename="../advanced/basiccudaexamples/basiccuda/my_max_min.cu" />
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/Bede-README" />
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/CUDA_Aware_MPI.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/CUDA_Normal_MPI.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/Device.cu" />
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/Host.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/Input.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/Jacobi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/Jacobi.doxygen" />
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/Jacobi.h" />
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/Makefile" />
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/README" />
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/jacobi-build-script" />
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/jacobi-gpu.250357" />
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/jacobi-mpigpu-script" />
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/jacobi_cuda_aware_mpi" />
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/jacobi_cuda_normal_mpi" />
+		<Unit filename="../advanced/basiccudaexamples/jacobi-bede/slurm-246101.out" />
+		<Unit filename="../advanced/basiccudaexamples/pgi_accelerator_examples/c1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../advanced/basiccudaexamples/pgi_accelerator_examples/c2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../advanced/basiccudaexamples/pgi_accelerator_examples/c3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../advanced/basiccudaexamples/pgi_accelerator_examples/f1.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/basiccudaexamples/pgi_accelerator_examples/f2.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/basiccudaexamples/pgi_accelerator_examples/f3.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/basiccudaexamples/pgi_accelerator_examples/makefile" />
+		<Unit filename="../advanced/basiccudaexamples/pgi_accelerator_examples/readme.txt" />
+		<Unit filename="../advanced/basiccudaexamples/pgi_accelerator_examples/sm.mod" />
+		<Unit filename="../advanced/diffuse/diffuse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../advanced/diffuse/diffuse.h" />
+		<Unit filename="../advanced/diffuse/diffuse_mpi" />
+		<Unit filename="../advanced/diffuse/diffuse_mpi.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/diffuse/diffuse_ompmpi.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/diffuse/diffuse_serial" />
+		<Unit filename="../advanced/diffuse/diffuse_serial.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/diffuse/diffusion.dat" />
+		<Unit filename="../advanced/f95features/createmodel.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/f95features/namelist-old.nml" />
+		<Unit filename="../advanced/f95features/namelist.nml" />
+		<Unit filename="../advanced/f95features/reader.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/f95features/readnamelist.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/f95features/readnamlist" />
+		<Unit filename="../advanced/f95features/temp.dat" />
+		<Unit filename="../advanced/f95features/writenamlist" />
+		<Unit filename="../advanced/f95features/writenamlist.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/mpi/E01-traffic.pdf" />
+		<Unit filename="../advanced/mpi/L00-overview_3day.pdf" />
+		<Unit filename="../advanced/mpi/L01-mpconcepts.pdf" />
+		<Unit filename="../advanced/mpi/L02-intro.pdf" />
+		<Unit filename="../advanced/mpi/L03-archer-mpi.pdf" />
+		<Unit filename="../advanced/mpi/L04-pt2pt.pdf" />
+		<Unit filename="../advanced/mpi/L06-modetagcomm.pdf" />
+		<Unit filename="../advanced/mpi/L07-nonblocking.pdf" />
+		<Unit filename="../advanced/mpi/L08-collective.pdf" />
+		<Unit filename="../advanced/mpi/L10-derivedtypes.pdf" />
+		<Unit filename="../advanced/mpi/L11-casestudy.pdf" />
+		<Unit filename="../advanced/mpi/L12-mpidesign.pdf" />
+		<Unit filename="../advanced/mpi/MPP-arralloc.tar" />
+		<Unit filename="../advanced/mpi/MPP-casesolns.tar" />
+		<Unit filename="../advanced/mpi/MPP-casestudy.pdf" />
+		<Unit filename="../advanced/mpi/MPP-casestudy.tar.gz" />
+		<Unit filename="../advanced/mpi/MPP-exercises.pdf" />
+		<Unit filename="../advanced/mpi/MPP-notes.pdf" />
+		<Unit filename="../advanced/mpi/MPP-pi.tar" />
+		<Unit filename="../advanced/mpi/MPP-solutions.tar" />
+		<Unit filename="../advanced/mpi/MPP-templates.tar" />
+		<Unit filename="../advanced/mpi/road-solution.pdf" />
+		<Unit filename="../advanced/mpi/road.pdf" />
+		<Unit filename="../advanced/nvidia-jacobi/CUDA_Aware_MPI.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../advanced/nvidia-jacobi/CUDA_Normal_MPI.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../advanced/nvidia-jacobi/Device.cu" />
+		<Unit filename="../advanced/nvidia-jacobi/Host.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../advanced/nvidia-jacobi/Input.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../advanced/nvidia-jacobi/Jacobi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../advanced/nvidia-jacobi/Jacobi.doxygen" />
+		<Unit filename="../advanced/nvidia-jacobi/Jacobi.h" />
+		<Unit filename="../advanced/nvidia-jacobi/Makefile" />
+		<Unit filename="../advanced/nvidia-jacobi/README" />
+		<Unit filename="../advanced/nvidia-jacobi/README.md" />
+		<Unit filename="../advanced/openmp/OpenMP-4.0-C.pdf" />
+		<Unit filename="../advanced/openmp/OpenMP-4.0-Fortran.pdf" />
+		<Unit filename="../advanced/root_bisection/Makefile" />
+		<Unit filename="../advanced/root_bisection/findrt" />
+		<Unit filename="../advanced/root_bisection/findrt.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/root_bisection/findrtmod.f90">
+			<Option weight="1" />
+		</Unit>
+		<Unit filename="../advanced/root_bisection/findrtmod2.f90">
+			<Option weight="2" />
+		</Unit>
+		<Unit filename="../advanced/root_bisection/findrtmod2.o" />
+		<Unit filename="../advanced/root_bisection/fort.1" />
+		<Unit filename="../advanced/root_bisection/funmod.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/root_bisection/make_mac" />
+		<Unit filename="../advanced/root_bisection/namelist" />
+		<Unit filename="../advanced/root_bisection/namelist.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/root_bisection/readnamelist" />
+		<Unit filename="../advanced/root_bisection/readnamelist.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/root_bisection/rootmod.f90">
+			<Option weight="1" />
+		</Unit>
+		<Unit filename="../advanced/root_bisection/rootmod.mod" />
+		<Unit filename="../advanced/root_bisection/rootmod.o" />
+		<Unit filename="../advanced/root_bisection/testfunctionmod.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/root_bisection/testfunctionmod.mod" />
+		<Unit filename="../advanced/root_bisection/testfunctionmod.o" />
+		<Unit filename="../advanced/root_bisection/testfunctionmod2.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/shallowwater/readme.txt" />
+		<Unit filename="../advanced/shallowwater/shallow" />
+		<Unit filename="../advanced/shallowwater/shallow-serial-lax.f">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/shallowwater/shallow-serial-lax.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/shallowwater/shallow-serial-mat.f">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/shallowwater/shallow-serial.f">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/shallowwater/shallow.f">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/shallowwater/shallow2" />
+		<Unit filename="../advanced/shallowwater/shallow2.f">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/testomp-mpi/matrix.f90" />
+		<Unit filename="../advanced/testomp-mpi/sum2.f90" />
+		<Unit filename="../advanced/testomp-mpi/testmpi.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/testomp-mpi/testomp.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../advanced/waves/hyper/runanimstringhyper1.f90" />
+		<Unit filename="../advanced/waves/io.f90" />
+		<Unit filename="../advanced/waves/laxsolver.f90" />
+		<Unit filename="../advanced/waves/laxwend.f90" />
+		<Unit filename="../advanced/waves/lparamdata.f90" />
+		<Unit filename="../advanced/waves/main.f90" />
+		<Unit filename="../advanced/waves/precision.f90" />
+		<Unit filename="../advanced/waves/runanimstringhyper1.f90">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../arrays/exercise" />
+		<Unit filename="../arrays/m_basis.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../arrays/matrix.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../arrays/spread" />
+		<Unit filename="../arrays/spread1.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../arrays/sum2.f">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/answers/data.txt" />
+		<Unit filename="../basics/answers/ex1bb.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/answers/ex1c.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/answers/ex2.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/answers/ex3.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/answers/ex4.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/answers/ex5a.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/answers/ex5b.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/answers/ex6.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/answers/ex7.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/answers/ex8.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/answers/ex8b.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/answers/ex9a.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/answers/ex9b.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/arith.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/data.txt" />
+		<Unit filename="../basics/hello.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../basics/readme.txt" />
+		<Unit filename="../ifun/char_int.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../ifun/convert.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../ifun/exercise" />
+		<Unit filename="../ifun/mod_int.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../ifun/model.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../integration/integral_simpson.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../integration/integral_trapezium.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../interpolation/interpol.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../io/edit1.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../io/edit2.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../io/exercise" />
+		<Unit filename="../io/inquire.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../io/io_spec.dat" />
+		<Unit filename="../io/io_spec.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../io/namelist.dat" />
+		<Unit filename="../io/namelist.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../io/non_adv.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../optpath/deniz3.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../optpath/gmon.out" />
+		<Unit filename="../optpath/opt" />
+		<Unit filename="../optpath/road-data.txt" />
+		<Unit filename="../pgi_accelerator_examples/c1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../pgi_accelerator_examples/c2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../pgi_accelerator_examples/c3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../pgi_accelerator_examples/f1" />
+		<Unit filename="../pgi_accelerator_examples/f1.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../pgi_accelerator_examples/f2.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../pgi_accelerator_examples/f3.f90">
+			<Option weight="1" />
+		</Unit>
+		<Unit filename="../pgi_accelerator_examples/makefile" />
+		<Unit filename="../pgi_accelerator_examples/readme.txt" />
+		<Unit filename="../pgi_accelerator_examples/sm.mod" />
+		<Unit filename="../pointers/exercise" />
+		<Unit filename="../pointers/polyline.dat" />
+		<Unit filename="../pointers/polyline.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../pointers/polyline.mod" />
+		<Unit filename="../pointers/simple.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../pointers/status.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../presentations/FIntroPart1.ppt" />
+		<Unit filename="../presentations/FIntroPart2.PPT" />
+		<Unit filename="../presentations/FIntroPart3.PPT" />
+		<Unit filename="../presentations/FIntroPart4.PPT" />
+		<Unit filename="../procm/err_main.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../procm/err_sub.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../procm/exercise" />
+		<Unit filename="../procm/generic.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../procm/money.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../root_bisection/Makefile" />
+		<Unit filename="../root_bisection/findrt" />
+		<Unit filename="../root_bisection/findrt.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../root_bisection/findrtmod.f90">
+			<Option weight="1" />
+		</Unit>
+		<Unit filename="../root_bisection/findrtmod2.f90">
+			<Option weight="2" />
+		</Unit>
+		<Unit filename="../root_bisection/findrtmod2.o" />
+		<Unit filename="../root_bisection/funmod.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../root_bisection/make_mac" />
+		<Unit filename="../root_bisection/namelist" />
+		<Unit filename="../root_bisection/namelist.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../root_bisection/out.txt" />
+		<Unit filename="../root_bisection/readnamelist" />
+		<Unit filename="../root_bisection/readnamelist.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../root_bisection/rootmod.f90">
+			<Option weight="1" />
+		</Unit>
+		<Unit filename="../root_bisection/rootmod.mod" />
+		<Unit filename="../root_bisection/rootmod.o" />
+		<Unit filename="../root_bisection/testfunctionmod.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../root_bisection/testfunctionmod.mod" />
+		<Unit filename="../root_bisection/testfunctionmod.o" />
+		<Unit filename="../root_bisection/testfunctionmod2.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../root_newton/newton.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../sdc/circle1.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../sdc/circle2.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../sdc/circle4.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../sdc/exercise" />
+		<Unit filename="../sdc/kind_int.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../sdc/mc_int.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../sdc/shell.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../sdc/square.dat" />
+		<Unit filename="../sdc/vehicle.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../shootingmethod/gmon.out" />
+		<Unit filename="../shootingmethod/mydoc.txt" />
+		<Unit filename="../shootingmethod/shoot" />
+		<Unit filename="../shootingmethod/shooting.f">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="../shootingmethod/startshooting.f90">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="incparams.inc" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

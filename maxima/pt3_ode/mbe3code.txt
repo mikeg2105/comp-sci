@@ -339,8 +339,8 @@ Maxima by Example, Chapter 3,
 
 (%i1) fpprintprec:8$
 (%i2) (nsteps : 31, ncycles : 240, a : 1/2, b : 1.15, w : 2/3)$
-(%i3) [dudt : v, dvdt : -sin(u) - a*v + b*cos(w*t),
-           T : float(2*%pi/w ) ];
+(%i3) 
+
 (%i4) [dt : T/nsteps, tmax : ncycles*T ];
 (%i5) tuvL : rk ([dudt,dvdt],[u,v],[0.8,0.8],[t,0,tmax, dt])$
 (%i6) %, fll;

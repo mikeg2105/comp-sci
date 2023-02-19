@@ -1,0 +1,9 @@
+! namelist.nml
+&EXAMPLE
+ X=0          ,
+ Y=2          ,
+ R=  4.00000000    ,  0.00000000    ,
+ PERSON%ID=-1         ,
+ PERSON%NAME="Poony Pie                       ",
+ PERSON%AGE=0          ,
+ /

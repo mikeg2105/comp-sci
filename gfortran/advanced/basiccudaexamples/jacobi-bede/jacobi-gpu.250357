@@ -1,0 +1,262 @@
+2  SLURM_JOB_NUM_NODES
+1  SLURM_NTASKS
+128  SLURM_CPUS_ON_NODE
+LD Library Path
+/opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib:/opt/software/builder/developers/compilers/cuda/10.2.89/1/default/lib64:/opt/software/builder/developers/compilers/gcc/8.4.0/1/default/lib64:/opt/software/builder/developers/compilers/gcc/8.4.0/1/default/lib:/opt/software/slurm/default/lib
+ Path
+/opt/software/slurm/default/bin:/opt/software/slurm/default/sbin:/opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/bin:/opt/software/builder/developers/compilers/cuda/10.2.89/1/default/bin:/opt/software/builder/developers/compilers/gcc/8.4.0/1/default/bin.wrapper:/opt/software/builder/developers/compilers/gcc/8.4.0/1/default/bin:/opt/software/slurm/default/bin:/opt/software/slurm/default/sbin:/nobackup/projects/bdshe01/cs1mkg/miniconda3/bin:/nobackup/projects/bdshe01/cs1mkg/miniconda3/condabin:/opt/software/slurm/tools/1.2/bin:/opt/software/slurm/default/bin:/opt/software/slurm/default/sbin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/users/cs1mkg/.local/bin:/users/cs1mkg/bin:/users/cs1mkg/.local/bin:/users/cs1mkg/bin
+/opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/bin/mpirun
+/opt/software/slurm/tools/1.2/bin/bede-mpirun
+gpu020.bede.dur.ac.uk
+/usr/share/lmod/lmod/init/bash: line 70: WRAPPER:: command not found
+/opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/bin/mpirun
+/opt/software/slurm/tools/1.2/bin/bede-mpirun
+CUDA Aware MPI
+[gpu020.bede.dur.ac.uk:48748] pml_ucx.c:291  Error: Failed to create UCP worker
+[gpu020.bede.dur.ac.uk:48747] pml_ucx.c:291  Error: Failed to create UCP worker
+[gpu020.bede.dur.ac.uk:48750] pml_ucx.c:291  Error: Failed to create UCP worker
+[gpu020.bede.dur.ac.uk:48749] pml_ucx.c:291  Error: Failed to create UCP worker
+[gpu021.bede.dur.ac.uk:82477] pml_ucx.c:291  Error: Failed to create UCP worker
+[gpu021.bede.dur.ac.uk:82478] pml_ucx.c:291  Error: Failed to create UCP worker
+[gpu021.bede.dur.ac.uk:82479] pml_ucx.c:291  Error: Failed to create UCP worker
+[gpu021.bede.dur.ac.uk:82480] pml_ucx.c:291  Error: Failed to create UCP worker
+Topology size: 2 x 4
+Local domain size (current node): 10000 x 10000
+Global domain size (all nodes): 20000 x 40000
+Starting Jacobi run with 8 processes using "Tesla V100-SXM2-32GB" GPUs (ECC enabled: 0 / 8):
+Iteration: 0 - Residue: 0.250000
+Iteration: 100 - Residue: 0.002397
+Iteration: 200 - Residue: 0.001204
+Iteration: 300 - Residue: 0.000804
+Iteration: 400 - Residue: 0.000603
+Iteration: 500 - Residue: 0.000483
+Iteration: 600 - Residue: 0.000403
+Iteration: 700 - Residue: 0.000345
+Iteration: 800 - Residue: 0.000302
+Iteration: 900 - Residue: 0.000269
+Stopped after 1000 iterations with residue 0.000242
+Total Jacobi run time: 19.7162 sec.
+Average per-process communication time: 5.2590 sec.
+Measured lattice updates: 40.57 GLU/s (total), 5.07 GLU/s (per process)
+Measured FLOPS: 202.85 GFLOPS (total), 25.36 GFLOPS (per process)
+Measured device bandwidth: 2.60 TB/s (total), 324.56 GB/s (per process)
+CUDA Normal MPI
+Topology size: 2 x 4
+Local domain size (current node): 10000 x 10000
+Global domain size (all nodes): 20000 x 40000
+Starting Jacobi run with 8 processes using "Tesla V100-SXM2-32GB" GPUs (ECC enabled: 0 / 8):
+[gpu020:48849:0:48849]  ucp_worker.c:183  Fatal: failed to set active message handler id 1: Invalid parameter
+[gpu021:82566:0:82566]  ucp_worker.c:183  Fatal: failed to set active message handler id 1: Invalid parameter
+[gpu021:82564:0:82564]  ucp_worker.c:183  Fatal: failed to set active message handler id 1: Invalid parameter
+[gpu020:48847:0:48847]  ucp_worker.c:183  Fatal: failed to set active message handler id 1: Invalid parameter
+==== backtrace (tid:  48849) ====
+ 0 0x000000000005920c ucs_debug_print_backtrace()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucs/debug/debug.c:656
+ 1 0x000000000002c8f8 ucp_worker_set_am_handlers()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:182
+ 2 0x000000000002e244 ucp_worker_iface_activate()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:665
+ 3 0x000000000002e244 ucp_worker_iface_activate()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:667
+ 4 0x000000000002ee10 ucp_worker_iface_progress_ep()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:831
+ 5 0x0000000000074728 ucp_wireup_ep_connect_aux()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup_ep.c:293
+ 6 0x0000000000075560 ucp_wireup_ep_connect()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup_ep.c:448
+ 7 0x00000000000782c8 ucp_wireup_connect_lane_to_ep()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup.c:790
+ 8 0x00000000000782c8 ucp_wireup_connect_lane()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup.c:830
+ 9 0x0000000000079378 ucp_wireup_init_lanes()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup.c:1074
+10 0x0000000000020b78 ucp_ep_create_to_worker_addr()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_ep.c:360
+11 0x000000000002199c ucp_ep_create_api_to_worker_addr()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_ep.c:611
+12 0x000000000002199c ucp_ep_create()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_ep.c:676
+13 0x000000000000513c mca_pml_ucx_add_proc_common()  pml_ucx.c:0
+14 0x0000000000006248 mca_pml_ucx_add_proc()  pml_ucx.c:0
+15 0x0000000000006700 mca_pml_ucx_send()  ???:0
+16 0x00000000000c08a4 PMPI_Sendrecv()  ???:0
+17 0x0000000010005b30 ExchangeHalos()  ???:0
+18 0x00000000100047ac RunJacobi()  ???:0
+19 0x0000000010001a9c main()  ???:0
+20 0x0000000000025200 generic_start_main.isra.0()  libc-start.c:0
+21 0x00000000000253f4 __libc_start_main()  ???:0
+=================================
+[gpu020:48849] *** Process received signal ***
+[gpu020:48849] Signal: Aborted (6)
+[gpu020:48849] Signal code:  (-6)
+[gpu020:48849] [ 0] [0x2000000504d8]
+[gpu020:48849] [ 1] /lib64/libc.so.6(abort+0x2b4)[0x2000006f2094]
+[gpu020:48849] [ 2] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucs.so.0(ucs_fatal_error_message+0x90)[0x20000c1c68b0]
+[gpu020:48849] [ 3] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucs.so.0(ucs_fatal_error_format+0xa4)[0x20000c1c6a54]
+[gpu020:48849] [ 4] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(+0x2c8f8)[0x20000c05c8f8]
+[gpu020:48849] [ 5] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_worker_iface_activate+0x84)[0x20000c05e244]
+[gpu020:48849] [ 6] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_worker_iface_progress_ep+0x70)[0x20000c05ee10]
+[gpu020:48849] [ 7] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_ep_connect_aux+0x128)[0x20000c0a4728]
+[gpu020:48849] [ 8] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_ep_connect+0x150)[0x20000c0a5560]
+[gpu020:48849] [ 9] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_connect_lane+0x318)[0x20000c0a82c8]
+[gpu020:48849] [10] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_init_lanes+0x6f8)[0x20000c0a9378]
+[gpu020:48849] [11] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_ep_create_to_worker_addr+0x98)[0x20000c050b78]
+[gpu020:48849] [12] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_ep_create+0x46c)[0x20000c05199c]
+[gpu020:48849] [13] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/openmpi/mca_pml_ucx.so(+0x513c)[0x200003fb513c]
+[gpu020:48849] [14] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/openmpi/mca_pml_ucx.so(+0x6248)[0x200003fb6248]
+[gpu020:48849] [15] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/openmpi/mca_pml_ucx.so(mca_pml_ucx_send+0x320)[0x200003fb6700]
+[gpu020:48849] [16] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libmpi.so.40(PMPI_Sendrecv+0x264)[0x2000002108a4]
+[gpu020:48849] [17] ./jacobi_cuda_normal_mpi[0x10005b30]
+[gpu020:48849] [18] ./jacobi_cuda_normal_mpi[0x100047ac]
+[gpu020:48849] [19] ./jacobi_cuda_normal_mpi[0x10001a9c]
+[gpu020:48849] [20] /lib64/libc.so.6(+0x25200)[0x2000006d5200]
+[gpu020:48849] [21] /lib64/libc.so.6(__libc_start_main+0xc4)[0x2000006d53f4]
+[gpu020:48849] *** End of error message ***
+==== backtrace (tid:  82566) ====
+ 0 0x000000000005920c ucs_debug_print_backtrace()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucs/debug/debug.c:656
+ 1 0x000000000002c8f8 ucp_worker_set_am_handlers()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:182
+ 2 0x000000000002e244 ucp_worker_iface_activate()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:665
+ 3 0x000000000002e244 ucp_worker_iface_activate()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:667
+ 4 0x000000000002ee10 ucp_worker_iface_progress_ep()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:831
+ 5 0x0000000000074728 ucp_wireup_ep_connect_aux()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup_ep.c:293
+ 6 0x0000000000075560 ucp_wireup_ep_connect()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup_ep.c:448
+ 7 0x00000000000782c8 ucp_wireup_connect_lane_to_ep()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup.c:790
+ 8 0x00000000000782c8 ucp_wireup_connect_lane()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup.c:830
+ 9 0x0000000000079378 ucp_wireup_init_lanes()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup.c:1074
+10 0x0000000000020b78 ucp_ep_create_to_worker_addr()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_ep.c:360
+11 0x000000000002199c ucp_ep_create_api_to_worker_addr()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_ep.c:611
+12 0x000000000002199c ucp_ep_create()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_ep.c:676
+13 0x000000000000513c mca_pml_ucx_add_proc_common()  pml_ucx.c:0
+14 0x0000000000006248 mca_pml_ucx_add_proc()  pml_ucx.c:0
+15 0x0000000000006700 mca_pml_ucx_send()  ???:0
+16 0x00000000000c08a4 PMPI_Sendrecv()  ???:0
+17 0x0000000010005b30 ExchangeHalos()  ???:0
+18 0x00000000100047ac RunJacobi()  ???:0
+19 0x0000000010001a9c main()  ???:0
+20 0x0000000000025200 generic_start_main.isra.0()  libc-start.c:0
+21 0x00000000000253f4 __libc_start_main()  ???:0
+=================================
+[gpu021:82566] *** Process received signal ***
+[gpu021:82566] Signal: Aborted (6)
+[gpu021:82566] Signal code:  (-6)
+[gpu021:82566] [ 0] [0x2000000504d8]
+[gpu021:82566] [ 1] /lib64/libc.so.6(abort+0x2b4)[0x2000006f2094]
+[gpu021:82566] [ 2] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucs.so.0(ucs_fatal_error_message+0x90)[0x20000c1c68b0]
+[gpu021:82566] [ 3] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucs.so.0(ucs_fatal_error_format+0xa4)[0x20000c1c6a54]
+[gpu021:82566] [ 4] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(+0x2c8f8)[0x20000c05c8f8]
+[gpu021:82566] [ 5] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_worker_iface_activate+0x84)[0x20000c05e244]
+[gpu021:82566] [ 6] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_worker_iface_progress_ep+0x70)[0x20000c05ee10]
+[gpu021:82566] [ 7] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_ep_connect_aux+0x128)[0x20000c0a4728]
+[gpu021:82566] [ 8] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_ep_connect+0x150)[0x20000c0a5560]
+[gpu021:82566] [ 9] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_connect_lane+0x318)[0x20000c0a82c8]
+[gpu021:82566] [10] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_init_lanes+0x6f8)[0x20000c0a9378]
+[gpu021:82566] [11] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_ep_create_to_worker_addr+0x98)[0x20000c050b78]
+[gpu021:82566] [12] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_ep_create+0x46c)[0x20000c05199c]
+[gpu021:82566] [13] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/openmpi/mca_pml_ucx.so(+0x513c)[0x200003fb513c]
+[gpu021:82566] [14] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/openmpi/mca_pml_ucx.so(+0x6248)[0x200003fb6248]
+[gpu021:82566] [15] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/openmpi/mca_pml_ucx.so(mca_pml_ucx_send+0x320)[0x200003fb6700]
+[gpu021:82566] [16] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libmpi.so.40(PMPI_Sendrecv+0x264)[0x2000002108a4]
+[gpu021:82566] [17] ./jacobi_cuda_normal_mpi[0x10005b30]
+[gpu021:82566] [18] ./jacobi_cuda_normal_mpi[0x100047ac]
+[gpu021:82566] [19] ./jacobi_cuda_normal_mpi[0x10001a9c]
+[gpu021:82566] [20] /lib64/libc.so.6(+0x25200)[0x2000006d5200]
+[gpu021:82566] [21] /lib64/libc.so.6(__libc_start_main+0xc4)[0x2000006d53f4]
+[gpu021:82566] *** End of error message ***
+==== backtrace (tid:  82564) ====
+ 0 0x000000000005920c ucs_debug_print_backtrace()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucs/debug/debug.c:656
+ 1 0x000000000002c8f8 ucp_worker_set_am_handlers()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:182
+ 2 0x000000000002e244 ucp_worker_iface_activate()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:665
+ 3 0x000000000002e244 ucp_worker_iface_activate()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:667
+ 4 0x000000000002ee10 ucp_worker_iface_progress_ep()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:831
+ 5 0x0000000000074728 ucp_wireup_ep_connect_aux()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup_ep.c:293
+ 6 0x0000000000075560 ucp_wireup_ep_connect()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup_ep.c:448
+ 7 0x00000000000782c8 ucp_wireup_connect_lane_to_ep()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup.c:790
+ 8 0x00000000000782c8 ucp_wireup_connect_lane()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup.c:830
+ 9 0x0000000000079378 ucp_wireup_init_lanes()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup.c:1074
+10 0x0000000000020b78 ucp_ep_create_to_worker_addr()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_ep.c:360
+11 0x000000000002199c ucp_ep_create_api_to_worker_addr()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_ep.c:611
+12 0x000000000002199c ucp_ep_create()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_ep.c:676
+13 0x000000000000513c mca_pml_ucx_add_proc_common()  pml_ucx.c:0
+14 0x0000000000006248 mca_pml_ucx_add_proc()  pml_ucx.c:0
+15 0x0000000000006700 mca_pml_ucx_send()  ???:0
+16 0x00000000000c08a4 PMPI_Sendrecv()  ???:0
+17 0x0000000010005b30 ExchangeHalos()  ???:0
+18 0x00000000100047ac RunJacobi()  ???:0
+19 0x0000000010001a9c main()  ???:0
+20 0x0000000000025200 generic_start_main.isra.0()  libc-start.c:0
+21 0x00000000000253f4 __libc_start_main()  ???:0
+=================================
+[gpu021:82564] *** Process received signal ***
+[gpu021:82564] Signal: Aborted (6)
+[gpu021:82564] Signal code:  (-6)
+[gpu021:82564] [ 0] [0x2000000504d8]
+[gpu021:82564] [ 1] /lib64/libc.so.6(abort+0x2b4)[0x2000006f2094]
+[gpu021:82564] [ 2] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucs.so.0(ucs_fatal_error_message+0x90)[0x2000141d68b0]
+[gpu021:82564] [ 3] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucs.so.0(ucs_fatal_error_format+0xa4)[0x2000141d6a54]
+[gpu021:82564] [ 4] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(+0x2c8f8)[0x20001406c8f8]
+[gpu021:82564] [ 5] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_worker_iface_activate+0x84)[0x20001406e244]
+[gpu021:82564] [ 6] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_worker_iface_progress_ep+0x70)[0x20001406ee10]
+[gpu021:82564] [ 7] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_ep_connect_aux+0x128)[0x2000140b4728]
+[gpu021:82564] [ 8] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_ep_connect+0x150)[0x2000140b5560]
+[gpu021:82564] [ 9] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_connect_lane+0x318)[0x2000140b82c8]
+[gpu021:82564] [10] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_init_lanes+0x6f8)[0x2000140b9378]
+[gpu021:82564] [11] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_ep_create_to_worker_addr+0x98)[0x200014060b78]
+[gpu021:82564] [12] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_ep_create+0x46c)[0x20001406199c]
+[gpu021:82564] [13] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/openmpi/mca_pml_ucx.so(+0x513c)[0x200003fb513c]
+[gpu021:82564] [14] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/openmpi/mca_pml_ucx.so(+0x6248)[0x200003fb6248]
+[gpu021:82564] [15] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/openmpi/mca_pml_ucx.so(mca_pml_ucx_send+0x320)[0x200003fb6700]
+[gpu021:82564] [16] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libmpi.so.40(PMPI_Sendrecv+0x264)[0x2000002108a4]
+[gpu021:82564] [17] ./jacobi_cuda_normal_mpi[0x10005b30]
+[gpu021:82564] [18] ./jacobi_cuda_normal_mpi[0x100047ac]
+[gpu021:82564] [19] ./jacobi_cuda_normal_mpi[0x10001a9c]
+[gpu021:82564] [20] /lib64/libc.so.6(+0x25200)[0x2000006d5200]
+[gpu021:82564] [21] /lib64/libc.so.6(__libc_start_main+0xc4)[0x2000006d53f4]
+[gpu021:82564] *** End of error message ***
+==== backtrace (tid:  48847) ====
+ 0 0x000000000005920c ucs_debug_print_backtrace()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucs/debug/debug.c:656
+ 1 0x000000000002c8f8 ucp_worker_set_am_handlers()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:182
+ 2 0x000000000002e244 ucp_worker_iface_activate()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:665
+ 3 0x000000000002e244 ucp_worker_iface_activate()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:667
+ 4 0x000000000002ee10 ucp_worker_iface_progress_ep()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_worker.c:831
+ 5 0x0000000000074728 ucp_wireup_ep_connect_aux()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup_ep.c:293
+ 6 0x0000000000075560 ucp_wireup_ep_connect()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup_ep.c:448
+ 7 0x00000000000782c8 ucp_wireup_connect_lane_to_ep()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup.c:790
+ 8 0x00000000000782c8 ucp_wireup_connect_lane()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup.c:830
+ 9 0x0000000000079378 ucp_wireup_init_lanes()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/wireup/wireup.c:1074
+10 0x0000000000020b78 ucp_ep_create_to_worker_addr()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_ep.c:360
+11 0x000000000002199c ucp_ep_create_api_to_worker_addr()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_ep.c:611
+12 0x000000000002199c ucp_ep_create()  /tmp/tmp2wprm3g7/ucx-1.9.0/src/ucp/core/ucp_ep.c:676
+13 0x000000000000513c mca_pml_ucx_add_proc_common()  pml_ucx.c:0
+14 0x0000000000006248 mca_pml_ucx_add_proc()  pml_ucx.c:0
+15 0x0000000000006700 mca_pml_ucx_send()  ???:0
+16 0x00000000000c08a4 PMPI_Sendrecv()  ???:0
+17 0x0000000010005b30 ExchangeHalos()  ???:0
+18 0x00000000100047ac RunJacobi()  ???:0
+19 0x0000000010001a9c main()  ???:0
+20 0x0000000000025200 generic_start_main.isra.0()  libc-start.c:0
+21 0x00000000000253f4 __libc_start_main()  ???:0
+=================================
+[gpu020:48847] *** Process received signal ***
+[gpu020:48847] Signal: Aborted (6)
+[gpu020:48847] Signal code:  (-6)
+[gpu020:48847] [ 0] [0x2000000504d8]
+[gpu020:48847] [ 1] /lib64/libc.so.6(abort+0x2b4)[0x2000006f2094]
+[gpu020:48847] [ 2] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucs.so.0(ucs_fatal_error_message+0x90)[0x20000c1c68b0]
+[gpu020:48847] [ 3] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucs.so.0(ucs_fatal_error_format+0xa4)[0x20000c1c6a54]
+[gpu020:48847] [ 4] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(+0x2c8f8)[0x20000c05c8f8]
+[gpu020:48847] [ 5] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_worker_iface_activate+0x84)[0x20000c05e244]
+[gpu020:48847] [ 6] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_worker_iface_progress_ep+0x70)[0x20000c05ee10]
+[gpu020:48847] [ 7] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_ep_connect_aux+0x128)[0x20000c0a4728]
+[gpu020:48847] [ 8] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_ep_connect+0x150)[0x20000c0a5560]
+[gpu020:48847] [ 9] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_connect_lane+0x318)[0x20000c0a82c8]
+[gpu020:48847] [10] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_wireup_init_lanes+0x6f8)[0x20000c0a9378]
+[gpu020:48847] [11] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_ep_create_to_worker_addr+0x98)[0x20000c050b78]
+[gpu020:48847] [12] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libucp.so.0(ucp_ep_create+0x46c)[0x20000c05199c]
+[gpu020:48847] [13] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/openmpi/mca_pml_ucx.so(+0x513c)[0x200003fb513c]
+[gpu020:48847] [14] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/openmpi/mca_pml_ucx.so(+0x6248)[0x200003fb6248]
+[gpu020:48847] [15] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/openmpi/mca_pml_ucx.so(mca_pml_ucx_send+0x320)[0x200003fb6700]
+[gpu020:48847] [16] /opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89/lib/libmpi.so.40(PMPI_Sendrecv+0x264)[0x2000002108a4]
+[gpu020:48847] [17] ./jacobi_cuda_normal_mpi[0x10005b30]
+[gpu020:48847] [18] ./jacobi_cuda_normal_mpi[0x100047ac]
+[gpu020:48847] [19] ./jacobi_cuda_normal_mpi[0x10001a9c]
+[gpu020:48847] [20] /lib64/libc.so.6(+0x25200)[0x2000006d5200]
+[gpu020:48847] [21] /lib64/libc.so.6(__libc_start_main+0xc4)[0x2000006d53f4]
+[gpu020:48847] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 5 with PID 82566 on node gpu021 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+=========================================================
+SLURM job: finished date = Mon 6 Sep 20:15:52 BST 2021
+Total run time : 0 Hours 0 Minutes 30 Seconds
+=========================================================

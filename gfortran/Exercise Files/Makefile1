@@ -1,0 +1,14 @@
+VAR='hello'
+VAR2='merry'
+VAR3='fun'
+
+default:
+	echo ${VAR}
+	
+merry:
+	@echo ${VAR2}
+
+fun:
+	@echo ${VAR3}
+	
+

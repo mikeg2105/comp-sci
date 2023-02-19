@@ -1,0 +1,8 @@
+&EXAMPLE
+ X=0          ,
+ Y=1          ,
+ R=  2.00000000    ,  0.00000000    ,
+ PERSON%ID=-1         ,
+ PERSON%NAME="Jane Does                       ",
+ PERSON%AGE=0          ,
+ /

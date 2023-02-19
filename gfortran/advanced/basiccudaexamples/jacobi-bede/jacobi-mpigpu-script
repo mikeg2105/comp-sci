@@ -1,0 +1,79 @@
+#!/bin/bash -l
+#SBATCH -A bdshe01
+#SBATCH -p gpu
+# This works for 32 >= N >= 1 on Bede
+#SBATCH -N 2
+#SBATCH -o jacobi-gpu.%j
+# Use all 4 GPUs on a node
+#SBATCH --gres=gpu:4
+#SBATCH -t 00:10:00
+#SBATCH --exclusive
+
+ulimit -s unlimited
+echo $SLURM_JOB_NUM_NODES ' SLURM_JOB_NUM_NODES'
+echo $SLURM_NTASKS ' SLURM_NTASKS'
+echo $SLURM_CPUS_ON_NODE ' SLURM_CPUS_ON_NODE'
+
+echo "LD Library Path"
+echo $LD_LIBRARY_PATH
+
+echo " Path"
+echo $PATH
+
+which mpirun
+which bede-mpirun
+
+#use
+#bede-mpirun --bede-par 1ppg -np 8  ./jacobi_cuda_aware_mpi -t 2 4 -d 10000 10000
+
+date_start=`date +%s`
+
+hostname
+
+#module load OpenMPI/3.1.4-gcccuda-2019b
+#module load gcc cuda/10.1.243 openmpi
+module load gcc cuda openmpi
+
+#module load OpenMPI/3.1.4-gcccuda-2019b
+
+#module load CUDA/10.1.243-GCC-8.3.0
+
+#export MPI_HOME=/opt/software/eb/software/OpenMPI/3.1.4-gcccuda-2019b
+
+#export CUDA_INSTALL_PATH=/opt/software/eb/software/CUDA/10.1.243-GCC-8.3.0
+
+#export MPI_HOME=/opt/software/eb/software/OpenMPI/3.1.4-gcccuda-2019b
+#export CUDA_INSTALL_PATH=/opt/software/eb/software/CUDA/10.1.243-GCC-8.3.0
+
+export MPI_HOME=/opt/software/builder/developers/libraries/openmpi/4.0.5/1/gcc-8.4.0-cuda-10.2.89
+export CUDA_INSTALL_PATH=/opt/software/builder/developers/compilers/cuda/10.2.89/1/default
+
+
+which mpirun
+which bede-mpirun
+# $ROW x $COL should equal the value of GPU used
+GPUS=$((4*$SLURM_JOB_NUM_NODES))
+ROW=2
+COL=4
+SIZE=10000
+echo "CUDA Aware MPI"
+bede-mpirun --bede-par 1ppg -np $GPUS  ./jacobi_cuda_aware_mpi -t $ROW $COL  -d $SIZE $SIZE
+echo "CUDA Normal MPI"
+bede-mpirun --bede-par 1ppg -np $GPUS  ./jacobi_cuda_normal_mpi -t $ROW $COL -d $SIZE $SIZE
+
+
+
+# 
+#
+
+date_end=`date +%s`
+seconds=$((date_end-date_start))
+minutes=$((seconds/60))
+seconds=$((seconds-60*minutes))
+hours=$((minutes/60))
+minutes=$((minutes-60*hours))
+echo =========================================================   
+echo SLURM job: finished   date = `date`   
+echo Total run time : $hours Hours $minutes Minutes $seconds Seconds
+echo =========================================================   
+
