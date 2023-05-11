@@ -55,7 +55,7 @@ it=1
 !initialise the configuration
 do i=1,ni
     x(i)=(i-1)*dx
-    if(i>76)then
+    if(i>70.and.i<82)then
         mx(i,1)=0
         rho(i,1)=rho0
         rhohm(i)=rho0
@@ -66,7 +66,6 @@ do i=1,ni
         rho(i,1)=rho0/8.0d0
         rhohm(i)=rho0/8.0d0
         rhohp(i)=rho0/8.0d0
-
 
         p(i,1)=p0/10.0d0
     endif
@@ -124,7 +123,7 @@ do it=1,nt-1
     print*, dt, mmx,mrho,me
 enddo ! end of time iterations
 
-call writeoutfile(filename,x,mx,ni,nt)
+call writeoutfile(filename,x,rho,ni,nt)
 
 
 contains
