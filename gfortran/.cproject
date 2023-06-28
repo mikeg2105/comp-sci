@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="photran.managedbuild.config.gnu.fortran.macosx.exe.debug.1889079431">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="photran.managedbuild.config.gnu.fortran.macosx.exe.debug.1889079431" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.MachO64" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.photran.core.GFortranErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="" cleanCommand="rm -rf" description="" errorParsers="org.eclipse.photran.core.GFortranErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GmakeErrorParser" id="photran.managedbuild.config.gnu.fortran.macosx.exe.debug.1889079431" name="Debug" parent="photran.managedbuild.config.gnu.fortran.macosx.exe.debug">
+					<folderInfo id="photran.managedbuild.config.gnu.fortran.macosx.exe.debug.1889079431." name="/" resourcePath="">
+						<toolChain id="photran.managedbuild.toolchain.gnu.fortran.macosx.exe.debug.286526844" name="GCC Fortran" superClass="photran.managedbuild.toolchain.gnu.fortran.macosx.exe.debug">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.MachO64" id="photran.managedbuild.target.gnu.platform.macosx.exe.debug.1740754920" name="Debug Platform" osList="macosx" superClass="photran.managedbuild.target.gnu.platform.macosx.exe.debug"/>
+							<builder buildPath="${workspace_loc:/fortran-compsci}/Debug" id="photran.managedbuild.target.gnu.builder.macosx.exe.debug.92121991" managedBuildOn="true" name="Gnu Make Builder.Debug" superClass="photran.managedbuild.target.gnu.builder.macosx.exe.debug"/>
+							<tool id="photran.managedbuild.tool.gnu.c.compiler.macosx.exe.debug.417278942" name="GCC C Compiler" superClass="photran.managedbuild.tool.gnu.c.compiler.macosx.exe.debug"/>
+							<tool id="photran.managedbuild.tool.gnu.fortran.compiler.macosx.exe.debug.1268219603" name="GNU Fortran Compiler" superClass="photran.managedbuild.tool.gnu.fortran.compiler.macosx.exe.debug"/>
+							<tool id="photran.managedbuild.tool.macosx.fortran.linker.macosx.exe.debug.1697321116" name="MacOS X Fortran Linker" superClass="photran.managedbuild.tool.macosx.fortran.linker.macosx.exe.debug"/>
+							<tool id="photran.managedbuild.tool.gnu.assembler.macosx.exe.debug.465568554" name="GCC Assembler" superClass="photran.managedbuild.tool.gnu.assembler.macosx.exe.debug"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="photran.managedbuild.config.gnu.fortran.macosx.exe.release.2012831351">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="photran.managedbuild.config.gnu.fortran.macosx.exe.release.2012831351" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.MachO64" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.photran.core.GFortranErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="" cleanCommand="rm -rf" description="" errorParsers="org.eclipse.photran.core.GFortranErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GmakeErrorParser" id="photran.managedbuild.config.gnu.fortran.macosx.exe.release.2012831351" name="Release" parent="photran.managedbuild.config.gnu.fortran.macosx.exe.release">
+					<folderInfo id="photran.managedbuild.config.gnu.fortran.macosx.exe.release.2012831351." name="/" resourcePath="">
+						<toolChain id="photran.managedbuild.toolchain.gnu.fortran.macosx.exe.release.1085063558" name="GCC Fortran" superClass="photran.managedbuild.toolchain.gnu.fortran.macosx.exe.release">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.MachO64" id="photran.managedbuild.target.gnu.platform.fortran.macosx.exe.release.134372722" name="Release Platform" osList="macosx" superClass="photran.managedbuild.target.gnu.platform.fortran.macosx.exe.release"/>
+							<builder buildPath="${workspace_loc:/fortran-compsci}/Release" id="photran.managedbuild.target.gnu.builder.macosx.exe.release.115795455" managedBuildOn="true" name="Gnu Make Builder.Release" superClass="photran.managedbuild.target.gnu.builder.macosx.exe.release"/>
+							<tool id="photran.managedbuild.tool.gnu.c.compiler.macosx.exe.release.478903920" name="GCC C Compiler" superClass="photran.managedbuild.tool.gnu.c.compiler.macosx.exe.release"/>
+							<tool id="photran.managedbuild.tool.gnu.fortran.compiler.macosx.exe.release.1736423689" name="GNU Fortran Compiler" superClass="photran.managedbuild.tool.gnu.fortran.compiler.macosx.exe.release"/>
+							<tool id="photran.managedbuild.tool.macosx.fortran.linker.macosx.exe.release.794592287" name="MacOS X Fortran Linker" superClass="photran.managedbuild.tool.macosx.fortran.linker.macosx.exe.release"/>
+							<tool id="photran.managedbuild.tool.gnu.assembler.macosx.exe.release.2064968636" name="GCC Assembler" superClass="photran.managedbuild.tool.gnu.assembler.macosx.exe.release"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="fortran-compsci.photran.managedbuild.target.gnu.fortran.macosx.exe.964754965" name="Executable (Gnu Fortran on MacOS X)" projectType="photran.managedbuild.target.gnu.fortran.macosx.exe"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+</cproject>
