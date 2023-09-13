@@ -1,0 +1,128 @@
+/* [wxMaxima: input   start ] */
+de : 'diff(u,t)- u - exp(-t);
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+gsoln : ode2(de,u,t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+psoln : ic1(gsoln,t = 2, u = -0.1),ratprint:false;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+rhs(psoln),t=2,ratsimp;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+(nsteps : 31, ncycles : 30, a : 0.2, b : 0.52, w : 0.694)$
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+[dudt : v, dvdt : -sin(u) - a*v + b*cos(w*t), 
+           T : float(2*%pi/w ) ];
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+[dt : T/nsteps, tmax : ncycles*T ];
+tuvL : rk ([dudt,dvdt],[u,v],[0.8,0.8],[t,0,tmax, dt])$
+%, fll;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+dt*( last(%) - 1 );
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+(%i11)	dt*( last(%) - 1 );
+(%o11)	[79.0311728873244,-16.40362964218592,0.03741651731350985]
+tuL : makelist ([tuvL[i][1],tuvL[i][2]],i,1,length(tuvL))$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+tuL : makelist ([tuvL[i][1],tuvL[i][2]],i,1,length(tuvL))$
+%, fll;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+tvL : makelist ([tuvL[i][1],tuvL[i][3]],i,1,length(tuvL))$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+tvL : makelist ([tuvL[i][1],tuvL[i][3]],i,1,length(tuvL))$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+%,fll;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+plot2d([ [discrete,tuL], [discrete,tvL]],[x,0,2000], 
+               [y,-15,30], 
+          [style,[lines,2]],[xlabel,"t"], [ylabel, " "], 
+           [legend, "u","v" ] ,[gnuplot_preamble,"set key bottom;"])$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+functions;
+/* [wxMaxima: input   end   ] */
+
+
+

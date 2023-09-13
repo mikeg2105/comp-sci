@@ -1,0 +1,258 @@
+/* [wxMaxima: comment start ]
+
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: title   start ]
+
+   [wxMaxima: title   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+Solar Wind
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+v=y*cs
+;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+v=y*c_s
+r=x*r_c
+
+r_0 : 696.3x10^6 m Radius of the sun
+p_0:    Pressure at the base of the sun
+
+r_large: 214r_0 Radius of the earths orbit
+p_large:
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: section start ]
+
+   [wxMaxima: section end   ] */
+
+
+/* [wxMaxima: input   start ] */
+p_0: 17406.24;
+r_sun: 696.3e6;
+r_0:r_sun+8776.207;
+R:8.3e3;
+r_c:11*r_sun;
+T_c:1.0e6;
+csi: sqrt(R*T_c);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+c(t):=sqrt(R.t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+des:'diff(y,x)-(2/x^2)*(x-1)/(y-(1/y));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+gsolns:ode2(des,y,x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+dydx(x,y):= -(2/x^2)*(x-1)/(y-(1/y));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+pl:p0*exp(-2*rc/r0);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+psolns : ic1(gsolns,x = 0.2, y = 0.01),ratprint:false;
+
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+lhs(psoln);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(lhs(psoln),y);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+y(t):=exp(t^2/2);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(rhs(psoln),x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+plot2d([ [discrete,tuL], [discrete,tvL]],[x,0,10],
+               [y,0,3], 
+          [style,[lines,2]],[xlabel,"r/rc"], [ylabel, " v/cs"], 
+           [legend, "u","v" ] ,[gnuplot_preamble,"set key bottom;"])$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+de : 'diff(u,t)- u - exp(-t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+values;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+functions;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+dydx(x,y);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+tyvxL : rk(dydx,[y,x],[20,2],[x,2,200, dt]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+des;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+gsoln : ode2(de,u,t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+psoln : ic1(gsoln,t = 2, u = -0.1),ratprint:false;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+rhs(psoln),t=2,ratsimp;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+(nsteps : 31, ncycles : 30, a : 0.2, b : 0.52, w : 0.694)$
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+[dudt : v, dvdt : -sin(u) - a*v + b*cos(w*t), 
+           T : float(2*%pi/w ) ];
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+[dt : T/nsteps, tmax : ncycles*T ];
+tuvL : rk ([dudt,dvdt],[u,v],[0.8,0.8],[t,0,tmax, dt])$
+%, fll;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+dt*( last(%) - 1 );
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+(%i11)	dt*( last(%) - 1 );
+(%o11)	[79.0311728873244,-16.40362964218592,0.03741651731350985]
+tuL : makelist ([tuvL[i][1],tuvL[i][2]],i,1,length(tuvL))$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+
+/* [wxMaxima: input   end   ] */
+
+
+
