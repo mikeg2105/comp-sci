@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   2314945,      40028]
-NotebookOptionsPosition[   2301477,      39816]
-NotebookOutlinePosition[   2301950,      39834]
-CellTagsIndexPosition[   2301907,      39831]
+NotebookDataLength[   2319054,      40147]
+NotebookOptionsPosition[   2305484,      39934]
+NotebookOutlinePosition[   2305957,      39952]
+CellTagsIndexPosition[   2305914,      39949]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -39812,7 +39812,125 @@ yoeF+6b9ynJnosD/v9Qh7L/8/wD7kMEK
      15.954589770191003`, RotateLabel -> 0]}]], "Output",
  CellChangeTimes->{3.91010748511402*^9},
  CellLabel->"Out[8]=",ExpressionUUID->"14945188-fd8d-42dd-bd85-c9ae15fc4070"]
-}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"symboliclegendre", "[", 
+    RowBox[{"n_", ",", "x_"}], "]"}], ":=", 
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{"LegendreP", "[", 
+      RowBox[{"n", ",", "x"}], "]"}], "==", "0"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"legendreprime", "[", 
+    RowBox[{"n_", ",", "a_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"D", "[", 
+     RowBox[{
+      RowBox[{"LegendreP", "[", 
+       RowBox[{"n", ",", "x"}], "]"}], ",", "x"}], "]"}], "/.", " ", 
+    RowBox[{"x", "->", "a"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"weights", "[", 
+     RowBox[{"n_", ",", "x_"}], "]"}], ":=", 
+    RowBox[{"2", "/", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"x", "^", "2"}]}], ")"}], " ", 
+       RowBox[{
+        RowBox[{"legendreprime", "[", 
+         RowBox[{"n", ",", "x"}], "]"}], "^", "2"}]}], ")"}]}]}], ";"}], 
+  "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "how", " ", "many", " ", "terms", " ", "should", " ", "be", " ", 
+    "generated"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"h", "=", "64"}], ";"}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{"what", " ", "numerical", " ", "precision", " ", "is", " ", 
+    RowBox[{"desired", "?"}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"precision", "=", "256"}], ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"str", "=", 
+   RowBox[{"OpenWrite", "[", "\"\<lgvalues.txt\>\"", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Write", "[", 
+   RowBox[{"str", ",", "\"\<abcissae\>\""}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Do", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Write", "[", "str", "]"}], ";", 
+     RowBox[{"Write", "[", 
+      RowBox[{"str", ",", "n"}], "]"}], ";", 
+     RowBox[{"Write", "[", "str", "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"nlist", "=", 
+      RowBox[{"symboliclegendre", "[", 
+       RowBox[{"n", ",", "x"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"xnlist", "=", 
+      RowBox[{"x", "/.", " ", "nlist"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Do", "[", 
+      RowBox[{
+       RowBox[{"Write", "[", 
+        RowBox[{"str", ",", 
+         RowBox[{"N", "[", 
+          RowBox[{
+           RowBox[{"Part", "[", 
+            RowBox[{"xnlist", ",", "i"}], "]"}], ",", "precision"}], "]"}]}], 
+        "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{"Length", "[", "xnlist", "]"}]}], "}"}]}], "]"}], ";"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "2", ",", "h"}], "}"}]}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Write", "[", 
+   RowBox[{"str", ",", "\"\<weights\>\""}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Do", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Write", "[", "str", "]"}], ";", 
+     RowBox[{"Write", "[", 
+      RowBox[{"str", ",", "n"}], "]"}], ";", 
+     RowBox[{"Write", "[", "str", "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"slist", ":=", 
+      RowBox[{"symboliclegendre", "[", 
+       RowBox[{"n", ",", "x"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"xslist", "=", 
+      RowBox[{"x", "/.", " ", "slist"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Do", "[", 
+      RowBox[{
+       RowBox[{"Write", "[", 
+        RowBox[{"str", ",", 
+         RowBox[{"N", "[", 
+          RowBox[{
+           RowBox[{"weights", "[", 
+            RowBox[{"n", ",", 
+             RowBox[{"Part", "[", 
+              RowBox[{"xslist", ",", "i"}], "]"}]}], "]"}], ",", 
+           "precision"}], "]"}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{"Length", "[", "xslist", "]"}]}], "}"}]}], "]"}], ";"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "2", ",", "h"}], "}"}]}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Close", "[", "str", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.9151981586021495`*^9},ExpressionUUID->"c2042b32-2dc4-451a-ad6f-\
+7cb6066b6559"]
 },
 WindowSize->{1027.2, 570.9},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -39861,7 +39979,7 @@ Cell[4663, 137, 86385, 1461, 213, "Output",ExpressionUUID->"c87fa19f-e9d0-4c3b-8
 Cell[91063, 1601, 613, 17, 43, "Input",ExpressionUUID->"54f732f4-9180-493b-a9aa-9b7563270faa"],
 Cell[CellGroupData[{
 Cell[91701, 1622, 504, 14, 25, "Input",ExpressionUUID->"42ee1ba0-718a-4154-8a77-002bd53374de"],
-Cell[92208, 1638, 28731, 529, 239, "Output",ExpressionUUID->"5c3475db-49a2-46a0-bbda-1676b617da8d"]
+Cell[92208, 1638, 28731, 529, 214, "Output",ExpressionUUID->"5c3475db-49a2-46a0-bbda-1676b617da8d"]
 }, Open  ]],
 Cell[120954, 2170, 209, 6, 52, "Text",ExpressionUUID->"72e08220-202c-467a-9374-b123ee9b1795"],
 Cell[121166, 2178, 340, 8, 43, "Input",ExpressionUUID->"533be2ce-e123-44d4-b777-04a9d26e5e77"],
@@ -40029,7 +40147,8 @@ Cell[1985500, 34429, 156234, 2668, 314, "Input",ExpressionUUID->"baeb50b7-397a-4
 Cell[CellGroupData[{
 Cell[2141759, 37101, 190, 3, 25, "Input",ExpressionUUID->"c9e4cc59-f14a-47ba-ba72-81f793780494"],
 Cell[2141952, 37106, 159509, 2707, 270, "Output",ExpressionUUID->"14945188-fd8d-42dd-bd85-c9ae15fc4070"]
-}, Open  ]]
+}, Open  ]],
+Cell[2301476, 39816, 4004, 116, 386, "Input",ExpressionUUID->"c2042b32-2dc4-451a-ad6f-7cb6066b6559"]
 }
 ]
 *)
