@@ -1,0 +1,575 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23556,        567]
+NotebookOptionsPosition[     18198,        489]
+NotebookOutlinePosition[     18713,        507]
+CellTagsIndexPosition[     18670,        504]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Paclet Installation", "Section",
+ CellChangeTimes->{{3.8751339090550823`*^9, 3.875133911169572*^9}, {
+  3.8752656827756567`*^9, 
+  3.875265683131957*^9}},ExpressionUUID->"eb2f8a09-6b3f-4416-bdbe-\
+ed3032a666ed"],
+
+Cell[BoxData[{
+ RowBox[{"PacletInstall", "[", 
+  RowBox[{"\"\<https://wolfr.am/DevWQCF\>\"", ",", 
+   RowBox[{"ForceVersionInstall", "->", "True"}]}], "]"}], "\n", 
+ RowBox[{"<<", "Wolfram`QuantumFramework`"}]}], "Input",
+ CellChangeTimes->{3.875818060604086*^9},
+ CellLabel->"In[1]:=",ExpressionUUID->"d9e5afe5-061b-402a-a321-db4d448a2699"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["QuantumCircuitOperator", "Section",
+ CellChangeTimes->{{3.875134663508906*^9, 
+  3.875134668953197*^9}},ExpressionUUID->"006fa776-fb7d-4019-9f80-\
+ffa097c06197"],
+
+Cell["\<\
+A quantum circuit is a composition of quantum operators acting on a quantum \
+state, representing a stepwise transformation of a quantum system.\
+\>", "Text",
+ CellChangeTimes->{{3.875140187802973*^9, 3.875140197859908*^9}, {
+  3.8752657316108103`*^9, 3.8752657318137283`*^9}, {3.875265762892311*^9, 
+  3.875265774418788*^9}},ExpressionUUID->"e3082cee-9b4e-4ac7-bc8d-\
+4eb89646700c"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"QuantumCircuitOperator", "[", 
+    RowBox[{"{", 
+     RowBox[{"op1", ",", "op1", ",", "op2"}], "}"}], "]"}], TraditionalForm]],
+  ExpressionUUID->"9c262192-a7f9-433e-ac55-e748eb0575f9"],
+ StyleBox[" ",
+  FontSize->16],
+ "a list of operators (either complete form, or shorthand)"
+}], "Text",
+ CellChangeTimes->{{3.875140187802973*^9, 3.875140197859908*^9}, {
+   3.8752657316108103`*^9, 3.8752657318137283`*^9}, {3.875265762892311*^9, 
+   3.875265801285468*^9}, {3.875265863233611*^9, 3.87526588918498*^9}, 
+   3.8752666726189213`*^9, 
+   3.875266847917346*^9},ExpressionUUID->"804b54fc-ae28-4e5f-9945-\
+8f4f157f0ce8"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"QuantumCircuitOperator", "[", 
+    RowBox[{"{", 
+     RowBox[{"\"\<named_circuit\>\"", ",", "..."}], "}"}], "]"}], 
+   TraditionalForm]],ExpressionUUID->"13e125cf-4e07-40cd-b79f-4fd8558ba7d0"],
+ " a named circuit"
+}], "Text",
+ CellChangeTimes->{{3.875140187802973*^9, 3.875140197859908*^9}, {
+   3.8752657316108103`*^9, 3.8752657318137283`*^9}, {3.875265762892311*^9, 
+   3.875265804383019*^9}, 3.875266679350678*^9, {3.8752668529964533`*^9, 
+   3.875266874675436*^9}, {3.875267230906389*^9, 
+   3.875267231091523*^9}},ExpressionUUID->"003634e9-a564-41db-89ef-\
+10cf0a2f2a67"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"QuantumCircuitOperator", "[", "...", "]"}], "[", " ", "]"}], 
+   TraditionalForm]],ExpressionUUID->"e19fc767-292f-4c07-b8fc-0879a8c3215e"],
+ " a circuit acting on its corresponding register state "
+}], "Text",
+ CellChangeTimes->{{3.875140187802973*^9, 3.875140197859908*^9}, {
+   3.8752657316108103`*^9, 3.8752657318137283`*^9}, {3.875265762892311*^9, 
+   3.875265786844592*^9}, 3.87526668369104*^9, {3.875266858428917*^9, 
+   3.8752668845075607`*^9}},ExpressionUUID->"51498c58-c9cb-4e9d-b342-\
+bcda9c255b7f"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", "\"\<X\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8751347574116096`*^9, 3.875134800777615*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"211b0a45-bc7f-4dfa-bb5d-67aa1a5a0734"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", "\"\<XYZ\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8751348611517143`*^9, 3.875134861431726*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"c95a7f2e-214e-4ddd-8907-d579fa4b15b1"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", 
+  RowBox[{"{", 
+   RowBox[{"\"\<X\>\"", "->", "2"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.875134850650209*^9, 3.875134875958444*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"a6f611ec-0835-4f18-8b41-16b6cb8db293"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"\"\<X\>\"", "->", "2"}], ",", "\"\<H\>\"", ",", 
+    RowBox[{"\"\<Z\>\"", "->", "2"}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.875134968241313*^9, 3.8751349739816837`*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"4ebf04ec-0b89-4189-9e8b-de82d5783b44"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", 
+  RowBox[{"{", "\"\<CNOT\>\"", "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8751348984965477`*^9, 3.875134934936984*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"dd29d4bf-6336-405a-9945-5cdb32a9042c"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", 
+  RowBox[{"{", 
+   RowBox[{"\"\<CNOT\>\"", "->", 
+    RowBox[{"{", 
+     RowBox[{"2", ",", "1"}], "}"}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8751349482135553`*^9, 3.8751349507692223`*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"1545ba57-5e87-492c-b573-74ba1dc14330"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"QuantumCircuitOperator", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\"\<X\>\"", "->", "2"}], ",", "\"\<H\>\"", ",", 
+     RowBox[{"\"\<Z\>\"", "->", "2"}]}], "}"}], "]"}], "[", 
+  "\"\<Operators\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.875135018346568*^9, 3.875135052103231*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"4c452ac4-4aeb-4b44-b097-45f1ee6a5920"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"QuantumCircuitOperator", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\"\<X\>\"", "->", "2"}], ",", "\"\<H\>\"", ",", 
+     RowBox[{"\"\<Z\>\"", "->", "2"}]}], "}"}], "]"}], "[", 
+  "\"\<CircuitOperator\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.875135079423492*^9, 3.8751350825124407`*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"a5ee27bb-f98f-415c-bcbc-27bdc1dc665d"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", 
+  RowBox[{"{", 
+   RowBox[{"\"\<H\>\"", ",", "\"\<CNOT\>\"", ",", 
+    RowBox[{"Sqrt", "@", "\"\<X\>\""}], ",", "\"\<Barrier\>\"", ",", 
+    "\"\<RootSWAP\>\"", ",", 
+    RowBox[{"{", 
+     RowBox[{"\"\<R\>\"", ",", "\[Theta]", ",", 
+      RowBox[{"\"\<X\>\"", "->", "1"}], ",", 
+      RowBox[{"\"\<Y\>\"", "->", "2"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Permutation\>\"", ",", 
+      RowBox[{"Cycles", "[", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "2"}], "}"}], "}"}], "]"}]}], "}"}], ",", 
+    "\"\<Barrier\>\"", ",", 
+    RowBox[{"QuantumChannel", "[", 
+     RowBox[{"{", 
+      RowBox[{"\"\<BitFlip\>\"", ",", "p"}], "}"}], "]"}], ",", 
+    "\"\<Barrier\>\"", ",", 
+    RowBox[{"{", "1", "}"}], ",", 
+    RowBox[{"{", "2", "}"}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.875135206561166*^9, 3.8751352519745502`*^9}, {
+   3.875136106844146*^9, 3.875136129754825*^9}, {3.875136190647716*^9, 
+   3.875136289957889*^9}, {3.8751363898247423`*^9, 3.87513641308186*^9}, {
+   3.875136531547365*^9, 3.8751365436933413`*^9}, {3.875136672125525*^9, 
+   3.8751366760917053`*^9}, 3.875136750302603*^9, {3.875136813258667*^9, 
+   3.875136834134282*^9}, {3.87513688907234*^9, 3.875137029413187*^9}, 
+   3.875140058799402*^9},
+ CellLabel->"In[36]:=",ExpressionUUID->"a239c12f-bbed-4d3a-b8e8-1c3fc8eb5136"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Named Circuits", "Section",
+ CellChangeTimes->{{3.8751372144550877`*^9, 3.8751372191775503`*^9}, {
+  3.875265692244255*^9, 
+  3.875265693587037*^9}},ExpressionUUID->"c4f4f641-34ce-44af-9067-\
+e4ad76caa96c"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", "\"\<Bell\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.875820333270268*^9, 3.87582035739073*^9}},
+ CellID->1470393002,ExpressionUUID->"6e0d1147-3949-4500-87ea-f65bf546de8d"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", "\"\<Magic\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.87582011505007*^9, 3.87582011571935*^9}, 
+   3.875820355627059*^9},ExpressionUUID->"a34a18c8-1b85-4d6e-a2d2-\
+d9f0ce649cc0"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", "\"\<Toffoli\>\"", "]"}]], "Input",
+ CellChangeTimes->{3.8758203533487597`*^9},
+ CellID->395258070,ExpressionUUID->"9e09a52e-4b02-4943-87e2-e5388cc61d84"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", "\"\<Fourier\>\"", "]"}]], "Input",
+ CellChangeTimes->{3.875820351455656*^9},
+ CellID->706341868,ExpressionUUID->"9f3ed9ce-7085-4937-893a-43a3605c7ca8"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", 
+  RowBox[{"{", 
+   RowBox[{"\"\<Fourier\>\"", ",", "5"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{3.875820349369013*^9},
+ CellID->481720840,ExpressionUUID->"ab1273e5-2bfe-4816-aaf9-410e6e425c77"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", 
+  RowBox[{"{", 
+   RowBox[{"\"\<PhaseEstimation\>\"", ",", 
+    RowBox[{"QuantumOperator", "[", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Phase\>\"", ",", 
+       RowBox[{"2", 
+        RowBox[{"\[Pi]", "/", "5"}]}]}], "}"}], "]"}], ",", "3"}], "}"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.875820347379805*^9},
+ CellID->1460398720,ExpressionUUID->"a988b2fc-d6a6-4056-b404-448b40dd573b"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", 
+  RowBox[{"{", 
+   RowBox[{"\"\<BernsteinVazirani\>\"", ",", "\"\<101\>\""}], "}"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.8758203455075493`*^9},
+ CellLabel->"In[101]:=",
+ CellID->749373048,ExpressionUUID->"678475b3-525f-412c-9324-924d99650faf"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"QuantumCircuitOperator", "[", 
+    RowBox[{"{", 
+     RowBox[{"\"\<BernsteinVazirani\>\"", ",", "\"\<101\>\""}], "}"}], "]"}], 
+   "[", "]"}], "[", "\"\<Probabilities\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.875822234854002*^9, 3.875822242534203*^9}},
+ CellLabel->
+  "In[103]:=",ExpressionUUID->"e9568801-905a-4dfd-9e80-44bb1d8b5531"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", 
+  RowBox[{"{", 
+   RowBox[{"\"\<BernsteinVaziraniOracle\>\"", ",", "\"\<101\>\""}], "}"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8758221908365717`*^9, 
+  3.8758221920527143`*^9}},ExpressionUUID->"5a0c82d7-8e84-48bc-b83a-\
+66382419b794"],
+
+Cell["Graph circuit, to generate graph/cluster states", "Text",
+ CellChangeTimes->{{3.875820579748829*^9, 
+  3.87582058762817*^9}},ExpressionUUID->"670e6b89-440d-47c9-90d0-\
+9667afc0539a"],
+
+Cell[BoxData[
+ RowBox[{"g", "=", 
+  RowBox[{"RandomGraph", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"4", ",", "5"}], "}"}], ",", 
+    RowBox[{"VertexLabels", "->", "Automatic"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.875820592792995*^9, 3.87582060142342*^9}},
+ CellLabel->"In[63]:=",ExpressionUUID->"80cad412-e7c6-43e5-add1-a8e6bc2faa8e"],
+
+Cell["Graph circuit applies CNOT on all edges", "Text",
+ CellChangeTimes->{{3.875820621875079*^9, 
+  3.875820637972382*^9}},ExpressionUUID->"da894685-d94b-49cf-8f2c-\
+fd75420f72e6"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", 
+  RowBox[{"{", 
+   RowBox[{"\"\<Graph\>\"", ",", "g"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.875137534602446*^9, 3.875137556835785*^9}, 
+   3.8758203434303427`*^9, 3.8758206051875753`*^9},
+ CellLabel->"In[57]:=",ExpressionUUID->"3772b96c-ad91-45a0-9aac-11e50f3d0298"],
+
+Cell["You may recall that we had a Graph state. ", "Text",
+ CellChangeTimes->{{3.8758216299638033`*^9, 
+  3.875821637262889*^9}},ExpressionUUID->"49029fea-c99f-416c-917f-\
+81510ec91ce5"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.875821899488214*^9, 3.875821910881838*^9}},
+ CellLabel->"Out[94]=",ExpressionUUID->"7f9e0ab2-9851-4e4d-b59c-4661f25288ae"],
+
+Cell[BoxData[
+ RowBox[{"gqc", "=", 
+  RowBox[{
+   RowBox[{"QuantumOperator", "[", 
+    RowBox[{"{", 
+     RowBox[{"\"\<H\>\"", ",", 
+      RowBox[{"Length", "[", 
+       RowBox[{"VertexList", "[", "g", "]"}], "]"}]}], "}"}], "]"}], "/*", 
+   RowBox[{"QuantumCircuitOperator", "[", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Graph\>\"", ",", "g"}], "}"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.875821562745475*^9, 3.875821562823094*^9}, {
+  3.875821600632186*^9, 3.8758216882963877`*^9}},
+ CellLabel->"In[64]:=",ExpressionUUID->"01aeaac5-a382-466f-8ddd-f2dd20215c36"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"QuantumState", "[", 
+   RowBox[{"{", 
+    RowBox[{"\"\<Graph\>\"", ",", "g"}], "}"}], "]"}], "==", 
+  RowBox[{"gqc", "[", "]"}]}]], "Input",
+ CellChangeTimes->{{3.875821933334063*^9, 3.875821982035236*^9}, {
+  3.875873821857563*^9, 3.875873825999486*^9}, {3.875873859433241*^9, 
+  3.875873872386324*^9}},
+ CellLabel->"In[65]:=",ExpressionUUID->"e82da209-b9da-444f-959a-09489147da92"],
+
+Cell["\<\
+Grover quantum-search algorithm with a Boolean oracle, given a Boolean \
+function\
+\>", "Text",
+ CellChangeTimes->{{3.875820644637686*^9, 
+  3.875820678651765*^9}},ExpressionUUID->"85163899-442f-44d5-9cfd-\
+ce9ba9999722"],
+
+Cell[BoxData[
+ RowBox[{"QuantumCircuitOperator", "[", 
+  RowBox[{"{", 
+   RowBox[{"\"\<Grover\>\"", ",", 
+    RowBox[{
+     RowBox[{"a", "&&", "b"}], "||", 
+     RowBox[{
+      RowBox[{"!", "c"}], "&&", "d"}]}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.875137558350976*^9, 3.875137608957856*^9}, 
+   3.875820341506021*^9, {3.8758203933842707`*^9, 3.875820410073226*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"2fc66d0f-02c2-484b-94a6-cc163e006342"],
+
+Cell["The corresponding Boolean oracle", "Text",
+ CellChangeTimes->{{3.875820665121299*^9, 
+  3.8758206731615868`*^9}},ExpressionUUID->"7e72ee2e-d5ca-4294-8fd3-\
+3f06e2236a94"],
+
+Cell[BoxData[
+ RowBox[{"boo", "=", 
+  RowBox[{"QuantumCircuitOperator", "[", 
+   RowBox[{"{", 
+    RowBox[{"\"\<BooleanOracle\>\"", ",", 
+     RowBox[{
+      RowBox[{"a", "&&", "b"}], "||", 
+      RowBox[{
+       RowBox[{"!", "c"}], "&&", "d"}]}]}], "}"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.875820131499927*^9, 3.875820133121705*^9}, 
+   3.8758203608732643`*^9, {3.875820417440282*^9, 3.875820436896905*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"30e0be60-c592-44fa-80ef-43639183309c"],
+
+Cell["\<\
+Note the Boolean oracle saves the solution in an ancillary qubit (last one).\
+\>", "Text",
+ CellChangeTimes->{{3.8758206844802017`*^9, 3.875820706211912*^9}, 
+   3.875821456310576*^9},ExpressionUUID->"4a04a920-fa4c-45f7-80cf-\
+32afdc0b4681"],
+
+Cell["Let\[CloseCurlyQuote]s find the solutions:", "Text",
+ CellChangeTimes->{{3.875821458991803*^9, 
+  3.8758214649585667`*^9}},ExpressionUUID->"403f32e5-630a-4059-b871-\
+b27a840035d4"],
+
+Cell[BoxData[
+ RowBox[{"sol", "=", 
+  RowBox[{
+   RowBox[{"SatisfiabilityInstances", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"a", "&&", "b"}], "||", 
+      RowBox[{
+       RowBox[{"!", "c"}], "&&", "d"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b", ",", "c", ",", "d"}], "}"}], ",", "All"}], "]"}],
+    "/.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"True", "->", "\"\<1\>\""}], ",", 
+     RowBox[{"False", "->", "\"\<0\>\""}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.875821166992593*^9, 3.875821168257505*^9}, {
+  3.875821491040259*^9, 3.875821499613944*^9}},
+ CellLabel->"In[77]:=",ExpressionUUID->"e2b4984d-7b14-4069-a774-baddccc6e486"],
+
+Cell["\<\
+Let\[CloseCurlyQuote]s create corresponding quantum states, by adding the \
+last [ancillary] qubit and set it as 0 \
+\>", "Text",
+ CellChangeTimes->{{3.875820828954845*^9, 
+  3.875820858925926*^9}},ExpressionUUID->"0e165e50-71ea-4988-aea2-\
+eb83a76fe865"],
+
+Cell[BoxData[
+ RowBox[{"states", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"QuantumState", "[", 
+     RowBox[{"#", "<>", "\"\<0\>\""}], "]"}], "&"}], "/@", "sol"}]}]], "Input",\
+
+ CellChangeTimes->{{3.875820933845538*^9, 3.8758209356801233`*^9}, {
+  3.87582115177597*^9, 3.8758211528182898`*^9}, {3.8758214762676783`*^9, 
+  3.875821503502376*^9}},
+ CellLabel->"In[78]:=",ExpressionUUID->"abf92cfb-66c5-4694-805e-2f258c3669db"],
+
+Cell["\<\
+Now after apply the Boolean oracle, as one can see, the ancillary qubit is \
+flipped\
+\>", "Text",
+ CellChangeTimes->{{3.875821053404337*^9, 
+  3.875821071981069*^9}},ExpressionUUID->"4d0f6420-cd26-4e3e-a28d-\
+b1d50f06d7f4"],
+
+Cell[BoxData[
+ RowBox[{"boo", "/@", "states"}]], "Input",
+ CellChangeTimes->{{3.875820551775652*^9, 3.8758205619156027`*^9}, {
+   3.875821031679817*^9, 3.875821033782407*^9}, {3.875821115069042*^9, 
+   3.875821115672886*^9}, 3.8758212058854*^9, {3.8758213939074287`*^9, 
+   3.87582139512904*^9}},
+ CellLabel->"In[70]:=",ExpressionUUID->"ae8a76aa-09d6-400e-8b28-e5586180bf09"],
+
+Cell["\<\
+There is another way of saving the solution of a Boolean function: adding a \
+phase into solutions\
+\>", "Text",
+ CellChangeTimes->{{3.8758210805575523`*^9, 
+  3.8758210991832733`*^9}},ExpressionUUID->"f4326362-4b10-47a7-aa8b-\
+26869ea70aa6"],
+
+Cell[BoxData[
+ RowBox[{"ph", "=", 
+  RowBox[{"QuantumCircuitOperator", "[", 
+   RowBox[{"{", 
+    RowBox[{"\"\<PhaseOracle\>\"", ",", 
+     RowBox[{
+      RowBox[{"a", "&&", "b"}], "||", 
+      RowBox[{
+       RowBox[{"!", "c"}], "&&", "d"}]}]}], "}"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8758204249047413`*^9, 3.875820427177649*^9}, {
+  3.875821103311257*^9, 3.8758211046656713`*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"ca5dad5a-615f-4d89-8c1f-d091c28c9328"],
+
+Cell["Create states:", "Text",
+ CellChangeTimes->{{3.875821535507568*^9, 
+  3.8758215478757877`*^9}},ExpressionUUID->"c3bae8be-7105-4503-a45a-\
+3161545fa999"],
+
+Cell[BoxData[
+ RowBox[{"states", "=", 
+  RowBox[{
+   RowBox[{"QuantumState", "@*", "StringJoin"}], "@@@", "sol"}]}]], "Input",
+ CellChangeTimes->{{3.875821374063217*^9, 3.875821386170044*^9}},
+ CellLabel->"In[72]:=",ExpressionUUID->"862067ab-8291-44ae-9f27-b674cbe6395a"],
+
+Cell["Action of phase oracle on them:", "Text",
+ CellChangeTimes->{{3.875821542132636*^9, 
+  3.875821546083027*^9}},ExpressionUUID->"d1399532-065c-4694-8f4e-\
+78b101134f30"],
+
+Cell[BoxData[
+ RowBox[{"ph", "/@", "states"}]], "Input",
+ CellChangeTimes->{{3.875821315424735*^9, 3.875821366737713*^9}, {
+  3.87582140766367*^9, 3.875821411555779*^9}},
+ CellLabel->"In[73]:=",ExpressionUUID->"94643975-8bad-4357-84cf-5bd43eb1cc65"]
+}, Open  ]]
+},
+WindowSize->{927, 804},
+WindowMargins->{{397, Automatic}, {Automatic, 0}},
+PrivateNotebookOptions->{"CloudPublishPath"->"/Published/WTC22QuantumTalk.nb"},
+TaggingRules-><|"TryRealOnly" -> False|>,
+FrontEndVersion->"13.1 for Mac OS X x86 (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b35bf486-b877-4c1e-af31-cf6e1f5f4e6b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 217, 4, 67, "Section",ExpressionUUID->"eb2f8a09-6b3f-4416-bdbe-ed3032a666ed"],
+Cell[800, 28, 341, 6, 52, "Input",ExpressionUUID->"d9e5afe5-061b-402a-a321-db4d448a2699"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1178, 39, 167, 3, 67, "Section",ExpressionUUID->"006fa776-fb7d-4019-9f80-ffa097c06197"],
+Cell[1348, 44, 393, 7, 58, "Text",ExpressionUUID->"e3082cee-9b4e-4ac7-bc8d-4eb89646700c"],
+Cell[1744, 53, 670, 16, 36, "Text",ExpressionUUID->"804b54fc-ae28-4e5f-9945-8f4f157f0ce8"],
+Cell[2417, 71, 630, 14, 35, "Text",ExpressionUUID->"003634e9-a564-41db-89ef-10cf0a2f2a67"],
+Cell[3050, 87, 576, 12, 35, "Text",ExpressionUUID->"51498c58-c9cb-4e9d-b342-bcda9c255b7f"],
+Cell[3629, 101, 230, 3, 30, "Input",ExpressionUUID->"211b0a45-bc7f-4dfa-bb5d-67aa1a5a0734"],
+Cell[3862, 106, 232, 3, 30, "Input",ExpressionUUID->"c95a7f2e-214e-4ddd-8907-d579fa4b15b1"],
+Cell[4097, 111, 276, 5, 30, "Input",ExpressionUUID->"a6f611ec-0835-4f18-8b41-16b6cb8db293"],
+Cell[4376, 118, 355, 7, 30, "Input",ExpressionUUID->"4ebf04ec-0b89-4189-9e8b-de82d5783b44"],
+Cell[4734, 127, 256, 4, 30, "Input",ExpressionUUID->"dd29d4bf-6336-405a-9945-5cdb32a9042c"],
+Cell[4993, 133, 334, 7, 30, "Input",ExpressionUUID->"1545ba57-5e87-492c-b573-74ba1dc14330"],
+Cell[5330, 142, 404, 9, 30, "Input",ExpressionUUID->"4c452ac4-4aeb-4b44-b097-45f1ee6a5920"],
+Cell[5737, 153, 412, 9, 30, "Input",ExpressionUUID->"a5ee27bb-f98f-415c-bcbc-27bdc1dc665d"],
+Cell[6152, 164, 1401, 30, 52, "Input",ExpressionUUID->"a239c12f-bbed-4d3a-b8e8-1c3fc8eb5136"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7590, 199, 212, 4, 67, "Section",ExpressionUUID->"c4f4f641-34ce-44af-9067-e4ad76caa96c"],
+Cell[7805, 205, 227, 3, 30, "Input",ExpressionUUID->"6e0d1147-3949-4500-87ea-f65bf546de8d",
+ CellID->1470393002],
+Cell[8035, 210, 234, 4, 30, "Input",ExpressionUUID->"a34a18c8-1b85-4d6e-a2d2-d9f0ce649cc0"],
+Cell[8272, 216, 208, 3, 30, "Input",ExpressionUUID->"9e09a52e-4b02-4943-87e2-e5388cc61d84",
+ CellID->395258070],
+Cell[8483, 221, 206, 3, 30, "Input",ExpressionUUID->"9f3ed9ce-7085-4937-893a-43a3605c7ca8",
+ CellID->706341868],
+Cell[8692, 226, 253, 5, 30, "Input",ExpressionUUID->"ab1273e5-2bfe-4816-aaf9-410e6e425c77",
+ CellID->481720840],
+Cell[8948, 233, 440, 11, 30, "Input",ExpressionUUID->"a988b2fc-d6a6-4056-b404-448b40dd573b",
+ CellID->1460398720],
+Cell[9391, 246, 303, 7, 30, "Input",ExpressionUUID->"678475b3-525f-412c-9324-924d99650faf",
+ CellID->749373048],
+Cell[9697, 255, 385, 9, 30, "Input",ExpressionUUID->"e9568801-905a-4dfd-9e80-44bb1d8b5531"],
+Cell[10085, 266, 295, 7, 30, "Input",ExpressionUUID->"5a0c82d7-8e84-48bc-b83a-66382419b794"],
+Cell[10383, 275, 188, 3, 35, "Text",ExpressionUUID->"670e6b89-440d-47c9-90d0-9667afc0539a"],
+Cell[10574, 280, 351, 8, 30, "Input",ExpressionUUID->"80cad412-e7c6-43e5-add1-a8e6bc2faa8e"],
+Cell[10928, 290, 181, 3, 35, "Text",ExpressionUUID->"da894685-d94b-49cf-8f2c-fd75420f72e6"],
+Cell[11112, 295, 331, 6, 30, "Input",ExpressionUUID->"3772b96c-ad91-45a0-9aac-11e50f3d0298"],
+Cell[11446, 303, 186, 3, 35, "Text",ExpressionUUID->"49029fea-c99f-416c-917f-81510ec91ce5"],
+Cell[11635, 308, 176, 2, 34, "Output",ExpressionUUID->"7f9e0ab2-9851-4e4d-b59c-4661f25288ae"],
+Cell[11814, 312, 565, 13, 30, "Input",ExpressionUUID->"01aeaac5-a382-466f-8ddd-f2dd20215c36"],
+Cell[12382, 327, 418, 9, 30, "Input",ExpressionUUID->"e82da209-b9da-444f-959a-09489147da92"],
+Cell[12803, 338, 231, 6, 35, "Text",ExpressionUUID->"85163899-442f-44d5-9cfd-ce9ba9999722"],
+Cell[13037, 346, 455, 10, 30, "Input",ExpressionUUID->"2fc66d0f-02c2-484b-94a6-cc163e006342"],
+Cell[13495, 358, 176, 3, 35, "Text",ExpressionUUID->"7e72ee2e-d5ca-4294-8fd3-3f06e2236a94"],
+Cell[13674, 363, 494, 11, 30, "Input",ExpressionUUID->"30e0be60-c592-44fa-80ef-43639183309c"],
+Cell[14171, 376, 251, 5, 35, "Text",ExpressionUUID->"4a04a920-fa4c-45f7-80cf-32afdc0b4681"],
+Cell[14425, 383, 186, 3, 35, "Text",ExpressionUUID->"403f32e5-630a-4059-b871-b27a840035d4"],
+Cell[14614, 388, 666, 18, 30, "Input",ExpressionUUID->"e2b4984d-7b14-4069-a774-baddccc6e486"],
+Cell[15283, 408, 265, 6, 35, "Text",ExpressionUUID->"0e165e50-71ea-4988-aea2-eb83a76fe865"],
+Cell[15551, 416, 425, 10, 30, "Input",ExpressionUUID->"abf92cfb-66c5-4694-805e-2f258c3669db"],
+Cell[15979, 428, 234, 6, 35, "Text",ExpressionUUID->"4d0f6420-cd26-4e3e-a28d-b1d50f06d7f4"],
+Cell[16216, 436, 375, 6, 30, "Input",ExpressionUUID->"ae8a76aa-09d6-400e-8b28-e5586180bf09"],
+Cell[16594, 444, 252, 6, 35, "Text",ExpressionUUID->"f4326362-4b10-47a7-aa8b-26869ea70aa6"],
+Cell[16849, 452, 470, 11, 30, "Input",ExpressionUUID->"ca5dad5a-615f-4d89-8c1f-d091c28c9328"],
+Cell[17322, 465, 158, 3, 35, "Text",ExpressionUUID->"c3bae8be-7105-4503-a45a-3161545fa999"],
+Cell[17483, 470, 271, 5, 30, "Input",ExpressionUUID->"862067ab-8291-44ae-9f27-b674cbe6395a"],
+Cell[17757, 477, 173, 3, 35, "Text",ExpressionUUID->"d1399532-065c-4694-8f4e-78b101134f30"],
+Cell[17933, 482, 249, 4, 30, "Input",ExpressionUUID->"94643975-8bad-4357-84cf-5bd43eb1cc65"]
+}, Open  ]]
+}
+]
+*)
+

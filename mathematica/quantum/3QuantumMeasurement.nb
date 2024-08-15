@@ -1,0 +1,970 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     37677,        962]
+NotebookOptionsPosition[     31336,        844]
+NotebookOutlinePosition[     31729,        860]
+CellTagsIndexPosition[     31686,        857]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"PacletUninstall", " ", "/@", " ", 
+   RowBox[{"PacletFind", "[", "\"\<Quantum*\>\"", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"ClearAll", "[", 
+   RowBox[{
+   "\"\<*QuantumFramework*\>\"", ",", "\"\<Wolfram`QuantumFramework`*\>\"", 
+    ",", " ", "\"\<Wolfram`QuantumFramework`**`*\>\""}], "]"}], ";"}], "\n", 
+ RowBox[{"PacletInstall", "[", 
+  RowBox[{
+   RowBox[{"CloudObject", "[", "\"\<https://wolfr.am/DevWQCF\>\"", "]"}], ",",
+    " ", 
+   RowBox[{"ForceVersionInstall", " ", "->", " ", "True"}]}], "]"}], "\n", 
+ RowBox[{"<<", " ", "Wolfram`QuantumFramework`"}]}], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"a7a898a2-e5de-48c5-bd56-4f75cc0703cd"],
+
+Cell[CellGroupData[{
+
+Cell["Quantum Measurement", "Section",
+ TaggingRules->{},
+ CellChangeTimes->{{3.8434388556306753`*^9, 3.843438874477027*^9}, {
+   3.84343922899472*^9, 3.8434392313621283`*^9}, 3.851431512161668*^9},
+ CellID->2000507648,ExpressionUUID->"e07f5937-010f-4d36-ad15-1eba1f2c194d"],
+
+Cell[TextData[{
+ "In our quantum framework, one can study projective measurements or any \
+general measurement (POVM), using ",
+ ButtonBox["QuantumMeasurementOperator",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.wolframcloud.com/obj/wolframquantumframework/\
+DeployedResources/Paclet/Wolfram/QuantumFramework/Documentation/\
+QuantumFramework/ref/QuantumMeasurementOperator.html"], None},
+  ButtonNote->
+   "https://www.wolframcloud.com/obj/wolframquantumframework/\
+DeployedResources/Paclet/Wolfram/QuantumFramework/Documentation/\
+QuantumFramework/ref/QuantumMeasurementOperator.html"],
+ "."
+}], "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.843838209809442*^9, 3.84383826994069*^9}, {
+  3.851615623849922*^9, 3.8516156238509083`*^9}},
+ CellID->66553693,ExpressionUUID->"73f7f8d4-efc3-48db-b156-bb9797b76a42"],
+
+Cell[CellGroupData[{
+
+Cell["PVM (Projective Measurements)", "Subsection",
+ TaggingRules->{},
+ CellChangeTimes->{{3.8436099847865353`*^9, 3.8436100017382298`*^9}, {
+  3.85152935582734*^9, 3.851529359562686*^9}},
+ CellID->1262237375,ExpressionUUID->"47a9608d-062c-43d4-9bee-58df94f2dbe6"],
+
+Cell["Specify a QuantumMeasurementOperator by basis name:", "Text",
+ CellChangeTimes->{{3.808433230179841*^9, 3.808433266194749*^9}, 
+   3.8084365778539996`*^9, {3.8084366276685486`*^9, 3.8084366301368804`*^9}, {
+   3.8123976682480297`*^9, 3.812397682024289*^9}, {3.843243870557455*^9, 
+   3.84324387110849*^9}, {3.843243919919778*^9, 3.843243923779314*^9}, {
+   3.843243970834832*^9, 3.84324398678095*^9}, {3.8746691567563963`*^9, 
+   3.87466916308255*^9}},
+ CellID->68439264,ExpressionUUID->"2de46bcf-f381-4b74-b916-bbd4046e1a31"],
+
+Cell[BoxData[
+ RowBox[{"QuantumMeasurementOperator", "[", "\"\<PauliZ\>\"", "]"}]], "Input",\
+
+ CellChangeTimes->{{3.812397691194149*^9, 3.812397700448348*^9}, {
+  3.843243921921754*^9, 3.843243922100164*^9}},
+ CellLabel->"In[9]:=",
+ CellID->1029397697,ExpressionUUID->"731b20fb-392f-4ae7-af43-7a633cae5736"],
+
+Cell["\<\
+Specify a QuantumMeasurementOperator object given a basis with customized \
+eigenvalues:\
+\>", "Text",
+ CellChangeTimes->{{3.811206331592458*^9, 3.8112063943573594`*^9}, {
+  3.811809148357079*^9, 3.8118091603989024`*^9}, {3.8118100099919944`*^9, 
+  3.8118100106492224`*^9}, {3.8118104976184235`*^9, 3.811810505896537*^9}, {
+  3.812397711976206*^9, 3.812397742006412*^9}, {3.8432439384796953`*^9, 
+  3.843243939323249*^9}, {3.843244023027196*^9, 3.843244025504506*^9}, {
+  3.844019784135686*^9, 3.8440197884079523`*^9}, {3.844019880796082*^9, 
+  3.8440198904077578`*^9}, {3.874669169290265*^9, 3.874669169772359*^9}},
+ CellID->418852936,ExpressionUUID->"8c4bd3df-24bb-47df-878f-891048f8c6c1"],
+
+Cell[BoxData[
+ RowBox[{"QuantumMeasurementOperator", "[", 
+  RowBox[{"\"\<Bell\>\"", "->", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.794312998879074*^9, 3.7943130687567167`*^9}, {
+   3.8118091657958536`*^9, 3.8118091779653296`*^9}, {3.8118100297043905`*^9, 
+   3.811810034848853*^9}, {3.8118105249621096`*^9, 3.8118105636194615`*^9}, {
+   3.811810692067918*^9, 3.8118106962070303`*^9}, 3.812397750990592*^9, {
+   3.8431493725319777`*^9, 3.8431494205589933`*^9}, {3.843149806253438*^9, 
+   3.843149810903569*^9}, {3.843243933494234*^9, 3.843243947425305*^9}, {
+   3.84409972999914*^9, 3.844099732372151*^9}},
+ CellLabel->"In[10]:=",
+ CellID->1502669524,ExpressionUUID->"123eab7e-fd4c-4a58-a911-e3e561066516"],
+
+Cell["One can measure an observable by inputting its matrix:", "Text",
+ CellChangeTimes->{{3.8439340549465847`*^9, 3.8439340564796963`*^9}, {
+   3.8439343571907787`*^9, 3.8439343742191267`*^9}, 3.843934491796507*^9},
+ CellID->1085279064,ExpressionUUID->"64121377-93b1-45e1-b4e3-ea7236f141a7"],
+
+Cell[BoxData[
+ RowBox[{"qmo", "=", 
+  RowBox[{"QuantumMeasurementOperator", "[", 
+   RowBox[{"PauliMatrix", "[", "2", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.844019414636421*^9, 3.84401941547094*^9}},
+ CellLabel->"In[11]:=",
+ CellID->427883758,ExpressionUUID->"1163f424-d7a2-4d02-9416-032d82478bf0"],
+
+Cell[BoxData[
+ RowBox[{"m", "=", 
+  RowBox[{"qmo", "[", 
+   RowBox[{"QuantumState", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"1", "+", 
+       FractionBox["\[ImaginaryI]", 
+        SqrtBox["2"]]}], ",", 
+      RowBox[{"\[ImaginaryI]", "+", 
+       FractionBox["1", 
+        SqrtBox["2"]]}]}], "}"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.843933996924274*^9, 3.8439340352533827`*^9}, {
+  3.8439343506562*^9, 3.843934424794444*^9}, {3.8439344634333687`*^9, 
+  3.8439344836343412`*^9}, {3.844019422577262*^9, 3.8440194228696938`*^9}},
+ CellLabel->"In[12]:=",
+ CellID->1706614677,ExpressionUUID->"a88322d6-128e-4cf3-bf56-df7a3658a645"],
+
+Cell[TextData[{
+ ButtonBox["ProbabilityPlot",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://reference.wolfram.com/language/ref/ProbabilityPlot.html"], 
+    None},
+  ButtonNote->
+   "https://reference.wolfram.com/language/ref/ProbabilityPlot.html"],
+ " of measurement results:"
+}], "Text",
+ CellChangeTimes->{{3.843934505014145*^9, 3.843934515629313*^9}, 
+   3.8746691776292067`*^9, {3.874669227111185*^9, 3.8746692315076313`*^9}},
+ CellID->1458226567,ExpressionUUID->"e33512f0-c75d-4017-9cf9-d29612390239"],
+
+Cell[BoxData[
+ RowBox[{"m", "[", "\"\<ProbabilityPlot\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.84393438209967*^9, 3.843934388675283*^9}},
+ CellLabel->"In[13]:=",
+ CellID->1962093594,ExpressionUUID->"85058ada-fbe6-450f-87e7-5c4bb5d8523b"],
+
+Cell["Post-measurement states:", "Text",
+ CellChangeTimes->{{3.843934505014145*^9, 3.843934529468124*^9}, {
+  3.8746692337612467`*^9, 3.8746692344519176`*^9}},
+ CellID->1655471314,ExpressionUUID->"2f9657c8-20e8-4825-8735-bf90b442e3fa"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"#", "[", "\"\<Formula\>\"", "]"}], "&"}], "/@", 
+   RowBox[{"m", "[", "\"\<StateAssociation\>\"", "]"}]}], "//", 
+  RowBox[{"Map", "@", "Simplify"}]}]], "Input",
+ CellChangeTimes->{{3.843934531607085*^9, 3.8439345359184628`*^9}, {
+  3.844170375705657*^9, 3.844170380377446*^9}, {3.851177452100667*^9, 
+  3.8511774762304583`*^9}},
+ CellLabel->"In[14]:=",
+ CellID->474131440,ExpressionUUID->"af4b1b60-7ac0-43a5-8ee9-036290d30ec0"],
+
+Cell["\<\
+A one-qudit measurement operator can act on a system of many qudits when the \
+order (target qudit for measurement) is given (by default it will be the \
+first qudit):\
+\>", "Text",
+ CellChangeTimes->{{3.8429191413179073`*^9, 3.842919154973583*^9}, {
+   3.842919221985703*^9, 3.842919226160327*^9}, {3.84291934054141*^9, 
+   3.842919350960878*^9}, {3.842919387806054*^9, 3.842919389458083*^9}, {
+   3.8430400610679703`*^9, 3.843040130030991*^9}, {3.843040269416451*^9, 
+   3.8430403156843367`*^9}, {3.8430403781175537`*^9, 3.843040385064528*^9}, {
+   3.843040619824725*^9, 3.843040622231353*^9}, {3.843040768904407*^9, 
+   3.843040777278377*^9}, {3.843040909985032*^9, 3.843040910250647*^9}, {
+   3.84304098983611*^9, 3.843041020195551*^9}, {3.844019593221552*^9, 
+   3.844019660779682*^9}, {3.874669245984926*^9, 3.874669246212009*^9}, {
+   3.8746695495995007`*^9, 3.874669550121583*^9}, 3.8750276591444964`*^9, {
+   3.875102028133466*^9, 3.8751020291795673`*^9}},
+ CellID->1207371546,ExpressionUUID->"f5f456cf-d074-4689-9354-7a61d4de4a97"],
+
+Cell[BoxData[
+ RowBox[{"qmo", "=", 
+  RowBox[{"QuantumMeasurementOperator", "[", 
+   RowBox[{"\"\<ComputationalBasis\>\"", ",", 
+    RowBox[{"{", "2", "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.844019615714602*^9, 3.8440196167159357`*^9}, 
+   3.844019664219524*^9},
+ CellLabel->"In[15]:=",
+ CellID->1011318320,ExpressionUUID->"a835d81b-7ff9-4282-a5c5-186b493634a1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"qmo", "[", 
+   RowBox[{"QuantumState", "[", 
+    RowBox[{"{", 
+     RowBox[{"\"\<UniformSuperposition\>\"", ",", "2"}], "}"}], "]"}], "]"}], 
+  "[", "\"\<StateAmplitudes\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.844019677942916*^9, 3.844019699046229*^9}, {
+  3.8441705295863457`*^9, 3.844170548184106*^9}},
+ CellLabel->"In[16]:=",
+ CellID->1780813210,ExpressionUUID->"0e572abe-14de-4e9d-8f82-748eec48b8db"],
+
+Cell["\<\
+A measurement can be defined by specifying the corresponding measurement \
+basis.\
+\>", "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.843838082620534*^9, 3.8438380877784986`*^9}, {
+  3.8438382738164377`*^9, 3.843838291309125*^9}},
+ CellID->562727424,ExpressionUUID->"65b272da-df0a-4a3d-b18c-0c1d4775361e"],
+
+Cell[TextData[{
+ "Measurement of a one-qudit system ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[ImaginaryI]", 
+     SqrtBox["3"], 
+     TemplateBox[{"0"},
+      "Ket"]}], "+", 
+    RowBox[{
+     SqrtBox["2"], 
+     TemplateBox[{"1"},
+      "Ket"]}], "+", 
+    RowBox[{
+     SqrtBox["5"], 
+     TemplateBox[{"2"},
+      "Ket"]}]}], TraditionalForm]],ExpressionUUID->
+  "8a24552e-eb66-4b83-a4e7-27ffac3e8476"],
+ " in the state basis:"
+}], "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.8429191413179073`*^9, 3.842919154973583*^9}, {
+  3.842919221985703*^9, 3.842919226160327*^9}, {3.8429193623385963`*^9, 
+  3.8429193645825377`*^9}, {3.843040145822934*^9, 3.843040157512147*^9}},
+ CellID->1426864348,ExpressionUUID->"09fe2e33-6c76-4f2e-b206-077c720881a1"],
+
+Cell[BoxData[
+ RowBox[{"\[Psi]0", "=", 
+  RowBox[{"QuantumState", "[", 
+   RowBox[{
+    RowBox[{"Sqrt", "@", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "3"}], ",", "2", ",", "5"}], "}"}]}], ",", "3"}], 
+   "]"}]}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.842355702009897*^9, 3.8423557103875303`*^9}, 
+   3.8423595958850937`*^9, {3.8423962286607723`*^9, 3.8423962584722023`*^9}, {
+   3.842396822596068*^9, 3.842396829950272*^9}, {3.842705599196898*^9, 
+   3.8427056068784733`*^9}, {3.842705667273711*^9, 3.84270566753368*^9}, {
+   3.84291926170364*^9, 3.842919268367087*^9}, {3.844532608357476*^9, 
+   3.8445326094686813`*^9}, {3.852202621505052*^9, 3.852202640591097*^9}},
+ CellLabel->"In[17]:=",
+ CellID->359210787,ExpressionUUID->"e08628ca-0983-44a0-b435-f4d81b25d613"],
+
+Cell[BoxData[
+ RowBox[{"\[Psi]0", "[", "\"\<Dimensions\>\"", "]"}]], "Input",
+ CellLabel->"In[18]:=",ExpressionUUID->"aceaf148-82b6-4db9-a9f9-cad54e444f6a"],
+
+Cell[BoxData[
+ RowBox[{"QuantumBasis", "[", 
+  RowBox[{"\[Psi]0", "[", "\"\<Dimensions\>\"", "]"}], "]"}]], "Input",
+ CellLabel->"In[19]:=",ExpressionUUID->"89a7dc18-3bc2-426b-a89b-9303bebfc0b8"],
+
+Cell[BoxData[
+ RowBox[{"m", "=", 
+  RowBox[{
+   RowBox[{"QuantumMeasurementOperator", "[", 
+    RowBox[{"QuantumBasis", "[", 
+     RowBox[{"\[Psi]0", "[", "\"\<Dimensions\>\"", "]"}], "]"}], "]"}], "[", 
+   "\[Psi]0", "]"}]}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.842355702009897*^9, 3.8423557103875303`*^9}, 
+   3.8423595958850937`*^9, {3.8423962286607723`*^9, 3.8423962584722023`*^9}, {
+   3.842396822596068*^9, 3.842396829950272*^9}, {3.842705599196898*^9, 
+   3.8427056068784733`*^9}, {3.842705667273711*^9, 3.84270566753368*^9}, {
+   3.84291926170364*^9, 3.842919268367087*^9}, {3.844532608357476*^9, 
+   3.8445326094686813`*^9}, 3.852202621505052*^9},
+ CellLabel->"In[20]:=",ExpressionUUID->"d2ab4318-5ef6-47d6-91c8-1d016638a8bb"],
+
+Cell[BoxData[
+ RowBox[{"m", "[", "\"\<ProbabilityPlot\>\"", "]"}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.842355702009897*^9, 3.8423557103875303`*^9}, 
+   3.8423595958850937`*^9, {3.8423962286607723`*^9, 3.8423962584722023`*^9}, {
+   3.842396822596068*^9, 3.842396829950272*^9}, {3.842705599196898*^9, 
+   3.8427056068784733`*^9}, {3.842705667273711*^9, 3.84270566753368*^9}, {
+   3.84291926170364*^9, 3.842919268367087*^9}, 3.844532608357476*^9},
+ CellLabel->"In[21]:=",
+ CellID->1862975327,ExpressionUUID->"5242787c-5aee-4267-9b29-83a33182f469"],
+
+Cell["Post-measurement states per measurement result:", "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.8429192741304407`*^9, 3.842919288408463*^9}},
+ CellID->857159539,ExpressionUUID->"581069dd-4fe6-4bd7-b0ab-60764803adf2"],
+
+Cell[BoxData[
+ RowBox[{"Thread", "[", 
+  RowBox[{
+   RowBox[{"m", "[", "\"\<States\>\"", "]"}], "==", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"QuantumState", "[", 
+      RowBox[{
+       RowBox[{"{", "1", "}"}], ",", "3"}], "]"}], ",", 
+     RowBox[{"QuantumState", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "1"}], "}"}], ",", "3"}], "]"}], ",", 
+     RowBox[{"QuantumState", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "1"}], "}"}], ",", "3"}], "]"}]}], 
+    "}"}]}], "]"}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.842919289339284*^9, 3.842919297954544*^9}, {
+  3.843040186891075*^9, 3.84304018757331*^9}, {3.843040224606872*^9, 
+  3.8430402493752203`*^9}},
+ CellLabel->"In[22]:=",
+ CellID->960067897,ExpressionUUID->"8e6fdfb3-b21f-43b4-bebd-93ff28a2c6e8"],
+
+Cell[TextData[{
+ "Measurement of a two-qudit system ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[ImaginaryI]", 
+     SqrtBox["3"], 
+     TemplateBox[{"00"},
+      "Ket"]}], "+", 
+    RowBox[{
+     SqrtBox["2"], 
+     TemplateBox[{"01"},
+      "Ket"]}], "+", 
+    RowBox[{"\[ImaginaryI]", 
+     TemplateBox[{"10"},
+      "Ket"]}], "+", 
+    RowBox[{
+     SqrtBox["5"], 
+     TemplateBox[{"11"},
+      "Ket"]}]}], TraditionalForm]],ExpressionUUID->
+  "704f9742-3c94-4f8d-bd77-b8c1d790117e"],
+ " in the computational basis:"
+}], "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.8429191413179073`*^9, 3.842919154973583*^9}, {
+  3.842919221985703*^9, 3.842919226160327*^9}, {3.84291934054141*^9, 
+  3.842919350960878*^9}, {3.842919387806054*^9, 3.842919389458083*^9}, {
+  3.8430400610679703`*^9, 3.843040130030991*^9}},
+ CellID->456986723,ExpressionUUID->"df8fc1c5-c344-4a35-b60a-39cfb82771d5"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Psi]0", "=", 
+   RowBox[{"QuantumState", "[", 
+    RowBox[{"Sqrt", "@", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "3"}], ",", "2", ",", 
+       RowBox[{"-", "1"}], ",", "5"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"m", "=", 
+  RowBox[{
+   RowBox[{"QuantumMeasurementOperator", "[", 
+    RowBox[{"\"\<Computational\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2"}], "}"}]}], "]"}], "[", "\[Psi]0", 
+   "]"}]}]}], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.842353706415938*^9, 3.842353766630292*^9}, {
+  3.8423968480142517`*^9, 3.842396872849805*^9}, {3.842746489795245*^9, 
+  3.842746502263735*^9}, {3.842919394357707*^9, 3.842919411719778*^9}, {
+  3.844532749148843*^9, 3.844532752659576*^9}},
+ CellLabel->"In[23]:=",
+ CellID->1174331789,ExpressionUUID->"eee4fbc2-2917-4b18-9595-97280d1c670c"],
+
+Cell[BoxData[
+ RowBox[{"m", "[", "\"\<ProbabilityPlot\>\"", "]"}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.842353706415938*^9, 3.842353766630292*^9}, {
+   3.8423968480142517`*^9, 3.842396872849805*^9}, {3.842746489795245*^9, 
+   3.842746502263735*^9}, {3.842919394357707*^9, 3.842919411719778*^9}, {
+   3.844532749148843*^9, 3.844532752659576*^9}, 3.852202967804941*^9},
+ CellLabel->"In[25]:=",
+ CellID->825741874,ExpressionUUID->"34071995-8c21-4a85-ab66-1ac7d294f941"],
+
+Cell["\<\
+One can get the post-measurements states of measurement results:\
+\>", "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.8438388963956413`*^9, 3.843838917251664*^9}},
+ CellID->1524804989,ExpressionUUID->"8a8024d7-ac83-40b7-8e25-6c847d897d8f"],
+
+Cell[BoxData[
+ RowBox[{"m", "[", "\"\<StateAssociation\>\"", "]"}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.84383888760958*^9, 3.843838893878487*^9}},
+ CellLabel->"In[26]:=",
+ CellID->1828655293,ExpressionUUID->"fb9751f7-42f2-49b0-84e4-8416c083637b"],
+
+Cell[TextData[{
+ "For composite systems, one can specify measuring of one or more qudits. It \
+can be done by specifying an order for QuantumMeasurementOperator. For \
+example, measurement of only the first qudit of a two-qudit system ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"\[ImaginaryI]", 
+       TemplateBox[{"0"},
+        "Ket"]}], "+", 
+      RowBox[{
+       SqrtBox["2"], 
+       TemplateBox[{"1"},
+        "Ket"]}]}], 
+     SqrtBox["3"]], "\[CircleTimes]", 
+    FractionBox[
+     RowBox[{
+      RowBox[{
+       SqrtBox["2"], 
+       TemplateBox[{"0"},
+        "Ket"]}], "+", 
+      RowBox[{"\[ImaginaryI]", 
+       SqrtBox["3"], 
+       TemplateBox[{"1"},
+        "Ket"]}], "+", 
+      RowBox[{
+       SqrtBox["5"], 
+       TemplateBox[{"2"},
+        "Ket"]}]}], 
+     SqrtBox["10"]]}], TraditionalForm]],ExpressionUUID->
+  "5d8e76f8-f863-4a8f-9c0a-1c1e510b5ec3"],
+ " in the state basis:"
+}], "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.8429191413179073`*^9, 3.842919154973583*^9}, {
+  3.842919221985703*^9, 3.842919226160327*^9}, {3.84291934054141*^9, 
+  3.842919350960878*^9}, {3.842919387806054*^9, 3.842919389458083*^9}, {
+  3.8430400610679703`*^9, 3.843040130030991*^9}, {3.843040269416451*^9, 
+  3.8430403156843367`*^9}, {3.8430403781175537`*^9, 3.843040385064528*^9}, {
+  3.843040619824725*^9, 3.843040622231353*^9}, {3.843040768904407*^9, 
+  3.843040777278377*^9}, {3.843040909985032*^9, 3.843040910250647*^9}, {
+  3.84304098983611*^9, 3.843041020195551*^9}, {3.843838377646187*^9, 
+  3.843838448273838*^9}, {3.851529400787512*^9, 3.8515294045541153`*^9}},
+ CellID->964115943,ExpressionUUID->"26210ffe-b16d-4a4c-9dde-0191947c5330"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Psi]0", "=", 
+   RowBox[{"QuantumTensorProduct", "[", 
+    RowBox[{
+     RowBox[{"QuantumState", "[", 
+      RowBox[{"Sqrt", "@", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "1"}], ",", "2"}], "}"}]}], "]"}], ",", 
+     RowBox[{"QuantumState", "[", 
+      RowBox[{
+       RowBox[{"Sqrt", "@", 
+        RowBox[{"{", 
+         RowBox[{"2", ",", 
+          RowBox[{"-", "3"}], ",", 
+          RowBox[{"-", "5"}]}], "}"}]}], ",", "3"}], "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"m", "=", 
+  RowBox[{
+   RowBox[{"QuantumMeasurementOperator", "[", 
+    RowBox[{"\"\<ComputationalBasis\>\"", ",", 
+     RowBox[{"{", "1", "}"}]}], "]"}], "[", "\[Psi]0", "]"}]}]}], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.842397512741063*^9, 3.8423975657648907`*^9}, {
+   3.842402676484984*^9, 3.842402685768412*^9}, {3.842919466344531*^9, 
+   3.8429194666010513`*^9}, {3.8430408477888536`*^9, 3.8430408513546*^9}, 
+   3.8430409123019323`*^9, {3.84383893410872*^9, 3.843838934854863*^9}, {
+   3.844532774540202*^9, 3.844532775127039*^9}},
+ CellLabel->"In[27]:=",
+ CellID->1132537386,ExpressionUUID->"f9f1a8d6-0810-4639-919f-e0c5c3344efa"],
+
+Cell[BoxData[
+ RowBox[{"m", "[", "\"\<ProbabilityPlot\>\"", "]"}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.842397512741063*^9, 3.8423975657648907`*^9}, {
+   3.842402676484984*^9, 3.842402685768412*^9}, {3.842919466344531*^9, 
+   3.8429194666010513`*^9}, {3.8430408477888536`*^9, 3.8430408513546*^9}, 
+   3.8430409123019323`*^9, {3.84383893410872*^9, 3.843838934854863*^9}, {
+   3.844532774540202*^9, 3.844532775127039*^9}},
+ CellLabel->"In[29]:=",
+ CellID->650128012,ExpressionUUID->"cd1b77df-c866-4a63-9cd8-913f2bf3e52d"],
+
+Cell[BoxData[
+ RowBox[{"m", "[", "\"\<StateAssociation\>\"", "]"}]], "Input",
+ TaggingRules->{},
+ CellLabel->"In[30]:=",
+ CellID->730048010,ExpressionUUID->"a58fc6f2-a3e2-4a94-90c6-9166e456bff5"],
+
+Cell[TextData[{
+ "Check the post-measurement states are ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[ImaginaryI]", 
+      TemplateBox[{"0"},
+       "Ket"]}], 
+     SqrtBox["3"]], "\[CircleTimes]", 
+    FractionBox[
+     RowBox[{
+      RowBox[{
+       SqrtBox["2"], 
+       TemplateBox[{"0"},
+        "Ket"]}], "+", 
+      RowBox[{"\[ImaginaryI]", 
+       SqrtBox["3"], 
+       TemplateBox[{"1"},
+        "Ket"]}], "+", 
+      RowBox[{
+       SqrtBox["5"], 
+       TemplateBox[{"2"},
+        "Ket"]}]}], 
+     SqrtBox["10"]]}], TraditionalForm]],ExpressionUUID->
+  "566aef3f-1768-492c-ab1e-b551ff5be054"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SqrtBox["2"], 
+      TemplateBox[{"1"},
+       "Ket"]}], 
+     SqrtBox["3"]], "\[CircleTimes]", 
+    FractionBox[
+     RowBox[{
+      RowBox[{
+       SqrtBox["2"], 
+       TemplateBox[{"0"},
+        "Ket"]}], "+", 
+      RowBox[{"\[ImaginaryI]", 
+       SqrtBox["3"], 
+       TemplateBox[{"1"},
+        "Ket"]}], "+", 
+      RowBox[{
+       SqrtBox["5"], 
+       TemplateBox[{"2"},
+        "Ket"]}]}], 
+     SqrtBox["10"]]}], TraditionalForm]],ExpressionUUID->
+  "2a08c5ea-faba-401e-b93a-bf2e0373e4c7"],
+ ":"
+}], "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.843041110561355*^9, 3.8430411327246017`*^9}, 
+   3.851529417339362*^9, {3.8516140437899885`*^9, 3.8516140454305077`*^9}},
+ CellID->1597477200,ExpressionUUID->"12f3fc1a-f964-455f-9e5d-360e659725d4"],
+
+Cell[BoxData[
+ RowBox[{"Thread", "[", 
+  RowBox[{
+   RowBox[{"m", "[", "\"\<States\>\"", "]"}], "==", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"QuantumTensorProduct", "[", 
+      RowBox[{
+       RowBox[{"QuantumState", "[", 
+        RowBox[{"Sqrt", "@", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "1"}], ",", "0"}], "}"}]}], "]"}], ",", 
+       RowBox[{"QuantumState", "[", 
+        RowBox[{
+         RowBox[{"Sqrt", "@", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", 
+            RowBox[{"-", "3"}], ",", 
+            RowBox[{"-", "5"}]}], "}"}]}], ",", "3"}], "]"}]}], "]"}], ",", 
+     RowBox[{"QuantumTensorProduct", "[", 
+      RowBox[{
+       RowBox[{"QuantumState", "[", 
+        RowBox[{"Sqrt", "@", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "2"}], "}"}]}], "]"}], ",", 
+       RowBox[{"QuantumState", "[", 
+        RowBox[{
+         RowBox[{"Sqrt", "@", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", 
+            RowBox[{"-", "3"}], ",", 
+            RowBox[{"-", "5"}]}], "}"}]}], ",", "3"}], "]"}]}], "]"}]}], 
+    "}"}]}], "]"}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.843040786093328*^9, 3.8430407924552393`*^9}, {
+  3.843040867001045*^9, 3.843040885223378*^9}, {3.843041068602079*^9, 
+  3.843041099720195*^9}},
+ CellLabel->"In[31]:=",
+ CellID->958745606,ExpressionUUID->"a6b8a52a-26eb-4858-b4d5-b97d3abaf06f"],
+
+Cell[TextData[{
+ "One can use the following format for named basis and specifying \
+corresponding eigenvalues: QuantumMeasurementOperator[name->eigenvalues]. For \
+example, define the measurement operator by a ",
+ ButtonBox["QuantumBasis",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.wolframcloud.com/obj/wolframquantumframework/\
+DeployedResources/Paclet/Wolfram/QuantumFramework/Documentation/\
+QuantumFramework/ref/QuantumBasis.html"], None},
+  ButtonNote->
+   "https://www.wolframcloud.com/obj/wolframquantumframework/\
+DeployedResources/Paclet/Wolfram/QuantumFramework/Documentation/\
+QuantumFramework/ref/QuantumBasis.html"],
+ " object (as an eigenbasis) and a list of eigenvalues:"
+}], "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.812927638228564*^9, 3.812927696209015*^9}, 
+   3.812927742169532*^9, {3.8438384802925262`*^9, 3.843838529906705*^9}, {
+   3.8515294437639227`*^9, 3.8515294465882196`*^9}, {3.8515296708091087`*^9, 
+   3.851529671256143*^9}, {3.8516156656178675`*^9, 3.8516156656188526`*^9}},
+ CellID->5163684,ExpressionUUID->"eadbd520-9fcb-43bf-96fb-7bb7b824608e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"QuantumMeasurementOperator", "[", 
+   RowBox[{"\"\<Bell\>\"", "->", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}], "]"}], "@", 
+  RowBox[{"QuantumState", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1", ",", "\[ImaginaryI]", ",", "2", ",", "3"}], "}"}], ",", 
+    "4"}], "]"}]}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.843873590215124*^9, 3.8438735921786013`*^9}, {
+  3.843874204396826*^9, 3.8438742644032288`*^9}, {3.844532798807644*^9, 
+  3.8445328256244307`*^9}},
+ CellLabel->"In[32]:=",
+ CellID->1324377490,ExpressionUUID->"d5783340-d8d8-4fe7-b360-e864cb4c0322"],
+
+Cell[BoxData[
+ RowBox[{"%", "[", "\"\<StateAmplitudes\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.852203288156061*^9, 
+  3.852203303493985*^9}},ExpressionUUID->"5de1a549-2b13-4459-96d1-\
+9cabc0b0a91e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["POVM", "Subsection",
+ CellChangeTimes->{{3.8516144430492883`*^9, 
+  3.85161444417929*^9}},ExpressionUUID->"7b266f25-86f1-46fa-ab3d-\
+34d4bcb48cf0"],
+
+Cell[TextData[{
+ "One can also input any set of operators, ",
+ Cell[BoxData[
+  RowBox[{"{", 
+   SubscriptBox["E", "m"], "}"}]], "InlineFormula",ExpressionUUID->
+  "7f6a1805-6378-4ce1-be3b-63b1a6ada868"],
+ " with ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"\[Sum]", 
+    SubscriptBox["E", "m"]}], "=", "I"}]], "InlineFormula",ExpressionUUID->
+  "64178e6d-fead-4aac-8bc1-220fe32a374a"],
+ " and ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["E", "m"], "=", 
+   RowBox[{
+    SubsuperscriptBox["M", "m", "\[ConjugateTranspose]"], 
+    SubscriptBox["M", "m"]}]}]], "InlineFormula",ExpressionUUID->
+  "29a6f4cf-7f93-4a3f-b1e7-6445cd6ba74c"],
+ ", to generalize measurements as positive operator-valued measures (POVMs). ",
+ Cell[BoxData[
+  SubscriptBox["M", "m"]],ExpressionUUID->
+  "2ac95f72-57f9-473c-987e-9b9f942a9270"],
+ " is usually called the detection operator, which, in general, can be \
+non-Hermitian."
+}], "Text",
+ CellChangeTimes->{
+  3.852202930352723*^9, {3.852203027929192*^9, 3.8522030643989897`*^9}, {
+   3.8750276435585356`*^9, 
+   3.8750276441550455`*^9}},ExpressionUUID->"56f35a7a-af67-4cb0-af56-\
+88340a461951"],
+
+Cell["\<\
+One can also give a list of POVM elements to define the measurement operator:\
+\
+\>", "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.844532901280614*^9, 3.844532920051001*^9}, {
+   3.8515295379668427`*^9, 3.851529538638424*^9}, {3.8516145365120125`*^9, 
+   3.851614537918171*^9}, 3.8522029254158707`*^9},
+ CellID->570158635,ExpressionUUID->"42239e42-1677-4408-b821-81eb3a3529ce"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"povm", "=", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"o1", ",", "o2", ",", "o3"}], "}"}], "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          FractionBox["2", "3"], ",", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          FractionBox["1", "6"], ",", 
+          FractionBox["1", 
+           RowBox[{"2", " ", 
+            SqrtBox["3"]}]]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          FractionBox["1", 
+           RowBox[{"2", " ", 
+            SqrtBox["3"]}]], ",", 
+          FractionBox["1", "2"]}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          FractionBox["1", "6"], ",", 
+          RowBox[{"-", 
+           FractionBox["1", 
+            RowBox[{"2", " ", 
+             SqrtBox["3"]}]]}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", 
+           FractionBox["1", 
+            RowBox[{"2", " ", 
+             SqrtBox["3"]}]]}], ",", 
+          FractionBox["1", "2"]}], "}"}]}], "}"}]}], "}"}]}]}], 
+  ";"}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.840817354840818*^9, 3.840817364012121*^9}, {
+  3.8408173993412867`*^9, 3.840817402209002*^9}},
+ CellLabel->"In[1]:=",
+ CellID->1270728923,ExpressionUUID->"f0682cd5-0af4-4881-8dea-dc1b6c14c9b3"],
+
+Cell["\<\
+Check that all POVM elements are explicitly positive semidefinite:\
+\>", "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.844532926919795*^9, 3.8445329579600058`*^9}, 
+   3.851529542554077*^9},
+ CellID->970097919,ExpressionUUID->"39817a2e-2da1-4716-9335-aab79c614e36"],
+
+Cell[BoxData[
+ RowBox[{"PositiveSemidefiniteMatrixQ", "/@", "povm"}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.840817366045277*^9, 3.840817407174773*^9}},
+ CellLabel->"In[2]:=",
+ CellID->416139446,ExpressionUUID->"694194af-1f10-432d-9451-7942666a665e"],
+
+Cell["Check the completeness relations:", "Text",
+ TaggingRules->{},
+ CellChangeTimes->{{3.844532959559071*^9, 3.844532966564601*^9}},
+ CellID->509781148,ExpressionUUID->"5db82cbd-80db-4cdf-abde-91d33e412059"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"Plus", "@@", "povm"}], ")"}], "==", 
+  RowBox[{"IdentityMatrix", "[", "2", "]"}]}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.8408179807620907`*^9, 3.840818006579886*^9}},
+ CellLabel->"In[3]:=",
+ CellID->614099940,ExpressionUUID->"0c8687b1-c9b4-4775-94f6-a5b8bda2b06d"],
+
+Cell[BoxData[
+ RowBox[{"qmo", "=", 
+  RowBox[{"QuantumMeasurementOperator", "[", "povm", "]"}]}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.844532988740686*^9, 3.844533002806921*^9}},
+ CellLabel->"In[4]:=",
+ CellID->1380664084,ExpressionUUID->"d86397ff-3a94-4daa-b81e-5bce7922bda7"],
+
+Cell["Post-measurement states after measuring POVMs:", "Text",
+ TaggingRules->{},
+ CellChangeTimes->{
+  3.8408173532296267`*^9, {3.841236583000248*^9, 3.841236584685398*^9}, {
+   3.844535528308375*^9, 3.844535545238896*^9}},
+ CellLabel->"In[5]:=",
+ CellID->1731840551,ExpressionUUID->"26a17153-2849-4349-bdf0-f4fb5942a939"],
+
+Cell[BoxData[
+ RowBox[{"m", "=", 
+  RowBox[{"qmo", "[", 
+   RowBox[{"QuantumState", "[", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "1"}], "}"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.852203756588583*^9, 
+  3.852203757150296*^9}},ExpressionUUID->"d134c005-445e-4cc3-b629-\
+0cd2cd0c1784"],
+
+Cell[BoxData[
+ RowBox[{"m", "[", "\"\<StatesAssociation\>\"", "]"}]], "Input",
+ TaggingRules->{},
+ CellChangeTimes->{{3.8445330167330217`*^9, 3.844533027345962*^9}, {
+  3.8445355110472*^9, 3.8445355257418137`*^9}, {3.852203754812303*^9, 
+  3.852203758979786*^9}},
+ CellID->232185208,ExpressionUUID->"dc475690-a8b7-45ab-b79a-55cee0af618a"],
+
+Cell[BoxData[
+ RowBox[{"m", "[", "\"\<ProbabilityPlot\>\"", "]"}]], "Input",
+ CellChangeTimes->{3.852202971655067*^9, 
+  3.8522037610316687`*^9},ExpressionUUID->"8d5d9d84-b6ee-46a9-9824-\
+da538d707e20"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{952, 804},
+WindowMargins->{{311, Automatic}, {Automatic, 2}},
+FrontEndVersion->"13.1 for Mac OS X x86 (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"27cdd1ef-44a4-4a43-a73f-4c006ff9959e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 696, 15, 94, "Input",ExpressionUUID->"a7a898a2-e5de-48c5-bd56-4f75cc0703cd"],
+Cell[CellGroupData[{
+Cell[1279, 39, 274, 4, 67, "Section",ExpressionUUID->"e07f5937-010f-4d36-ad15-1eba1f2c194d",
+ CellID->2000507648],
+Cell[1556, 45, 833, 18, 58, "Text",ExpressionUUID->"73f7f8d4-efc3-48db-b156-bb9797b76a42",
+ CellID->66553693],
+Cell[CellGroupData[{
+Cell[2414, 67, 264, 4, 54, "Subsection",ExpressionUUID->"47a9608d-062c-43d4-9bee-58df94f2dbe6",
+ CellID->1262237375],
+Cell[2681, 73, 532, 7, 35, "Text",ExpressionUUID->"2de46bcf-f381-4b74-b916-bbd4046e1a31",
+ CellID->68439264],
+Cell[3216, 82, 308, 6, 30, "Input",ExpressionUUID->"731b20fb-392f-4ae7-af43-7a633cae5736",
+ CellID->1029397697],
+Cell[3527, 90, 701, 11, 35, "Text",ExpressionUUID->"8c4bd3df-24bb-47df-878f-891048f8c6c1",
+ CellID->418852936],
+Cell[4231, 103, 780, 13, 30, "Input",ExpressionUUID->"123eab7e-fd4c-4a58-a911-e3e561066516",
+ CellID->1502669524],
+Cell[5014, 118, 292, 3, 35, "Text",ExpressionUUID->"64121377-93b1-45e1-b4e3-ea7236f141a7",
+ CellID->1085279064],
+Cell[5309, 123, 307, 6, 30, "Input",ExpressionUUID->"1163f424-d7a2-4d02-9416-032d82478bf0",
+ CellID->427883758],
+Cell[5619, 131, 652, 16, 53, "Input",ExpressionUUID->"a88322d6-128e-4cf3-bf56-df7a3658a645",
+ CellID->1706614677],
+Cell[6274, 149, 519, 12, 35, "Text",ExpressionUUID->"e33512f0-c75d-4017-9cf9-d29612390239",
+ CellID->1458226567],
+Cell[6796, 163, 241, 4, 30, "Input",ExpressionUUID->"85058ada-fbe6-450f-87e7-5c4bb5d8523b",
+ CellID->1962093594],
+Cell[7040, 169, 235, 3, 35, "Text",ExpressionUUID->"2f9657c8-20e8-4825-8735-bf90b442e3fa",
+ CellID->1655471314],
+Cell[7278, 174, 488, 11, 30, "Input",ExpressionUUID->"af4b1b60-7ac0-43a5-8ee9-036290d30ec0",
+ CellID->474131440],
+Cell[7769, 187, 1051, 16, 58, "Text",ExpressionUUID->"f5f456cf-d074-4689-9354-7a61d4de4a97",
+ CellID->1207371546],
+Cell[8823, 205, 372, 8, 30, "Input",ExpressionUUID->"a835d81b-7ff9-4282-a5c5-186b493634a1",
+ CellID->1011318320],
+Cell[9198, 215, 444, 10, 30, "Input",ExpressionUUID->"0e572abe-14de-4e9d-8f82-748eec48b8db",
+ CellID->1780813210],
+Cell[9645, 227, 318, 7, 35, "Text",ExpressionUUID->"65b272da-df0a-4a3d-b18c-0c1d4775361e",
+ CellID->562727424],
+Cell[9966, 236, 767, 24, 42, "Text",ExpressionUUID->"09fe2e33-6c76-4f2e-b206-077c720881a1",
+ CellID->1426864348],
+Cell[10736, 262, 794, 17, 30, "Input",ExpressionUUID->"e08628ca-0983-44a0-b435-f4d81b25d613",
+ CellID->359210787],
+Cell[11533, 281, 156, 2, 30, "Input",ExpressionUUID->"aceaf148-82b6-4db9-a9f9-cad54e444f6a"],
+Cell[11692, 285, 195, 3, 30, "Input",ExpressionUUID->"89a7dc18-3bc2-426b-a89b-9303bebfc0b8"],
+Cell[11890, 290, 750, 14, 30, "Input",ExpressionUUID->"d2ab4318-5ef6-47d6-91c8-1d016638a8bb"],
+Cell[12643, 306, 559, 9, 30, "Input",ExpressionUUID->"5242787c-5aee-4267-9b29-83a33182f469",
+ CellID->1862975327],
+Cell[13205, 317, 225, 3, 35, "Text",ExpressionUUID->"581069dd-4fe6-4bd7-b0ab-60764803adf2",
+ CellID->857159539],
+Cell[13433, 322, 831, 23, 30, "Input",ExpressionUUID->"8e6fdfb3-b21f-43b4-bebd-93ff28a2c6e8",
+ CellID->960067897],
+Cell[14267, 347, 900, 28, 42, "Text",ExpressionUUID->"df8fc1c5-c344-4a35-b60a-39cfb82771d5",
+ CellID->456986723],
+Cell[15170, 377, 885, 23, 52, "Input",ExpressionUUID->"eee4fbc2-2917-4b18-9595-97280d1c670c",
+ CellID->1174331789],
+Cell[16058, 402, 480, 8, 30, "Input",ExpressionUUID->"34071995-8c21-4a85-ab66-1ac7d294f941",
+ CellID->825741874],
+Cell[16541, 412, 251, 5, 35, "Text",ExpressionUUID->"8a8024d7-ac83-40b7-8e25-6c847d897d8f",
+ CellID->1524804989],
+Cell[16795, 419, 261, 5, 30, "Input",ExpressionUUID->"fb9751f7-42f2-49b0-84e4-8416c083637b",
+ CellID->1828655293],
+Cell[17059, 426, 1698, 45, 95, "Text",ExpressionUUID->"26210ffe-b16d-4a4c-9dde-0191947c5330",
+ CellID->964115943],
+Cell[18760, 473, 1198, 30, 52, "Input",ExpressionUUID->"f9f1a8d6-0810-4639-919f-e0c5c3344efa",
+ CellID->1132537386],
+Cell[19961, 505, 533, 9, 30, "Input",ExpressionUUID->"cd1b77df-c866-4a63-9cd8-913f2bf3e52d",
+ CellID->650128012],
+Cell[20497, 516, 195, 4, 30, "Input",ExpressionUUID->"a58fc6f2-a3e2-4a94-90c6-9166e456bff5",
+ CellID->730048010],
+Cell[20695, 522, 1478, 57, 49, "Text",ExpressionUUID->"12f3fc1a-f964-455f-9e5d-360e659725d4",
+ CellID->1597477200],
+Cell[22176, 581, 1388, 39, 52, "Input",ExpressionUUID->"a6b8a52a-26eb-4858-b4d5-b97d3abaf06f",
+ CellID->958745606],
+Cell[23567, 622, 1107, 21, 58, "Text",ExpressionUUID->"eadbd520-9fcb-43bf-96fb-7bb7b824608e",
+ CellID->5163684],
+Cell[24677, 645, 649, 16, 30, "Input",ExpressionUUID->"d5783340-d8d8-4fe7-b360-e864cb4c0322",
+ CellID->1324377490],
+Cell[25329, 663, 202, 4, 30, "Input",ExpressionUUID->"5de1a549-2b13-4459-96d1-9cabc0b0a91e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25568, 672, 153, 3, 54, "Subsection",ExpressionUUID->"7b266f25-86f1-46fa-ab3d-34d4bcb48cf0"],
+Cell[25724, 677, 1120, 31, 61, "Text",ExpressionUUID->"56f35a7a-af67-4cb0-af56-88340a461951"],
+Cell[26847, 710, 391, 8, 35, "Text",ExpressionUUID->"42239e42-1677-4408-b821-81eb3a3529ce",
+ CellID->570158635],
+Cell[27241, 720, 1511, 50, 53, "Input",ExpressionUUID->"f0682cd5-0af4-4881-8dea-dc1b6c14c9b3",
+ CellID->1270728923],
+Cell[28755, 772, 278, 6, 35, "Text",ExpressionUUID->"39817a2e-2da1-4716-9335-aab79c614e36",
+ CellID->970097919],
+Cell[29036, 780, 262, 5, 30, "Input",ExpressionUUID->"694194af-1f10-432d-9451-7942666a665e",
+ CellID->416139446],
+Cell[29301, 787, 209, 3, 35, "Text",ExpressionUUID->"5db82cbd-80db-4cdf-abde-91d33e412059",
+ CellID->509781148],
+Cell[29513, 792, 330, 8, 30, "Input",ExpressionUUID->"0c8687b1-c9b4-4775-94f6-a5b8bda2b06d",
+ CellID->614099940],
+Cell[29846, 802, 291, 6, 30, "Input",ExpressionUUID->"d86397ff-3a94-4daa-b81e-5bce7922bda7",
+ CellID->1380664084],
+Cell[30140, 810, 323, 6, 35, "Text",ExpressionUUID->"26a17153-2849-4349-bdf0-f4fb5942a939",
+ CellID->1731840551],
+Cell[30466, 818, 296, 8, 30, "Input",ExpressionUUID->"d134c005-445e-4cc3-b629-0cd2cd0c1784"],
+Cell[30765, 828, 338, 6, 30, "Input",ExpressionUUID->"dc475690-a8b7-45ab-b79a-55cee0af618a",
+ CellID->232185208],
+Cell[31106, 836, 202, 4, 30, "Input",ExpressionUUID->"8d5d9d84-b6ee-46a9-9824-da538d707e20"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
