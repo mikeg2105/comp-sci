@@ -10,6 +10,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
+
+
+
 fig, ax = plt.subplots()
 
 x = np.arange(0, 2*np.pi, 0.01)
@@ -38,6 +41,7 @@ ani = animation.FuncAnimation(
 # from matplotlib.animation import FFMpegWriter
 # writer = FFMpegWriter(fps=15, metadata=dict(artist='Me'), bitrate=1800)
 # ani.save("movie.mp4", writer=writer)
+HTML(ani.to_html5_video())
 
-plt.show()
+#plt.show()
 

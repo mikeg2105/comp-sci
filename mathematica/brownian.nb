@@ -1,0 +1,161 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5407,        153]
+NotebookOptionsPosition[      4605,        133]
+NotebookOutlinePosition[      5081,        151]
+CellTagsIndexPosition[      5038,        148]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "Parameters", "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"numParticles", "=", "10"}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{"Number", " ", "of", " ", "particles"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"timeStep", "=", "0.01"}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{"Time", " ", "step", " ", "size"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"totalTime", "=", "10"}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{"Total", " ", "simulation", " ", "time"}], "*)"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.952065108243704*^9, 3.9520651109045467`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"607f2e1f-bbc4-1042-aa47-62e482339e2c"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Wiener", " ", "Process", " ", "Generator"}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"wienerProcess", "[", 
+     RowBox[{"numSteps_", ",", "timeStep_"}], "]"}], ":=", 
+    RowBox[{"Accumulate", "[", 
+     RowBox[{
+      RowBox[{"Sqrt", "[", "timeStep", "]"}], " ", 
+      RowBox[{"RandomVariate", "[", 
+       RowBox[{
+        RowBox[{"NormalDistribution", "[", 
+         RowBox[{"0", ",", "1"}], "]"}], ",", "numSteps"}], "]"}]}], "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.9520651335143127`*^9, 3.9520651359691944`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"406824da-68c5-5b41-9116-82b6e817eb6e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Simulate", " ", "Brownian", " ", "Motion"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"simulateBrownianMotion", "[", 
+     RowBox[{"numParticles_", ",", "totalTime_", ",", "timeStep_"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"numSteps", ",", "times", ",", "particlePaths"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"numSteps", "=", 
+        RowBox[{"Round", "[", 
+         RowBox[{"totalTime", "/", "timeStep"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"times", "=", 
+        RowBox[{"Range", "[", 
+         RowBox[{"0", ",", "totalTime", ",", "timeStep"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"particlePaths", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Prepend", "[", 
+           RowBox[{
+            RowBox[{"wienerProcess", "[", 
+             RowBox[{"numSteps", ",", "timeStep"}], "]"}], ",", "0"}], "]"}], 
+          ",", 
+          RowBox[{"{", "numParticles", "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"times", ",", "particlePaths"}], "}"}]}]}], "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.952065154419777*^9, 3.9520651562601185`*^9}, 
+   3.9520652572363434`*^9},ExpressionUUID->"d2f563f4-5d27-034d-9e0f-\
+e468141caf4b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Run", " ", "the", " ", "Simulation"}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"times", ",", "particlePaths"}], "}"}], "=", 
+     RowBox[{"simulateBrownianMotion", "[", 
+      RowBox[{"numParticles", ",", "totalTime", ",", "timeStep"}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.9520651883096313`*^9, 
+  3.9520651904974594`*^9}},ExpressionUUID->"4f5cf337-3144-b248-b00e-\
+467efb7f81b6"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "Visualization", "*)"}], 
+  RowBox[{"ListLinePlot", "[", 
+   RowBox[{"particlePaths", ",", 
+    RowBox[{"DataRange", "->", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "totalTime"}], "}"}]}], ",", 
+    RowBox[{"PlotLegends", "->", "Automatic"}], ",", 
+    RowBox[{"AxesLabel", "->", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Time\>\"", ",", "\"\<Position\>\""}], "}"}]}], ",", 
+    RowBox[{"PlotLabel", "->", "\"\<Brownian Motion of Particles\>\""}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.952065220405472*^9},ExpressionUUID->"d478c762-4b09-3f46-a1af-\
+3dbf5701010d"]
+},
+WindowSize->{1036.8, 580.5},
+WindowMargins->{{
+  Automatic, -4.7999999999999545`}, {-4.7999999999999545`, Automatic}},
+Magnification:>2.1 Inherited,
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"bf9e5aed-38d3-1540-8210-41eec43f0bf9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 701, 18, 90, "Input",ExpressionUUID->"607f2e1f-bbc4-1042-aa47-62e482339e2c"],
+Cell[1262, 40, 709, 17, 90, "Input",ExpressionUUID->"406824da-68c5-5b41-9116-82b6e817eb6e"],
+Cell[1974, 59, 1443, 37, 170, "Input",ExpressionUUID->"d2f563f4-5d27-034d-9e0f-e468141caf4b"],
+Cell[3420, 98, 565, 15, 90, "Input",ExpressionUUID->"4f5cf337-3144-b248-b00e-467efb7f81b6"],
+Cell[3988, 115, 613, 16, 50, "Input",ExpressionUUID->"d478c762-4b09-3f46-a1af-3dbf5701010d"]
+}
+]
+*)
+
